@@ -8,6 +8,7 @@ development:
       options:
         # The timeout in seconds for selecting a server for an operation. (default: 30)
         server_selection_timeout: 5
+
 test:
   clients:
     default:
@@ -18,3 +19,14 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      # Mongoid can connect to a URI accepted by the driver:
+      uri: mongodb+srv://LIVE-Spring2024:<%= ENV['DATABASE_PASSWORD'] %>@<%= ENV['DATABASE_URL'] %>/evg?retryWrites=true&w=majority
+      options:
+        # The timeout in seconds for selecting a server for an operation. (default: 30)
+        server_selection_timeout: 5
