@@ -286,7 +286,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  capybara
+  capybara (~> 3.39, >= 3.39.2)
   database_cleaner-mongoid
   debug
   importmap-rails

@@ -58,7 +58,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
+  gem 'capybara', '~> 3.39', '>= 3.39.2'
   gem "selenium-webdriver"
 
   gem 'database_cleaner-mongoid'
