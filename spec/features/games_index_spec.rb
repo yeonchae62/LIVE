@@ -31,7 +31,6 @@ RSpec.feature "Games", type: :feature do
 
     # Verify: Ensure we're on the new game creation page
     expect(page).to have_current_path(new_game_path)
-    puts page.body
     expect(page).to have_content("New Game")
   end
 end
