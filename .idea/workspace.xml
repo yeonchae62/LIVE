@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LIVE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LIVE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/games_index_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/games_index_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/games_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/games_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/game.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mongoid.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +54,10 @@
     "RSpec.Game test valid url format.executor": "Run",
     "RSpec.Game.executor": "Run",
     "RSpec.Games (1).executor": "Run",
+    "RSpec.Games DELETE /games/:id.executor": "Run",
     "RSpec.Games GET /games.executor": "Run",
     "RSpec.Games Navigating to the new game page.executor": "Run",
+    "RSpec.Games PATCH /games/:id updates the specified game.executor": "Run",
     "RSpec.Games POST /games.executor": "Run",
     "RSpec.Games Visiting the games index page.executor": "Run",
     "RSpec.Games management User creates a new game.executor": "Run",
@@ -59,7 +71,7 @@
     "Test::Unit/Shoulda/Minitest.GamesControllerTest.executor": "Run",
     "Test::Unit/Shoulda/Minitest.MainControllerTest.executor": "Run",
     "git-widget-placeholder": "xiuyu",
-    "last_opened_file_path": "/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE",
+    "last_opened_file_path": "/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE/app/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +87,12 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
@@ -82,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="RSpec.Games (1)">
+  <component name="RunManager" selected="RSpec.GamesController">
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -112,7 +130,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
-    <configuration name="Games GET /games" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+    <configuration name="Game is not valid without a title" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="LIVE" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -132,11 +150,11 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/requests/games_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/game_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Games GET /games" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Game is not valid without a title" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
@@ -149,7 +167,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Games Navigating to the new game page" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+    <configuration name="Game" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="LIVE" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -169,48 +187,11 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/features/games_index_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/game_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Games Navigating to the new game page" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Games POST /games" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
-      <module name="LIVE" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/requests/games_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Games POST /games" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Game" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
@@ -285,6 +266,43 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Games" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GamesController" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="LIVE" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/controllers/games_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GamesController" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
@@ -479,11 +497,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="RSpec.GamesController" />
         <item itemvalue="RSpec.Games (1)" />
-        <item itemvalue="RSpec.Games POST /games" />
-        <item itemvalue="RSpec.Games GET /games" />
         <item itemvalue="RSpec.Games" />
-        <item itemvalue="RSpec.Games Navigating to the new game page" />
+        <item itemvalue="RSpec.Game" />
+        <item itemvalue="RSpec.Game is not valid without a title" />
       </list>
     </recent_temporary>
   </component>
@@ -498,7 +516,7 @@
       <updated>1707023343308</updated>
       <workItem from="1707023345106" duration="4356000" />
       <workItem from="1707075660504" duration="10196000" />
-      <workItem from="1707595526896" duration="19771000" />
+      <workItem from="1707595526896" duration="31551000" />
     </task>
     <servers />
   </component>
@@ -506,22 +524,24 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LIVE@Games__1_.rcov" NAME="Games (1) Coverage Results" MODIFIED="1707696672738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games.rcov" NAME="Games Coverage Results" MODIFIED="1707696661287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@GamesController.rcov" NAME="GamesController Coverage Results" MODIFIED="1707692901146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games__1_.rcov" NAME="Games (1) Coverage Results" MODIFIED="1707799641230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games.rcov" NAME="Games Coverage Results" MODIFIED="1707798206202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@GamesController.rcov" NAME="GamesController Coverage Results" MODIFIED="1707799686441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index_assigns__games_and_renders_the_index_template.rcov" NAME="GamesController GET #index assigns @games and renders the index template Coverage Results" MODIFIED="1707689959228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_without_a_title.rcov" NAME="Game is not valid without a title Coverage Results" MODIFIED="1707680549406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_Navigating_to_the_new_game_page.rcov" NAME="Games Navigating to the new game page Coverage Results" MODIFIED="1707695019388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_GET__games.rcov" NAME="Games GET /games Coverage Results" MODIFIED="1707701496336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_GET__games.rcov" NAME="Games GET /games Coverage Results" MODIFIED="1707702218292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_without_a_title.rcov" NAME="Game is not valid without a title Coverage Results" MODIFIED="1707797985870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_test_url_format.rcov" NAME="Game test url format Coverage Results" MODIFIED="1707685154507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_POST__games.rcov" NAME="Games POST /games Coverage Results" MODIFIED="1707701502980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_POST__games.rcov" NAME="Games POST /games Coverage Results" MODIFIED="1707702246493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_PATCH__games__id_updates_the_specified_game.rcov" NAME="Games PATCH /games/:id updates the specified game Coverage Results" MODIFIED="1707702338828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_DELETE__games__id.rcov" NAME="Games DELETE /games/:id Coverage Results" MODIFIED="1707702385531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@MainControllerTest.rcov" NAME="MainControllerTest Coverage Results" MODIFIED="1707108076113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@LIVE.rcov" NAME="LIVE Coverage Results" MODIFIED="1707023633540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_with_duplicated_title.rcov" NAME="Game is not valid with duplicated title Coverage Results" MODIFIED="1707685442626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_management_User_creates_a_new_game.rcov" NAME="Games management User creates a new game Coverage Results" MODIFIED="1707689241103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_management.rcov" NAME="Games management Coverage Results" MODIFIED="1707689648636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game.rcov" NAME="Game Coverage Results" MODIFIED="1707685878631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_Visiting_the_games_index_page.rcov" NAME="Games Visiting the games index page Coverage Results" MODIFIED="1707693339740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game.rcov" NAME="Game Coverage Results" MODIFIED="1707798190193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesControllerTest.rcov" NAME="GamesControllerTest Coverage Results" MODIFIED="1707108987013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_without_a_url.rcov" NAME="Game is not valid without a url Coverage Results" MODIFIED="1707685061021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_test_valid_url_format.rcov" NAME="Game test valid url format Coverage Results" MODIFIED="1707683165945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />

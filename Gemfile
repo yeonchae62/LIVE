@@ -5,8 +5,6 @@ ruby "3.3.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
-gem 'mongoid', "~>8.1"
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -44,6 +42,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem 'rspec-rails', '~> 6.1.1'
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do
@@ -60,7 +59,11 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara', '~> 3.39', '>= 3.39.2'
   gem "selenium-webdriver"
-
-  gem 'database_cleaner-mongoid'
+  gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
+end
+
+group :production do
+  # for Heroku deployment
+  gem 'pg'
 end

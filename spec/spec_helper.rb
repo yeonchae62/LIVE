@@ -44,24 +44,12 @@ RSpec.configure do |config|
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
-  # This setup ensures that each test starts with a clean database state.
-  config.before(:suite) do
-    DatabaseCleaner[:mongoid].clean_with(:deletion)
-  end
 
   config.before(:each) do
-    DatabaseCleaner[:mongoid].strategy = :deletion
-  end
-
-  config.before(:each, js: true) do
-    DatabaseCleaner[:mongoid].strategy = :deletion
-  end
-
-  config.before(:each) do
-    DatabaseCleaner[:mongoid].start
+    DatabaseCleaner.start
   end
 
   config.after(:each) do
-    DatabaseCleaner[:mongoid].clean
+    DatabaseCleaner.clean
   end
 end
