@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LIVE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LIVE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evg.xrnf3x1.mongodb.net" beforeDir="false" afterPath="$PROJECT_DIR$/evg.xrnf3x1.mongodb.net" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evg.xrnf3x1.mongodb.net-shm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evg.xrnf3x1.mongodb.net-wal" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,7 +545,7 @@
       <workItem from="1707023345106" duration="4356000" />
       <workItem from="1707075660504" duration="10196000" />
       <workItem from="1707595526896" duration="32861000" />
-      <workItem from="1707883650819" duration="1268000" />
+      <workItem from="1707883650819" duration="1872000" />
     </task>
     <servers />
   </component>
