@@ -1,5 +1,5 @@
 
-<%= link_to "View All Games", "/games" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,24 +17,23 @@
 
   <!-- Displaying Images with Links -->
   <div class="image-container">
-    <a href="url1"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 1"></a>
-    <a href="url2"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 2"></a>
-    <a href="url3"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 3"></a>
-    <a href="url4"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 4"></a>
-    <a href="url5"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 5"></a>
-    <a href="url6"><img src="ttps://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 6"></a>
+    <a href="url1"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 1"></a>
+    <a href="url2"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 2"></a>
+    <a href="url3"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 3"></a>
+    <a href="url4"><img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 4"></a>
+    <a href="url5"><img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 5"></a>
+    <a href="url6"><img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 6"></a>
   </div>
 
 
   <!-- Layouts-->
 
   <!-- Login-->
-  <a href="/login" class="login-link">Login</a>
+  <%= link_to "Log In", login_path, class: "button" %>
+  <!-- <a href="/login" class="login-link">Login</a>-->
 
   <!-- Games-->
-  <a href="/videos/add" class="button">Add Video</a>
-  <a href="/videos/edit" class="button">Edit Video</a>
-
-  <a href="/games" class="button">View All Games</a>
+  <%= link_to "View All Games", "/games", class: "button" %>
+  <!-- <%= link_to "View All Games", "/games" %>-->
 </body>
 </html>
