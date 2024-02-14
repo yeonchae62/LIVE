@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,50 +34,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RSpec.Game is not valid with duplicated title.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Game is not valid without a title.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Game is not valid without a url.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Game test url format.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Game test valid url format.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Game.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games (1).executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games DELETE /games/:id.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games GET /games.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games Navigating to the new game page.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games PATCH /games/:id updates the specified game.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games POST /games.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games Visiting the games index page.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games management User creates a new game.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games management.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.Games.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.GamesController GET #index assigns @games and renders the index template.executor&quot;: &quot;Run&quot;,
-    &quot;RSpec.GamesController.executor&quot;: &quot;Run&quot;,
-    &quot;Rails.LIVE.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Test::Unit/Shoulda/Minitest.GamesControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Test::Unit/Shoulda/Minitest.MainControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;xiuyu&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE/app/models&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.space&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RSpec.Game is not valid with duplicated title.executor": "Run",
+    "RSpec.Game is not valid without a title.executor": "Run",
+    "RSpec.Game is not valid without a url.executor": "Run",
+    "RSpec.Game test url format.executor": "Run",
+    "RSpec.Game test valid url format.executor": "Run",
+    "RSpec.Game.executor": "Run",
+    "RSpec.Games (1).executor": "Run",
+    "RSpec.Games DELETE /games/:id.executor": "Run",
+    "RSpec.Games GET /games.executor": "Run",
+    "RSpec.Games Navigating to the new game page.executor": "Run",
+    "RSpec.Games PATCH /games/:id updates the specified game.executor": "Run",
+    "RSpec.Games POST /games.executor": "Run",
+    "RSpec.Games Visiting the games index page.executor": "Run",
+    "RSpec.Games management User creates a new game.executor": "Run",
+    "RSpec.Games management.executor": "Run",
+    "RSpec.Games.executor": "Run",
+    "RSpec.GamesController GET #index assigns @games and renders the index template.executor": "Run",
+    "RSpec.GamesController.executor": "Run",
+    "Rails.LIVE.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Test::Unit/Shoulda/Minitest.GamesControllerTest.executor": "Run",
+    "Test::Unit/Shoulda/Minitest.MainControllerTest.executor": "Run",
+    "git-widget-placeholder": "xiuyu",
+    "last_opened_file_path": "/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "settings.space",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/models" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
@@ -545,7 +547,7 @@
       <workItem from="1707023345106" duration="4356000" />
       <workItem from="1707075660504" duration="10196000" />
       <workItem from="1707595526896" duration="32861000" />
-      <workItem from="1707883650819" duration="1872000" />
+      <workItem from="1707883650819" duration="2869000" />
     </task>
     <servers />
   </component>
