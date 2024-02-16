@@ -1,5 +1,8 @@
 # README
 
+* Deployment: https://evg-library-8a920fa9c3cb.herokuapp.com/
+* Code Climate Reports: https://codeclimate.com/github/yeonchae62/LIVE
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
