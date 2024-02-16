@@ -36,3 +36,4 @@
 
 # Ignore coverage reports
 coverage
+test-reporter

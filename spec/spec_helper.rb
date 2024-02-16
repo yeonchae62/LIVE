@@ -13,8 +13,13 @@
 # it.
 
 require 'simplecov'
+require 'simplecov_json_formatter'
+SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start 'rails'
 
+require 'capybara/rspec'
+require 'selenium-webdriver'
+Capybara.javascript_driver = :selenium_chrome_headless
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

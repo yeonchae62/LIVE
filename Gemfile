@@ -59,11 +59,13 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara', '~> 3.39', '>= 3.39.2'
   gem "selenium-webdriver"
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
 
   # for test coverage analysis
-  gem 'simplecov', require: false
+  gem 'simplecov',require: false
+  gem 'simplecov_json_formatter', '~> 0.1.2', require: false
 end
 
 group :production do
