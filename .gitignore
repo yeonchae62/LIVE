@@ -34,4 +34,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-.envrc
+# Ignore coverage reports
+coverage
+test-reporter
