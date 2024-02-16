@@ -1,4 +1,66 @@
-<h1>Welcome to Our Website</h1>
-<p>This is a project of educational video games for LIVE Lab</p>
 
-<%= link_to "View All Games", "/games" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Our Website</title>
+  <link rel="stylesheet" href="application.css">
+</head>
+
+<body>
+  <h1>Live Lab</h1>
+  
+  <h2>Welcome to Our Website</h2>
+
+  <!-- Login-->
+  <%= link_to "Log In", login_path, class: "button" %>
+  <!-- <a href="/login" class="login-link">Login</a>-->
+
+
+  <p>This is a project of educational video games for LIVE Lab</p>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search...">
+    <button type="submit">Search</button>
+  </div>
+
+
+
+  <!-- Displaying Images with Links -->
+  <div class="container">
+    <div class="image-container">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 1">
+        <p>Most Watched - Category 1</p>
+    </div>
+    <div class="image-container">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 2">
+        <p>Most Watched - Category 2</p>
+    </div>
+    <div class="image-container">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1721470/capsule_616x353.jpg?t=1707439907" alt="Image 3">
+        <p>Most Watched - Category 3</p>
+    </div>
+    <div class="image-container">
+        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 4">
+        <p>Most Watched - Category 4</p>
+    </div>
+    <div class="image-container">
+        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 5">
+        <p>Most Watched - Category 5</p>
+    </div>
+    <div class="image-container">
+        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 6">
+        <p>Most Watched - Category 6</p>
+    </div>
+</div>
+
+  <!-- Layouts-->
+
+  <!-- Games-->
+  <%= link_to "View All Games", "/games", class: "button" %>
+  <!-- <%= link_to "View All Games", "/games" %>-->
+</body>
+</html>
