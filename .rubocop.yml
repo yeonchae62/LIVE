@@ -9,3 +9,17 @@ AllCops:
 Rails:
   Enabled: true
 
+Style/Documentation:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 8
+
+RSpec/ExampleLength:
+  Max: 10
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false
