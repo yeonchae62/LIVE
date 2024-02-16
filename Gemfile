@@ -60,6 +60,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara', '~> 3.39', '>= 3.39.2'
+  gem 'cucumber-rails', require: false
   gem "selenium-webdriver"
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
