@@ -37,3 +37,4 @@
 # Ignore coverage reports
 coverage
 test-reporter
+/run_reporter

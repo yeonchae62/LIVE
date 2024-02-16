@@ -10,7 +10,6 @@ application up and running.
 
 * System dependencies
   * rails 7.1.3
-  * mongoDB (if you want to test locally)
 
 * Configuration(for development and testing)
   * run `bundle install` or ` bundle config set --local without 'production'` to install ruby dependencies
@@ -18,4 +17,3 @@ application up and running.
 
 * For testing
   * run `rails db:test:prepare` to setup the database
-  * 

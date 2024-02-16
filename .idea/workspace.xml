@@ -5,55 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/Rakefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/games_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/games_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/games_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/games_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/main_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/main_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jobs/application_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/game.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/games/_game.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/games/_game.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/games/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/games/index.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/games/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/games/show.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/importmap.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/importmap.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/content_security_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/content_security_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/permissions_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/permissions_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20240213035850_create_games.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20240213035850_create_games.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20240213050155_add_game_title_and_url_to_games.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20240213050155_add_game_title_and_url_to_games.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/game_management_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/game_management_steps.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/main_page_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/main_page_steps.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/support/env.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/support/env.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/games_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/games_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/main_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/main_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/games_index_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/games_index_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/main_page_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/main_page_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/game_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/game_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/games_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/games_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -633,20 +587,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/controllers/main_controller_spec.rb</url>
-          <line>2</line>
-          <properties myBlockOrdinal="-1">
-            <option name="block-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LIVE@MainPage_User_visits_the_main_page.rcov" NAME="MainPage User visits the main page Coverage Results" MODIFIED="1708118399320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_games.rcov" NAME="Scenario: Viewing games Coverage Results" MODIFIED="1708057896733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
@@ -677,7 +617,7 @@
     <SUITE FILE_PATH="coverage/LIVE@Games.rcov" NAME="Games Coverage Results" MODIFIED="1708119827485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index_assigns__games_and_renders_the_index_template.rcov" NAME="GamesController GET #index assigns @games and renders the index template Coverage Results" MODIFIED="1707689959228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@game_management_feature.rcov" NAME="game_management.feature Coverage Results" MODIFIED="1708118852985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@MainPage.rcov" NAME="MainPage Coverage Results" MODIFIED="1708120813729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@MainPage.rcov" NAME="MainPage Coverage Results" MODIFIED="1708120931567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page.rcov" NAME="Scenario: User visits the main page Coverage Results" MODIFIED="1708120338557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__4_.rcov" NAME="Scenario: Creating a new game (4) Coverage Results" MODIFIED="1708057229829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game.rcov" NAME="Scenario: Deleting a game Coverage Results" MODIFIED="1708058910622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
