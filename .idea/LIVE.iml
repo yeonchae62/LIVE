@@ -16,6 +16,7 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+        <option value="cucumber:install" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -69,6 +70,7 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+        <option value="cucumber:install" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
