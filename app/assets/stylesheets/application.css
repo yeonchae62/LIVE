@@ -13,3 +13,144 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* Style for h1 element */
+h1 {
+    left: 100px; /* Center alignment */
+    padding: 20px; /* Top and bottom padding */
+}
+
+
+/* Banner style */
+
+h2 {
+    text-align: center; /* Center alignment */
+    padding: 50px 0; /* Top and bottom padding */
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+
+/*Button*/
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Add margin between buttons */
+    float: right; /* Float the buttons to the right */
+}
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+/*Image Container*/
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Wrap items when they exceed container width */
+}
+
+.image-container {
+    flex: 0 0 33.33%; /* Each container takes one-third of the container's width */
+    padding: 10px; /* Add padding around each container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.image-container img {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container p {
+    text-align: center; /* Center-align the description */
+    margin-top: 5px; /* Add margin above the description */
+}
+
+
+/*search bar*/
+
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    max-width: 500px; /* Set maximum width for the container */
+    width: 100%; /* Make container full width */
+    ustify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove default margin */
+}
+
+.search-container input[type="text"] {
+    flex: 1; /* Input field takes up remaining space */
+    padding: 15px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
+}
+
+.search-container button {
+    padding: 15px 25px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: 1px solid #007bff; /* Add border */
+    border-radius: 0 5px 5px 0; /* Rounded corners (right side only) */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    border-color: #0056b3; /* Darker border color on hover */
+}
+
+
+.search-container {
+    display: flex; /* Use flexbox for layout */
+    max-width: 600px; /* Set maximum width for the container */
+    width: 100%; /* Make container full width */
+}
+
+.search-container input[type="text"] {
+    flex: 1; /* Input field takes up remaining space */
+    padding: 15px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
+}
+
+.search-container button {
+    padding: 15px 25px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: 1px solid #007bff; /* Add border */
+    border-radius: 0 5px 5px 0; /* Rounded corners (right side only) */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    border-color: #0056b3; /* Darker border color on hover */
+}
+
+
+/*LogIn*/
+
+.login-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px; /* ??? ?? ?? */
+}
+
+.login-link:hover {
+  background-color: #0056b3;
+}
