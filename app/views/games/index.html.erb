@@ -4,11 +4,25 @@
 
 <div id="games">
   <% @games.each do |game| %>
-    <%= render game %>
+    <div id="game_<%= game.id %>">
+      <p>
+        <strong>Game Title:</strong>
+        <%= game.game_title %>
+      </p>
+      <p>
+        <strong>URL:</strong>
+        <%= game.url %>
+      </p>
+      <p>
+        <strong>Platform(s):</strong>
+        <%= game.platform %>
+      </p>
+      <%#= render game %>
+    </div>
     <p>
       <%= link_to "Show this game", game %>
     </p>
   <% end %>
-</div>
+</div>$
 
 <%= link_to "New Game", new_game_path %>
