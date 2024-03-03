@@ -2,8 +2,8 @@
 
 # features/step_definitions/game_management_steps.rb
 
-Given('I have a game titled {string} with the url {string}') do |title, url|
-  Game.create!(game_title: title, url:)
+Given('I have a game titled {string} with the url {string} and source {string}') do |title, url, source|
+  Game.create!(game_title: title, url:url, source:source)
 end
 
 Given('I am on the game list page') do
@@ -33,6 +33,11 @@ When('I click {string} for the game titled {string}') do |_link_text, game_title
 
   link = game_div.find(:xpath, './following-sibling::p[1]').find('a')
   link.click
+end
+
+Then('I should see {string} on the page') do |search_text|
+  full_page_text = find('body').text
+  expect(full_page_text).to include(search_text)
 end
 
 Then('I should not see {string} in the game list') do |game_title|

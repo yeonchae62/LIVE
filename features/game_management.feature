@@ -3,8 +3,8 @@ Feature: Game management
   I want to manage games
 
   Background:
-    Given I have a game titled "Game1" with the url "http://game1.com"
-    And I have a game titled "Lost Recipes" with the url "https://www.meta.com/experiences/4584847304916084/?utm_source=schellgames.com&utm_medium=oculusredirect"
+    Given I have a game titled "Game1" with the url "http://game1.com" and source "New Source"
+    And I have a game titled "Lost Recipes" with the url "https://www.meta.com/experiences/4584847304916084/?utm_source=schellgames.com&utm_medium=oculusredirect" and source "Schell Games"
 
   Scenario: Creating a new game
     Given I am on the game list page
@@ -16,9 +16,9 @@ Feature: Game management
 
   Scenario: Viewing games
     Given I am on the game list page
-    When I click "Show this game" for the game titled "Game1"
-    Then I should be on the "Game1" details page
-    And I should see "Source"
+    When I click "Show this game" for the game titled "Lost Recipes"
+    Then I should be on the "Lost Recipes" details page
+    And I should see "Schell Games" on the page
 
   Scenario: Updating a game
     Given I am on the "Game1" details page
