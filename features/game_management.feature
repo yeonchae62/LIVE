@@ -15,6 +15,7 @@ Feature: Game management
 
   Scenario: Viewing games
     Given I am on the game list page
+    And I should see a "Return to main" button
     When I click "Show this game" for the game titled "Game1"
     Then I should be on the "Game1" details page
 
@@ -30,3 +31,8 @@ Feature: Game management
     When I click "Destroy this game" button
     Then I should be redirected to game list page
     And I should not see "Game1" in the game list
+
+  Scenario: Go back to home page
+    Given I am on the game list page
+    When I click "Return to main" button
+    Then I should be redirected to home page

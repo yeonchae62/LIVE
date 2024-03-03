@@ -15,6 +15,11 @@ RSpec.describe 'Games' do
     expect(page).to have_content('Games')
   end
 
+  it 'shows the "Return to main" button' do
+    expect(page).to have_content('Return to main')
+    expect(page).to have_link('Return to main', href: main_page_path)
+  end
+
   it 'displays the names of the games' do
     # Verify: Check that the names of the games are present
     expect(page).to have_content('Game1')
