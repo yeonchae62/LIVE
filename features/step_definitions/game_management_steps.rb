@@ -10,6 +10,10 @@ Given('I am on the game list page') do
   visit games_path
 end
 
+Given('I should see a {string} button') do |button_text|
+  page.should have_content(button_text)
+end
+
 When('I click {string} button') do |button_text|
   click_on button_text
 end
@@ -50,4 +54,8 @@ end
 
 Then('I should be redirected to game list page') do
   expect(page).to have_current_path(games_path, ignore_query: true)
+end
+
+Then('I should be redirected to home page') do
+  visit main_page_path
 end
