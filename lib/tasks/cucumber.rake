@@ -54,8 +54,8 @@ unless ARGV.any? { |a| a =~ /^gems/ } # Don't load anything when running the gem
     end
 
     # In case we don't have the generic Rails test:prepare hook, append a no-op task that we can depend upon.
-    task 'test:prepare' => :environment do
-    end
+    # task 'test:prepare' => :environment do
+    # end
 
     task stats: 'cucumber:statsetup'
   rescue LoadError
