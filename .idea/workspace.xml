@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/games/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/games/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/games/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/games/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/game_management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/game_management.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/game_management_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/game_management_steps.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tasks/cucumber.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/cucumber.rake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/games_index_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/games_index_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pids/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/storage/.keep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Test::Unit/Shoulda/Minitest.GamesControllerTest.executor": "Run",
     "Test::Unit/Shoulda/Minitest.MainControllerTest.executor": "Run",
-    "git-widget-placeholder": "Merging show1",
+    "git-widget-placeholder": "xiuyu",
     "last_opened_file_path": "/Users/nilolisboa/Desktop/CSCE606/LIVE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -567,6 +565,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game__2_.rcov" NAME="Scenario: Deleting a game (2) Coverage Results" MODIFIED="1708059051511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />

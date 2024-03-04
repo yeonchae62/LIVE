@@ -38,3 +38,6 @@
 coverage
 test-reporter
 /run_reporter
+
+# Ignore IDEA files
+.idea/*
