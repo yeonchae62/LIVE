@@ -64,3 +64,12 @@ end
 Then('I should be redirected to home page') do
   visit main_page_path
 end
+
+Given(/^I am on the new game page$/) do
+  visit new_game_path
+end
+
+Given(/^I am on the "([^"]*)" edit page$/) do |game_title|
+  game = Game.find_by(game_title:)
+  visit edit_game_path(game)
+end

@@ -14,6 +14,12 @@ Feature: Game management
     And I click "Create Game" button
     Then I should be on the "New Game" details page
 
+  Scenario: Unsuccessful creation of a game
+    Given I am on the new game page
+    When I fill in "Game title" with ""
+    And I click "Create Game" button
+    Then I should see "can't be blank"
+
   Scenario: Viewing games
     Given I am on the game list page
     And I should see a "Return to main" button
@@ -27,6 +33,12 @@ Feature: Game management
     And I fill in "Game title" with "Game1 Updated"
     And I click "Update Game" button
     Then I should be on the "Game1 Updated" details page
+
+  Scenario: Unsuccessful game update due to invalid input
+    Given I am on the "Game1" edit page
+    When I fill in "Game title" with ""
+    And I click "Update Game" button
+    Then I should see "can't be blank"
 
   Scenario: Deleting a game
     Given I am on the "Game1" details page
