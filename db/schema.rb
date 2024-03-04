@@ -10,12 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_13_050155) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_13_035850) do
   create_table "games", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "game_title"
     t.string "url"
+    t.string "source"
+    t.string "researcher"
+    t.string "included"
+    t.string "exclusion_notes"
+    t.string "publication_year"
+    t.string "developers"
+    t.string "publisher"
+    t.string "used_in_class"
+    t.string "downloadable"
+    t.string "discontinued"
+    t.string "generalized_subject"
+    t.string "subject1"
+    t.string "subject2"
+    t.string "remainder"
+    t.string "teaching"
+    t.string "college_users"
+    t.string "cost"
+    t.string "game_type"
+    t.string "genre"
+    t.string "tags"
+    t.string "game_time"
+    t.string "dimensions"
+    t.string "sound"
+    t.string "platform"
+    t.string "spanish"
+    t.string "other_languages"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
