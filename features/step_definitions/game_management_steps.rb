@@ -3,7 +3,7 @@
 # features/step_definitions/game_management_steps.rb
 
 Given('I have a game titled {string} with the url {string} and source {string}') do |title, url, source|
-  Game.create!(game_title: title, url:url, source:source)
+  Game.create!(game_title: title, url:, source:)
 end
 
 Given('I am on the game list page') do
