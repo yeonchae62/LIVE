@@ -36,6 +36,10 @@ class GamesController < ApplicationController
 
   # PATCH/PUT /games/1 or /games/1.json
   def update
+    # if @game.game_title == "" || @game.game_title == nil
+    #   flash[:notice] = "Game Title can't be blank"
+    #   redirect_to game_path(@game)
+    # end
     respond_to do |format|
       if @game.update(game_params)
         format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
@@ -66,6 +70,34 @@ class GamesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def game_params
-    params.require(:game).permit(:game_title, :url)
+    params.require(:game).permit(:game_title,
+                                 :url,
+                                 :source,
+                                 :researcher,
+                                 :included,
+                                 :exclusion_notes,
+                                 :publication_year,
+                                 :developers,
+                                 :publisher,
+                                 :used_in_class,
+                                 :downloadable,
+                                 :discontinued,
+                                 :generalized_subject,
+                                 :subject1,
+                                 :subject2,
+                                 :remainder,
+                                 :teaching,
+                                 :college_users,
+                                 :cost,
+                                 :game_type,
+                                 :genre,
+                                 :tags,
+                                 :game_time,
+                                 :dimensions,
+                                 :sound,
+                                 :platform,
+                                 :spanish,
+                                 :other_languages,
+                                 :notes,)
   end
 end
