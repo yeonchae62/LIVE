@@ -94,6 +94,6 @@ class GamesController < ApplicationController
                                  :platform,
                                  :spanish,
                                  :other_languages,
-                                 :notes,)
+                                 :notes)
   end
 end
