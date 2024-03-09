@@ -36,10 +36,6 @@ class GamesController < ApplicationController
 
   # PATCH/PUT /games/1 or /games/1.json
   def update
-    # if @game.game_title == "" || @game.game_title == nil
-    #   flash[:notice] = "Game Title can't be blank"
-    #   redirect_to game_path(@game)
-    # end
     respond_to do |format|
       if @game.update(game_params)
         format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
