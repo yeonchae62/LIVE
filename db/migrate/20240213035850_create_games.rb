@@ -3,7 +3,7 @@
 class CreateGames < ActiveRecord::Migration[7.1]
   def change # rubocop:disable Metrics/MethodLength
     create_table :games do |g| # rubocop:disable Metrics/BlockLength
-      g.string 'game_title'
+      g.string 'game_title', null: false
       g.string 'url'
       g.string 'source'
       g.string 'researcher'
