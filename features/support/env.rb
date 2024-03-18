@@ -9,6 +9,10 @@
 require 'cucumber/rails'
 require 'simplecov'
 require 'simplecov_json_formatter'
+require 'devise'
+require 'devise/test/integration_helpers'
+World(Devise::Test::IntegrationHelpers)
+
 # SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start 'rails'
 

@@ -23,3 +23,14 @@ Feature: Create user account
     And I submit the registration form
     Then I should see a successful registration message
     And the user should have the default role
+
+  Scenario: User forgot password
+    Given I have a registered account
+    And I am on the forgot password page
+    When I fill in my email address
+    And I press "Send me reset password instructions"
+    Then I should receive an email with reset password instructions
+
+  Scenario: New user gets default role
+    Given a new user is created
+    Then the user's role should be user

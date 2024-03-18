@@ -16,5 +16,10 @@ RSpec.describe 'User Registration', type: :feature do
 
     # Add expectations based on your application's behavior
     expect(page).to have_content('Welcome to Our Website')
+
+    # check if role is user
+    user = User.last
+
+    expect(user.role).to eq('user')
   end
 end

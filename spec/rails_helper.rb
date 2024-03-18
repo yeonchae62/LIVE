@@ -28,6 +28,10 @@ RSpec.configure do |config|
   # Remove this line to enable support for ActiveRecord
   config.use_active_record = false
 
+  # for Devise
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
+
   # If you enable ActiveRecord support you should uncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
   # should set use_transactional_fixtures to false.

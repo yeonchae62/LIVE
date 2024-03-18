@@ -40,3 +40,31 @@ And('the user should have the default role') do
   user = User.last # Assuming the last created user is the one we just registered
   expect(user.role).to eq('user')
 end
+
+# Password Reset
+Given("I have a registered account") do
+  @user = User.create(email: "test@example.com", password: "password123")
+end
+
+And("I am on the forgot password page") do
+  visit new_user_password_path
+end
+
+When("I fill in my email address") do
+  fill_in "Email", with: "test@example.com"
+end
+
+Then("I should receive an email with reset password instructions") do
+  expect(ActionMailer::Base.deliveries.last.to).to eq(["test@example.com"])
+  expect(ActionMailer::Base.deliveries.last.subject).to eq("Reset password instructions")
+end
+
+# step_definitions/user_steps.rb
+
+Given("a new user is created") do
+  @user = User.new(email: "test@example.com", password: "password123", password_confirmation: "password123")
+end
+
+Then("the user's role should be user") do
+  expect(@user.role).to eq("user") # Assuming the default role is 'user'
+end
