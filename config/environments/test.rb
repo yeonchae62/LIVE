@@ -7,6 +7,10 @@ require 'active_support/core_ext/integer/time'
 # your test database is "scratch space" for the test suite and is wiped
 # and recreated between test runs. Don't rely on the data there!
 
+Devise.setup do |config|
+  config.secret_key = Rails.application.secret_key_base
+end
+
 Rails.application.configure do
   # Configure 'rails notes' to inspect Cucumber files
   config.annotations.register_directories('features')
