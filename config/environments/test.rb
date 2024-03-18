@@ -12,10 +12,9 @@ Devise.setup do |config|
 end
 
 Rails.application.configure do
-
   # Devise password reset
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  
+
   # Configure 'rails notes' to inspect Cucumber files
   config.annotations.register_directories('features')
   config.annotations.register_extensions('feature') { |tag| /#\s*(#{tag}):?\s*(.*)$/ }
