@@ -9,7 +9,7 @@
 require 'cucumber/rails'
 require 'simplecov'
 require 'simplecov_json_formatter'
-#SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
+# SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start 'rails'
 
 # By default, any exception happening in your Rails application will bubble up
