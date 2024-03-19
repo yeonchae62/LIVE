@@ -39,7 +39,8 @@ parsed_csv&.each do |row|
       platform: row['Platform'],
       spanish: row['Available in Spanish'],
       other_languages: row['Available in other languages'],
-      notes: row['Notes']
+      notes: row['Notes'],
+      image: row['Image']
     }
   )
 end
