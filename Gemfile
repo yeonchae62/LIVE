@@ -79,3 +79,5 @@ group :production do
   # for Heroku deployment
   gem 'pg'
 end
+
+gem 'will_paginate', '~> 4.0'
