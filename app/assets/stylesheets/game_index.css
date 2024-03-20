@@ -1,0 +1,36 @@
+.button-container {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust margin between buttons and games */
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: calc(50% - 10px);
+  margin: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.game-info {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.game-image {
+  width: 100%;
+  height: auto;
+}
+
+.pagination-container {
+  text-align: center;
+}

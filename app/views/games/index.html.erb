@@ -2,29 +2,43 @@
 
 <h1>Games</h1>
 
-<%= link_to "Return to main", main_page_path, class: "button" %>
-<%= link_to "New Game", new_game_path, class: "button" %>
-<div id="games">
-  <% @games.each do |game| %>
-    <div id="game_<%= game.id %>">
-      <p>
-        <strong>Game Title:</strong>
-        <%= game.game_title %>
-      </p>
-      <p>
-        <strong>URL:</strong>
-        <%= game.url %>
-      </p>
-      <p>
-        <strong>Platform(s):</strong>
-        <%= game.platform %>
-      </p>
-      <%#= render game %>
+<div class="button-container">
+  <%= link_to "Return to main", main_page_path, class: "button" %>
+  <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
+  <%= link_to "New Game", new_game_path, class: "button" %>
+</div>
+
+
+<div class="games-container">
+  <% @games.each_with_index do |game, index| %>
+    <div class="game <%= index.even? ? 'left' : 'right' %>">
+      <div class="game-info">
+        <p>
+          <strong>Game Title:</strong>
+          <%= game.game_title %>
+        </p>
+        <p>
+          <strong>URL:</strong>
+          <%= game.url %>
+        </p>
+        <p>
+          <strong>Contents Info</strong>
+          <% if game.image.present? %>
+            <img src="<%= game.image %>" alt="Image 1" class="game-image">
+          <% else %>
+            <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="Default Image" class="game-image">
+          <% end %>
+        </p>
+        <p>
+          <strong>Platform(s):</strong>
+          <%= game.platform %>
+        </p>
+        <%= link_to "Show this game", game %>
+      </div>
     </div>
-    <p>
-      <%= link_to "Show this game", game %>
-    </p>
   <% end %>
 </div>
 
-<%= will_paginate @games %>
+<div class="pagination-container">
+  <%= will_paginate @games %>
+</div>
