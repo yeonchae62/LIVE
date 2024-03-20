@@ -3,8 +3,10 @@
 require 'csv'
 
 # Seed the EVG DB with all included games from the CSV file.
-evg_csv_text = Rails.root.join('lib/seeds/2024GamesDatabaseGeneralized.csv').read
-parsed_csv = CSV.parse(evg_csv_text, headers: true, encoding: 'ISO-8859-1')
+csv_file_path = Rails.root.join('lib/seeds/2024GamesDatabaseGeneralized.csv')
+csv_file_content = File.read(csv_file_path, encoding: 'UTF-8')
+parsed_csv = CSV.parse(csv_file_content, headers: true)
+
 parsed_csv&.each do |row|
   next unless row['Included'] == 'TRUE'
 
