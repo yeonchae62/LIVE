@@ -31,13 +31,6 @@ Then('I should be on the {string} details page') do |game_title|
   expect(page).to have_current_path(game_path(game), ignore_query: true)
 end
 
-# When('I click {string} for the game titled {string}') do |_link_text, game_title|
-#   # Find the div that contains the game title
-#   game_div = find('div#games').all('div').find { |div| div.has_text?(game_title) }
-#
-#   link = game_div.find(:xpath, './following-sibling::p[1]').find('a')
-#   link.click
-# end
 When('I click {string} for the game titled {string}') do |link_text, game_title|
   # Find the div that contains the game title. Note: Adjusted to not rely on div#games
   game_div = all('div.game-info').find { |div| div.has_text?(game_title) }
@@ -46,7 +39,6 @@ When('I click {string} for the game titled {string}') do |link_text, game_title|
   link = game_div.find_link(link_text)
   link.click
 end
-
 
 Then('I should see {string} on the page') do |search_text|
   full_page_text = find('body').text
