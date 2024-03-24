@@ -10,14 +10,6 @@
 <%= render "form", game: @game %>
 
 
-
-<div class="games-container">
-  <% if @game.image.present? %>
-    <img src="<%= @game.image %>" alt="Game Image">
-  <% end %>
-</div>
-
-
 <div>
   <%= link_to "Show this game", @game %> |
   <%= link_to 'Cancel Edit', games_path, :class => 'btn btn-secondary' %>
