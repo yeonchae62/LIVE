@@ -9,7 +9,14 @@
 
 <%= render "form", game: @game %>
 
-<br>
+
+
+<div class="games-container">
+  <% if @game.image.present? %>
+    <img src="<%= @game.image %>" alt="Game Image">
+  <% end %>
+</div>
+
 
 <div>
   <%= link_to "Show this game", @game %> |
