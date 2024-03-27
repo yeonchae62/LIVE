@@ -117,6 +117,15 @@
     <%= form.label :notes, 'Notes', :class => 'col-form-label' %>
     <%= form.text_field 'notes', :class => 'form-control' %>
   </div>
+  <div class="editform">
+  <%= form.label :image, 'Game image', :class => 'col-form-label' %>
+  <%= form.text_field 'image', :class => 'form-control' %>
+</div>
+<div class="games-container">
+  <% if @game.image.present? %>
+    <img src="<%= @game.image %>" alt="Game Image">
+  <% end %>
+</div>
 
   <div>
     <%= form.submit %>
