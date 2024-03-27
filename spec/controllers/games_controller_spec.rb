@@ -6,10 +6,24 @@ RSpec.describe GamesController do
   let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
 
   describe 'GET #index' do
-    it 'assigns @games and renders the index template' do
-      get :index
-      expect(assigns(:games)).to eq([game])
-      expect(response).to render_template('index')
+    context 'without search parameters' do
+      it 'assigns all games as @games and renders the index template' do
+        get :index
+        expect(assigns(:games)).to eq([game])
+        expect(response).to render_template('index')
+      end
+    end
+
+    context 'with search parameters' do
+      let!(:matching_game) do
+        Game.create!(game_title: 'Special Search Term', source: 'Another Source',
+                     publication_year: '2022', subject1: 'Subject1', subject2: 'Subject2')
+      end
+
+      it 'assigns matching games as @games' do
+        get :index, params: { search: 'special search' }
+        expect(assigns(:games)).to contain_exactly(matching_game)
+      end
     end
   end
 
