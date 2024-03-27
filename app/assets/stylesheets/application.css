@@ -93,7 +93,7 @@ h2 {
     border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
 }
 
-.search-container button {
+.search-container-button {
     padding: 15px 25px; /* Add padding */
     font-size: 16px; /* Set font size */
     background-color: #007bff; /* Set background color */
@@ -103,40 +103,11 @@ h2 {
     cursor: pointer; /* Change cursor on hover */
 }
 
-.search-container button:hover {
+.search-container-button:hover {
     background-color: #0056b3; /* Darker background color on hover */
     border-color: #0056b3; /* Darker border color on hover */
 }
 
-
-.search-container {
-    display: flex; /* Use flexbox for layout */
-    max-width: 600px; /* Set maximum width for the container */
-    width: 100%; /* Make container full width */
-}
-
-.search-container input[type="text"] {
-    flex: 1; /* Input field takes up remaining space */
-    padding: 15px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
-}
-
-.search-container button {
-    padding: 15px 25px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: 1px solid #007bff; /* Add border */
-    border-radius: 0 5px 5px 0; /* Rounded corners (right side only) */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.search-container button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
-    border-color: #0056b3; /* Darker border color on hover */
-}
 
 
 /*LogIn*/
