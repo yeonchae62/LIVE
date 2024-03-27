@@ -5,7 +5,11 @@ class GamesController < ApplicationController
 
   # GET /games or /games.json
   def index
-    @games = Game.paginate(page: params[:page], per_page: 6)
+    @games = if params[:search].present?
+               search_games(params[:search]).paginate(page: params[:page], per_page: 6)
+             else
+               Game.paginate(page: params[:page], per_page: 6)
+             end
   end
 
   # GET /games/1 or /games/1.json
@@ -95,5 +99,10 @@ class GamesController < ApplicationController
                                  :spanish,
                                  :other_languages,
                                  :notes)
+  end
+
+  def search_games(term)
+    search_term = "%#{term.downcase}%"
+    Game.search_by_term(search_term).order_relevance(search_term)
   end
 end
