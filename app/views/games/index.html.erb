@@ -2,6 +2,13 @@
 
 <h1>Games</h1>
 
+<%= form_with url: games_path, method: :get, local: true do |form| %>
+  <div class="search-container">
+    <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
+    <%= form.submit "Search", class: "search-container-button" %>
+  </div>
+<% end %>
+
 <div class="button-container">
   <%= link_to "Return to main", main_page_path, class: "button" %>
   <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
