@@ -125,3 +125,30 @@ h2 {
 .login-link:hover {
   background-color: #0056b3;
 }
+
+/* Flash Messages Styles */
+.flash {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.flash.notice {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.flash.alert {
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}
+
+.flash.info {
+    background-color: #d9edf7;
+    color: #31708f;
+    border-color: #bce8f1;
+}

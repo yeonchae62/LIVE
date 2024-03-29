@@ -48,9 +48,9 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
 end
 
 users = [
-  { email: 'user1@example.com', password: 'user1@example.com', role: 0 },
-  { email: 'user2@example.com', password: 'user2@example.com', role: 1 },
-  { email: 'user3@example.com', password: 'user3@example.com', role: 2 }
+  { email: 'user@example.com', password: 'user@example.com', role: 0 },
+  { email: 'moderator@example.com', password: 'moderator@example.com', role: 1 },
+  { email: 'admin@example.com', password: 'admin@example.com', role: 2 }
 ]
 
 users.each do |user_attrs|
