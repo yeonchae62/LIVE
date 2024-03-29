@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
-    <h1> User Management </h1>
-</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .role-select {
+            width: 100%;
+        }
+        
+        .submit-btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.email %></li>
-  <% end %>
-</ul>
+<body>
+    <h1>User Management</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Change Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @users.each do |user| %>
+            <tr>
+                <td><%= user.email %></td>
+                <td><%= user.role %></td>
+                <td>
+                    <form action="/change_role" method="POST">
+                        <input type="hidden" name="user_id" value="<%= user.id %>">
+                        <select name="role" class="role-select">
+                            <option value="admin">Admin</option>
+                            <option value="moderator">Moderator</option>
+                            <option value="user">User</option>
+                        </select>
+                        <input type="submit" value="Change Role" class="submit-btn">
+                    </form>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</body>
 
 </html>

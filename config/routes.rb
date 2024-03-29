@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
   get '/login', to: 'main#login'
   get '/user_management', to: 'main#user_management'
+  post '/change_role', to: 'main#change_role'
 
   get '/', to: 'main#index', as: :main_page
 
