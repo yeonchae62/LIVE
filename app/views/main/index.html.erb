@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +24,12 @@
 
   <p>This is a project of educational video games for LIVE Lab</p>
 
+  <%= form_with url: games_path, method: :get, local: true do |form| %>
   <div class="search-container">
-    <input type="text" placeholder="Search...">
-    <button type="submit">Search</button>
+    <%= form.text_field :search, placeholder: "Search..." %>
+    <%= form.submit "Search", class: "search-container-button" %>
   </div>
+  <% end %>
 
 
 
