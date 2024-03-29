@@ -9,7 +9,5 @@ Feature: User Management
   Scenario: Changing user role
     Given there are existing users
     When I visit the user management page
-    When I change the role of a user
-    Then I should see a success message
-    And the user's role should be updated
-
+    When I change the role of a user to admin
+    Then I should see user role as admin
