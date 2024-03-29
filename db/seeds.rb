@@ -7,8 +7,7 @@ csv_file_path = Rails.root.join('lib/seeds/2024GamesDatabaseGeneralized.csv')
 csv_file_content = File.read(csv_file_path, encoding: 'UTF-8')
 parsed_csv = CSV.parse(csv_file_content, headers: true)
 
-
-parsed_csv&.each do |row|
+parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
   next unless row['Included'] == 'TRUE'
 
   Game.create!(
