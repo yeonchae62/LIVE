@@ -51,9 +51,9 @@
                     <form action="/change_role" method="POST">
                         <input type="hidden" name="user_id" value="<%= user.id %>">
                         <select name="role" class="role-select">
-                            <option value="admin">Admin</option>
-                            <option value="moderator">Moderator</option>
-                            <option value="user">User</option>
+                          <option value="admin" <%= 'selected' if user.role == 'admin' %>>Admin</option>
+                          <option value="moderator" <%= 'selected' if user.role == 'moderator' %>>Moderator</option>
+                          <option value="user" <%= 'selected' if user.role == 'user' %>>User</option>
                         </select>
                         <input type="submit" value="Change Role" class="submit-btn">
                     </form>
