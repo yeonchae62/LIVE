@@ -48,5 +48,15 @@ parsed_csv&.each do |row|
   )
 end
 
+users = [
+  { email: 'user1@example.com', password: 'user1@example.com', role: 0 },
+  { email: 'user2@example.com', password: 'user2@example.com', role: 1 },
+  { email: 'user3@example.com', password: 'user3@example.com', role: 2 }
+]
+
+users.each do |user_attrs|
+  User.create!(user_attrs)
+end
+
 # use rails logger, this is only here for testing in the meantime
 # puts "There are now #{Game.count} rows in the games table"
