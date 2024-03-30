@@ -47,5 +47,15 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
   )
 end
 
+users = [
+  { email: 'user@example.com', password: 'user@example.com', role: 0 },
+  { email: 'moderator@example.com', password: 'moderator@example.com', role: 1 },
+  { email: 'admin@example.com', password: 'admin@example.com', role: 2 }
+]
+
+users.each do |user_attrs|
+  User.create!(user_attrs)
+end
+
 # use rails logger, this is only here for testing in the meantime
 # puts "There are now #{Game.count} rows in the games table"
