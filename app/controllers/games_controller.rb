@@ -85,4 +85,5 @@ class GamesController < ApplicationController
     search_term = "%#{term.downcase}%"
     Game.search_by_term(search_term).order_relevance(search_term)
   end
+  
 end

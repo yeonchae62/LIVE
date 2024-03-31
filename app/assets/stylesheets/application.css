@@ -35,6 +35,21 @@ h2 {
 
 /*Button*/
 
+.centered-button {
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
 .button {
     display: inline-block;
     padding: 10px 20px;
