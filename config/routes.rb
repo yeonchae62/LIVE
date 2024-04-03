@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'main#index'
-  resources :games
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,6 +14,12 @@ Rails.application.routes.draw do
   post '/change_role', to: 'main#change_role'
 
   get '/', to: 'main#index', as: :main_page
+
+  resources :games do
+    collection do
+      get 'cost'
+    end
+  end
 
   # Defines the root path route ("/")
   # root "posts#index"

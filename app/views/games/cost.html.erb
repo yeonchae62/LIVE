@@ -1,0 +1,18 @@
+<!-- app/views/games/cost.html.erb -->
+<h1>All Games with Cost</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Game.all.each do |game| %>
+      <tr>
+        <td><%= game.game_title %></td>
+        <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
