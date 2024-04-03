@@ -42,3 +42,11 @@ end
 Then('I should be redirected to the game list page') do
   expect(page).to have_current_path(games_path, ignore_query: true)
 end
+
+Then(/^I should see a message saying "([^"]*)"$/) do |msg|
+  expect(page).to have_text(msg)
+end
+
+When(/^I press the "([^"]*)" button without entering any search text$/) do |arg|
+  click_on arg
+end
