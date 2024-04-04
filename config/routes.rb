@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :games do
     collection do
       get 'cost'
+      get 'publication_year'
+      get 'dimensions'
     end
   end
 
