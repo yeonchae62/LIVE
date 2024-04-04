@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Information</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 
 <p style="color: green"><%= notice %></p>
 
 <h1>Game Information</h1>
+
+<%= link_to "Visit this Game", @game.url, class: "search-container-button" %>
 
 <div class="games-container">
   <table>
