@@ -12,7 +12,9 @@
 
   <body>
     <% flash.each do |message_type, message| %>
-      <div class="flash <%= message_type %>"><%= message %></div>
+      <% unless message_type.to_s == 'timedout' %>
+        <div class="flash <%= message_type %>"><%= message %></div>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>
