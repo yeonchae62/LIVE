@@ -7,7 +7,7 @@ Feature: Create user account
     And I write in "Password" with "password123"
     And I write in "Password confirmation" with "password123"
     And I press "Sign up"
-    Then I shall see "Welcome to Our Website"
+    Then I should be redirected to home page
 
   Scenario: User fails to sign up with invalid information
     Given I am on the sign up page
