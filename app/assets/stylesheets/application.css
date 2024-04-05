@@ -157,6 +157,7 @@ h2 {
 .navbar {
     background-color: #333;
     overflow: hidden;
+    height: 80px;
 }
 
 .navbar a {
@@ -166,7 +167,9 @@ h2 {
     text-align: center;
     text-decoration: none;
     padding: 10px 10px 10px 15px;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .navbar a.active {
@@ -176,6 +179,7 @@ h2 {
 .navbar a:hover {
     /*background-color: #ddd;*/
     color: #1a9fff;
+    text-shadow: 0 0 2px #1a9fff;
 }
 
 .navbar .navbar-logo{
@@ -185,7 +189,7 @@ h2 {
 
 .navbar-logo img{
     display: block;
-    height:40px;
+    height:60px;
 }
 
 .navbar .navbar-logo:hover {
@@ -199,7 +203,7 @@ h2 {
     height: 2px;
     background: #1a9fff;
     border-radius: 3px;
-    animation: slide 0.1s;
+    animation: slide 0.3s;
     margin-top: 2px;
 }
 
