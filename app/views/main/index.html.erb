@@ -7,22 +7,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Our Website</title>
+<!--  <title>Welcome to Our Website</title>-->
 <!--  <link rel="stylesheet" href="application.css">-->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-  <h1>Live Lab</h1>
+<!--  <h1>Live Lab</h1>-->
   
-  <h2>Welcome to Our Website</h2>
+<!--  <h2>Welcome to Our Website</h2>-->
 
   <!-- Login-->
   <%= link_to "Log In", login_path, class: "button" %>
   <!-- <a href="/login" class="login-link">Login</a>-->
 
 
-  <p>This is a project of educational video games for LIVE Lab</p>
+<!--  <p>This is a project of educational video games for LIVE Lab</p>-->
 
   <%= form_with url: games_path, method: :get, local: true do |form| %>
   <div class="search-container">
@@ -46,10 +46,10 @@
   <!-- Layouts-->
 
   <!-- Link to User Management Page -->
-  <%= link_to "User Management", user_management_path, class: "button" %>
+  <%#= link_to "User Management", user_management_path, class: "button" %>
 
   <!-- Games-->
-  <%= link_to "View All Games", "/games", class: "button" %>
+  <%#= link_to "View All Games", "/games", class: "button" %>
   <!-- <%= link_to "View All Games", "/games" %>-->
 </body>
 </html>
