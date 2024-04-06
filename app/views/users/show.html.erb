@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+      <div class="profile">
+        <h1>My Profile</h1>
+        <p>Email: <%= current_user.email %></p>
+        <p>Role: <%= current_user.role %></p>
+        <%= link_to 'Change Password', edit_user_registration_path %>
+        <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete %>
+      </div>
+</body>
+

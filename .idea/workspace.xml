@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/user_management_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/user_management_steps.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/user_management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/user_management.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/main_page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/main_page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/step_definitions/main_page_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/main_page_steps.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +56,27 @@
     "Cucumber.Scenario: Main page game container visibility (4).executor": "Run",
     "Cucumber.Scenario: Main page game container visibility (5).executor": "Run",
     "Cucumber.Scenario: Main page game container visibility.executor": "Run",
+    "Cucumber.Scenario: Navigating from one page to another using the navigation bar.executor": "Run",
+    "Cucumber.Scenario: Navigation bar on the Homepage (1).executor": "Run",
+    "Cucumber.Scenario: Navigation bar on the Homepage.executor": "Run",
+    "Cucumber.Scenario: No results found for a specific search (1).executor": "Run",
+    "Cucumber.Scenario: No results found for a specific search.executor": "Run",
     "Cucumber.Scenario: Results are ordered by relevance.executor": "Run",
     "Cucumber.Scenario: Search redirects to the game list page (1).executor": "Run",
     "Cucumber.Scenario: Search redirects to the game list page.executor": "Run",
+    "Cucumber.Scenario: Search with empty input returns all games.executor": "Run",
     "Cucumber.Scenario: Search with matching criteria (1).executor": "Run",
     "Cucumber.Scenario: Search with matching criteria (2).executor": "Run",
     "Cucumber.Scenario: Search with matching criteria.executor": "Run",
     "Cucumber.Scenario: Search without parameters.executor": "Run",
+    "Cucumber.Scenario: Show a button to log in if not logged in (1).executor": "Run",
+    "Cucumber.Scenario: Show a button to log in if not logged in.executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page (1).executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page (2).executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page (3).executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page (4).executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page (5).executor": "Run",
+    "Cucumber.Scenario: Signing out from the \"My Profile\" page.executor": "Run",
     "Cucumber.Scenario: Updating a game (1).executor": "Run",
     "Cucumber.Scenario: Updating a game.executor": "Run",
     "Cucumber.Scenario: User visits the main page (1).executor": "Run",
@@ -75,6 +86,7 @@
     "Cucumber.Scenario: Viewing games (1).executor": "Run",
     "Cucumber.Scenario: Viewing games (2).executor": "Run",
     "Cucumber.Scenario: Viewing games.executor": "Run",
+    "Cucumber.Scenario: Viewing the \"My Profile\" page.executor": "Run",
     "Cucumber.Scenario: Viewing the main page content.executor": "Run",
     "Cucumber.Scenario: Visitor clicks on a game title link (1).executor": "Run",
     "Cucumber.Scenario: Visitor clicks on a game title link (2).executor": "Run",
@@ -86,6 +98,7 @@
     "Cucumber.main_page.feature.executor": "Run",
     "Cucumber.search_games.feature.executor": "Run",
     "Cucumber.user_account.feature.executor": "Run",
+    "Cucumber.user_profile.feature.executor": "Run",
     "RSpec.Game is not valid with duplicated title.executor": "Run",
     "RSpec.Game is not valid without a title.executor": "Run",
     "RSpec.Game is not valid without a url.executor": "Run",
@@ -119,12 +132,14 @@
     "RSpec.MainController.executor": "Run",
     "RSpec.MainPage User visits the main page.executor": "Run",
     "RSpec.MainPage.executor": "Run",
+    "RSpec.User Registration.executor": "Run",
+    "RSpec.UsersController.executor": "Run",
     "Rails.LIVE.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Test::Unit/Shoulda/Minitest.GamesControllerTest.executor": "Run",
     "Test::Unit/Shoulda/Minitest.MainControllerTest.executor": "Run",
-    "git-widget-placeholder": "user__management",
+    "git-widget-placeholder": "xiuyu",
     "last_opened_file_path": "/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -148,6 +163,7 @@
       <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/features" />
     </key>
   </component>
@@ -158,8 +174,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber.Scenario: Admin changes a user's role (2)">
-    <configuration name="Scenario: Admin changes a user's role (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+  <component name="RunManager" selected="Cucumber.Scenario: Navigating from one page to another using the navigation bar (1)">
+    <configuration name="Scenario: Navigating from one page to another using the navigation bar (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <module name="LIVE" />
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -181,9 +197,9 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/user_management.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/main_page.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Admin changes a user's role$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Navigating from one page to another using the navigation bar$" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
@@ -196,7 +212,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
-    <configuration name="Scenario: Admin changes a user's role (2)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+    <configuration name="Scenario: Navigating from one page to another using the navigation bar" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <module name="LIVE" />
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -218,9 +234,9 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/user_management.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/main_page.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Admin changes a user's role$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Navigating from one page to another using the navigation bar$" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
@@ -233,7 +249,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
-    <configuration name="Scenario: Admin changes a user's role" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+    <configuration name="Scenario: Navigation bar on the Homepage (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <module name="LIVE" />
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -255,9 +271,46 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/user_management.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/main_page.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Admin changes a user's role$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Navigation bar on the Homepage$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="true" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario: Navigation bar on the Homepage" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <module name="LIVE" />
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/main_page.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^Navigation bar on the Homepage$" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
@@ -303,16 +356,15 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
-    <configuration name="MainController POST #change_role redirects to the user_management path with a notice" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+    <configuration name="user_account.feature" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <module name="LIVE" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs>
-        <env name="RAILS_ENV" value="test" />
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
@@ -322,59 +374,23 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/controllers/main_controller_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="MainController POST #change_role redirects to the user_management path with a notice" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MainController" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
-      <module name="LIVE" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/controllers/main_controller_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="MainController" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/features/user_account.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="true" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -595,11 +611,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber.Scenario: Admin changes a user's role (2)" />
-        <item itemvalue="Cucumber.Scenario: Admin changes a user's role (1)" />
-        <item itemvalue="Cucumber.Scenario: Admin changes a user's role" />
-        <item itemvalue="RSpec.MainController" />
-        <item itemvalue="RSpec.MainController POST #change_role redirects to the user_management path with a notice" />
+        <item itemvalue="Cucumber.Scenario: Navigating from one page to another using the navigation bar (1)" />
+        <item itemvalue="Cucumber.Scenario: Navigating from one page to another using the navigation bar" />
+        <item itemvalue="Cucumber.Scenario: Navigation bar on the Homepage (1)" />
+        <item itemvalue="Cucumber.Scenario: Navigation bar on the Homepage" />
+        <item itemvalue="Cucumber.user_account.feature" />
       </list>
     </recent_temporary>
   </component>
@@ -627,65 +643,49 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LIVE@search_games_feature.rcov" NAME="search_games.feature Coverage Results" MODIFIED="1711646174552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@MainPage_User_visits_the_main_page.rcov" NAME="MainPage User visits the main page Coverage Results" MODIFIED="1710903478530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_games.rcov" NAME="Scenario: Viewing games Coverage Results" MODIFIED="1710906602276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__2_.rcov" NAME="Scenario: Creating a new game (2) Coverage Results" MODIFIED="1708056905779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController_PATCH_PUT__update.rcov" NAME="GamesController PATCH/PUT #update Coverage Results" MODIFIED="1708119205315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__2_.rcov" NAME="Scenario: Visitor clicks on a game title link (2) Coverage Results" MODIFIED="1710965585642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__5_.rcov" NAME="Scenario: Creating a new game (5) Coverage Results" MODIFIED="1708057433434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Updating_a_game.rcov" NAME="Scenario: Updating a game Coverage Results" MODIFIED="1708058764985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_with_matching_criteria.rcov" NAME="Scenario: Search with matching criteria Coverage Results" MODIFIED="1711647573727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@main_page_feature.rcov" NAME="main_page.feature Coverage Results" MODIFIED="1710965539765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_GET__games.rcov" NAME="Games GET /games Coverage Results" MODIFIED="1707702218292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Updating_a_game__1_.rcov" NAME="Scenario: Updating a game (1) Coverage Results" MODIFIED="1708058847591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_CRUD_operations.rcov" NAME="Games CRUD operations Coverage Results" MODIFIED="1708049237746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role__2_.rcov" NAME="Scenario: Admin changes a user's role (2) Coverage Results" MODIFIED="1711748284467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@UsersController.rcov" NAME="UsersController Coverage Results" MODIFIED="1712170945438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page__3_.rcov" NAME="Scenario: User visits the main page (3) Coverage Results" MODIFIED="1708120516628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_with_duplicated_title.rcov" NAME="Game is not valid with duplicated title Coverage Results" MODIFIED="1707685442626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_management.rcov" NAME="Games management Coverage Results" MODIFIED="1707689648636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_management_Deleting_a_game.rcov" NAME="Game management Deleting a game Coverage Results" MODIFIED="1708053501624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Show_a_button_to_log_in_if_not_logged_in__1_.rcov" NAME="Scenario: Show a button to log in if not logged in (1) Coverage Results" MODIFIED="1712173332494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__No_results_found_for_a_specific_search.rcov" NAME="Scenario: No results found for a specific search Coverage Results" MODIFIED="1712106954860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Show_a_button_to_log_in_if_not_logged_in.rcov" NAME="Scenario: Show a button to log in if not logged in Coverage Results" MODIFIED="1712173206479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController.rcov" NAME="GamesController Coverage Results" MODIFIED="1711577119650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility__1_.rcov" NAME="Scenario: Main page game container visibility (1) Coverage Results" MODIFIED="1710965326020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index_with_search_parameters.rcov" NAME="GamesController GET #index with search parameters Coverage Results" MODIFIED="1711577024856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Results_are_ordered_by_relevance.rcov" NAME="Scenario: Results are ordered by relevance Coverage Results" MODIFIED="1711648347934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_management_Creating_a_new_game.rcov" NAME="Game management Creating a new game Coverage Results" MODIFIED="1708051828707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game.rcov" NAME="Scenario: Creating a new game Coverage Results" MODIFIED="1710909871355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Navigation_bar_on_the_Homepage__1_.rcov" NAME="Scenario: Navigation bar on the Homepage (1) Coverage Results" MODIFIED="1712342911497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility__4_.rcov" NAME="Scenario: Main page game container visibility (4) Coverage Results" MODIFIED="1710964846383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@user_account_feature.rcov" NAME="user_account.feature Coverage Results" MODIFIED="1711648739027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@user_account_feature.rcov" NAME="user_account.feature Coverage Results" MODIFIED="1712341648155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Navigating_from_one_page_to_another_using_the_navigation_bar.rcov" NAME="Scenario: Navigating from one page to another using the navigation bar Coverage Results" MODIFIED="1712343010701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_with_matching_criteria__2_.rcov" NAME="Scenario: Search with matching criteria (2) Coverage Results" MODIFIED="1711648026192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game__2_.rcov" NAME="Scenario: Deleting a game (2) Coverage Results" MODIFIED="1708059051511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@LIVE.rcov" NAME="LIVE Coverage Results" MODIFIED="1707023633540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_CRUD_operations_Delete_a_game.rcov" NAME="Games CRUD operations Delete a game Coverage Results" MODIFIED="1708049807650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@_feature.rcov" NAME=".feature Coverage Results" MODIFIED="1708059360340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__5_.rcov" NAME="Scenario: Visitor clicks on a game title link (5) Coverage Results" MODIFIED="1710909166358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__No_results_found_for_a_specific_search__1_.rcov" NAME="Scenario: No results found for a specific search (1) Coverage Results" MODIFIED="1712107064244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_Visiting_the_games_index_page.rcov" NAME="Games Visiting the games index page Coverage Results" MODIFIED="1708118528578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page__2_.rcov" NAME="Scenario: User visits the main page (2) Coverage Results" MODIFIED="1708120492258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_test_valid_url_format.rcov" NAME="Game test valid url format Coverage Results" MODIFIED="1707683165945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page__5_.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page (5) Coverage Results" MODIFIED="1712174624335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_games__2_.rcov" NAME="Scenario: Viewing games (2) Coverage Results" MODIFIED="1708058467012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__3_.rcov" NAME="Scenario: Creating a new game (3) Coverage Results" MODIFIED="1708057137266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games.rcov" NAME="Games Coverage Results" MODIFIED="1708119827485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_the_main_page_content.rcov" NAME="Scenario: Viewing the main page content Coverage Results" MODIFIED="1710909583894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__4_.rcov" NAME="Scenario: Visitor clicks on a game title link (4) Coverage Results" MODIFIED="1710908969130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index_assigns__games_and_renders_the_index_template.rcov" NAME="GamesController GET #index assigns @games and renders the index template Coverage Results" MODIFIED="1707689959228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@game_management_feature.rcov" NAME="game_management.feature Coverage Results" MODIFIED="1708118852985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility__5_.rcov" NAME="Scenario: Main page game container visibility (5) Coverage Results" MODIFIED="1710964923199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_without_parameters.rcov" NAME="Scenario: Search without parameters Coverage Results" MODIFIED="1711645710865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@MainPage.rcov" NAME="MainPage Coverage Results" MODIFIED="1708120931567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page__2_.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page (2) Coverage Results" MODIFIED="1712174380491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page.rcov" NAME="Scenario: User visits the main page Coverage Results" MODIFIED="1710909270245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__4_.rcov" NAME="Scenario: Creating a new game (4) Coverage Results" MODIFIED="1708057229829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game.rcov" NAME="Scenario: Deleting a game Coverage Results" MODIFIED="1708058910622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_Navigating_to_the_new_game_page.rcov" NAME="Games Navigating to the new game page Coverage Results" MODIFIED="1708118719836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__1_.rcov" NAME="Scenario: Visitor clicks on a game title link (1) Coverage Results" MODIFIED="1710965525757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_redirects_to_the_game_list_page__1_.rcov" NAME="Scenario: Search redirects to the game list page (1) Coverage Results" MODIFIED="1711647257305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_DELETE__games__id.rcov" NAME="Games DELETE /games/:id Coverage Results" MODIFIED="1707702385531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link.rcov" NAME="Scenario: Visitor clicks on a game title link Coverage Results" MODIFIED="1710965502681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@MainControllerTest.rcov" NAME="MainControllerTest Coverage Results" MODIFIED="1707108076113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_management_Updating_a_game.rcov" NAME="Game management Updating a game Coverage Results" MODIFIED="1708053084451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_the__My_Profile__page.rcov" NAME="Scenario: Viewing the &quot;My Profile&quot; page Coverage Results" MODIFIED="1712173741470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility.rcov" NAME="Scenario: Main page game container visibility Coverage Results" MODIFIED="1710965018175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role.rcov" NAME="Scenario: Admin changes a user's role Coverage Results" MODIFIED="1711747370667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_with_matching_criteria__1_.rcov" NAME="Scenario: Search with matching criteria (1) Coverage Results" MODIFIED="1711647814570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@MainController.rcov" NAME="MainController Coverage Results" MODIFIED="1711745190992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page__1_.rcov" NAME="Scenario: User visits the main page (1) Coverage Results" MODIFIED="1710909741027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@MainController_POST__change_role_redirects_to_the_user_management_path_with_a_notice.rcov" NAME="MainController POST #change_role redirects to the user_management path with a notice Coverage Results" MODIFIED="1711744618266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game.rcov" NAME="Game Coverage Results" MODIFIED="1711641209863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesControllerTest.rcov" NAME="GamesControllerTest Coverage Results" MODIFIED="1707108987013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
@@ -694,21 +694,55 @@
     <SUITE FILE_PATH="coverage/LIVE@MainController_POST__change_role_updates_the_user_s_role.rcov" NAME="MainController POST #change_role updates the user's role Coverage Results" MODIFIED="1711744594167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_management_Viewing_games.rcov" NAME="Game management Viewing games Coverage Results" MODIFIED="1708051838170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__1_.rcov" NAME="Scenario: Creating a new game (1) Coverage Results" MODIFIED="1708056773475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games__1_.rcov" NAME="Games (1) Coverage Results" MODIFIED="1707799641230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_games__1_.rcov" NAME="Scenario: Viewing games (1) Coverage Results" MODIFIED="1710907168903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page__3_.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page (3) Coverage Results" MODIFIED="1712174522000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__3_.rcov" NAME="Scenario: Visitor clicks on a game title link (3) Coverage Results" MODIFIED="1710909245746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game__1_.rcov" NAME="Scenario: Deleting a game (1) Coverage Results" MODIFIED="1708058928550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_without_a_title.rcov" NAME="Game is not valid without a title Coverage Results" MODIFIED="1707797985870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@MainController_POST__change_role.rcov" NAME="MainController POST #change_role Coverage Results" MODIFIED="1711744352410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role__1_.rcov" NAME="Scenario: Admin changes a user's role (1) Coverage Results" MODIFIED="1711747409401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Game_test_url_format.rcov" NAME="Game test url format Coverage Results" MODIFIED="1707685154507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_POST__games.rcov" NAME="Games POST /games Coverage Results" MODIFIED="1707702246493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Games_PATCH__games__id_updates_the_specified_game.rcov" NAME="Games PATCH /games/:id updates the specified game Coverage Results" MODIFIED="1707702338828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_with_empty_input_returns_all_games.rcov" NAME="Scenario: Search with empty input returns all games Coverage Results" MODIFIED="1712107070361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@user_profile_feature.rcov" NAME="user_profile.feature Coverage Results" MODIFIED="1712173430991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_search_by_term.rcov" NAME="Game.search_by_term Coverage Results" MODIFIED="1711640772969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility__3_.rcov" NAME="Scenario: Main page game container visibility (3) Coverage Results" MODIFIED="1710964710882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
-    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_redirects_to_the_game_list_page.rcov" NAME="Scenario: Search redirects to the game list page Coverage Results" MODIFIED="1711647015998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Game_management.rcov" NAME="Game management Coverage Results" MODIFIED="1708053515253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@Games_management_User_creates_a_new_game.rcov" NAME="Games management User creates a new game Coverage Results" MODIFIED="1707689241103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
     <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index.rcov" NAME="GamesController GET #index Coverage Results" MODIFIED="1711576936357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@MainPage_User_visits_the_main_page.rcov" NAME="MainPage User visits the main page Coverage Results" MODIFIED="1710903478530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__2_.rcov" NAME="Scenario: Visitor clicks on a game title link (2) Coverage Results" MODIFIED="1710965585642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Updating_a_game__1_.rcov" NAME="Scenario: Updating a game (1) Coverage Results" MODIFIED="1708058847591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role__2_.rcov" NAME="Scenario: Admin changes a user's role (2) Coverage Results" MODIFIED="1711748284467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_is_not_valid_with_duplicated_title.rcov" NAME="Game is not valid with duplicated title Coverage Results" MODIFIED="1707685442626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_management.rcov" NAME="Games management Coverage Results" MODIFIED="1707689648636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page__1_.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page (1) Coverage Results" MODIFIED="1712174360831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page__4_.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page (4) Coverage Results" MODIFIED="1712174582781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_management_Deleting_a_game.rcov" NAME="Game management Deleting a game Coverage Results" MODIFIED="1708053501624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Signing_out_from_the__My_Profile__page.rcov" NAME="Scenario: Signing out from the &quot;My Profile&quot; page Coverage Results" MODIFIED="1712174640739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_management_Creating_a_new_game.rcov" NAME="Game management Creating a new game Coverage Results" MODIFIED="1708051828707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_CRUD_operations_Delete_a_game.rcov" NAME="Games CRUD operations Delete a game Coverage Results" MODIFIED="1708049807650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@_feature.rcov" NAME=".feature Coverage Results" MODIFIED="1708059360340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__5_.rcov" NAME="Scenario: Visitor clicks on a game title link (5) Coverage Results" MODIFIED="1710909166358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page__2_.rcov" NAME="Scenario: User visits the main page (2) Coverage Results" MODIFIED="1708120492258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_test_valid_url_format.rcov" NAME="Game test valid url format Coverage Results" MODIFIED="1707683165945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__3_.rcov" NAME="Scenario: Creating a new game (3) Coverage Results" MODIFIED="1708057137266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_the_main_page_content.rcov" NAME="Scenario: Viewing the main page content Coverage Results" MODIFIED="1710909583894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@GamesController_GET__index_assigns__games_and_renders_the_index_template.rcov" NAME="GamesController GET #index assigns @games and renders the index template Coverage Results" MODIFIED="1707689959228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Main_page_game_container_visibility__5_.rcov" NAME="Scenario: Main page game container visibility (5) Coverage Results" MODIFIED="1710964923199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@MainPage.rcov" NAME="MainPage Coverage Results" MODIFIED="1712340707096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Creating_a_new_game__4_.rcov" NAME="Scenario: Creating a new game (4) Coverage Results" MODIFIED="1708057229829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_Navigating_to_the_new_game_page.rcov" NAME="Games Navigating to the new game page Coverage Results" MODIFIED="1708118719836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Visitor_clicks_on_a_game_title_link__1_.rcov" NAME="Scenario: Visitor clicks on a game title link (1) Coverage Results" MODIFIED="1710965525757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Navigation_bar_on_the_Homepage.rcov" NAME="Scenario: Navigation bar on the Homepage Coverage Results" MODIFIED="1712342815702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_redirects_to_the_game_list_page__1_.rcov" NAME="Scenario: Search redirects to the game list page (1) Coverage Results" MODIFIED="1711647257305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@User_Registration.rcov" NAME="User Registration Coverage Results" MODIFIED="1712341161513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_DELETE__games__id.rcov" NAME="Games DELETE /games/:id Coverage Results" MODIFIED="1707702385531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role.rcov" NAME="Scenario: Admin changes a user's role Coverage Results" MODIFIED="1711747370667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_with_matching_criteria__1_.rcov" NAME="Scenario: Search with matching criteria (1) Coverage Results" MODIFIED="1711647814570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__User_visits_the_main_page__1_.rcov" NAME="Scenario: User visits the main page (1) Coverage Results" MODIFIED="1710909741027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games__1_.rcov" NAME="Games (1) Coverage Results" MODIFIED="1707799641230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Viewing_games__1_.rcov" NAME="Scenario: Viewing games (1) Coverage Results" MODIFIED="1710907168903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Deleting_a_game__1_.rcov" NAME="Scenario: Deleting a game (1) Coverage Results" MODIFIED="1708058928550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Admin_changes_a_user_s_role__1_.rcov" NAME="Scenario: Admin changes a user's role (1) Coverage Results" MODIFIED="1711747409401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@MainController_POST__change_role.rcov" NAME="MainController POST #change_role Coverage Results" MODIFIED="1711744352410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Game_test_url_format.rcov" NAME="Game test url format Coverage Results" MODIFIED="1707685154507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_POST__games.rcov" NAME="Games POST /games Coverage Results" MODIFIED="1707702246493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Games_PATCH__games__id_updates_the_specified_game.rcov" NAME="Games PATCH /games/:id updates the specified game Coverage Results" MODIFIED="1707702338828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
+    <SUITE FILE_PATH="coverage/LIVE@Scenario__Search_redirects_to_the_game_list_page.rcov" NAME="Scenario: Search redirects to the game list page Coverage Results" MODIFIED="1711647015998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LIVE" />
   </component>
 </project>

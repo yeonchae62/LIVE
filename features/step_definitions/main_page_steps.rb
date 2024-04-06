@@ -57,6 +57,7 @@ Then('I print the page HTML') do
   puts page.html # Outputs the current page HTML
 end
 
+
 Then('I should see a link to view games by cost') do
   expect(page).to have_link('View Games by Cost', href: cost_games_path)
 end
@@ -67,4 +68,22 @@ end
 
 Then('I should see a link to view 3D games') do
   expect(page).to have_link('3D', href: dimensions_games_path)
+
+Then(/^I should see a navigation bar$/) do
+  expect(page).to have_css('.navbar')
+end
+
+And(/^I should see links to "([^"]*)", "([^"]*)", "([^"]*)"$/) do |link1, link2, link3|
+  expect(page).to have_link(link1)
+  expect(page).to have_link(link2)
+  expect(page).to have_link(link3)
+end
+
+When(/^I click on the "([^"]*)" link in the navigation bar$/) do |arg|
+  click_on arg
+end
+
+Then(/^I should be on My Profile page$/) do
+  expect(page).to have_current_path(user_account_info_path, ignore_query: true)
+>>>>>>> main
 end

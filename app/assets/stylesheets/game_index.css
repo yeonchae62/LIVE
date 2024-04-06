@@ -34,3 +34,10 @@
 .pagination-container {
   text-align: center;
 }
+
+.no-results-message {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
