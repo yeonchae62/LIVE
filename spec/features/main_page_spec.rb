@@ -4,19 +4,19 @@
 require 'rails_helper'
 
 RSpec.describe 'MainPage' do
-  it "displays link to view games by cost" do
+  it 'displays link to view games by cost' do
     visit root_path
-    expect(page).to have_link("View Games by Cost", href: cost_games_path)
+    expect(page).to have_link('View Games by Cost', href: cost_games_path)
   end
 
-  it "displays link to view latest game" do
+  it 'displays link to view latest game' do
     visit root_path
-    expect(page).to have_link("Latest Game", href: publication_year_games_path)
+    expect(page).to have_link('Latest Game', href: publication_year_games_path)
   end
 
-  it "displays link to view 3D games" do
+  it 'displays link to view 3D games' do
     visit root_path
-    expect(page).to have_link("3D", href: dimensions_games_path)
+    expect(page).to have_link('3D', href: dimensions_games_path)
   end
 
   it 'User visits the main page' do
