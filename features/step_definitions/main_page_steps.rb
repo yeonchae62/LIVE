@@ -56,3 +56,15 @@ end
 Then('I print the page HTML') do
   puts page.html # Outputs the current page HTML
 end
+
+Then("I should see a link to view games by cost") do
+  expect(page).to have_link("View Games by Cost", href: cost_games_path)
+end
+
+Then("I should see a link to view latest game") do
+  expect(page).to have_link("Latest Game", href: publication_year_games_path)
+end
+
+Then("I should see a link to view 3D games") do
+  expect(page).to have_link("3D", href: dimensions_games_path)
+end

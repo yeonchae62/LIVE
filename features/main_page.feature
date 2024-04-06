@@ -29,3 +29,9 @@ Feature: Main Page Content and Navigation
     And I visit the main page
     When I click on the title of the first game
     Then I should be redirected to the game details page
+
+  Scenario: Displaying links
+    Given I am on the homepage
+    Then I should see a link to view games by cost
+    And I should see a link to view latest game
+    And I should see a link to view 3D games
