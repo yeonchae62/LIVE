@@ -14,8 +14,7 @@ RSpec.describe 'User Registration', type: :feature do
 
     click_on 'Sign up'
 
-    # Add expectations based on your application's behavior
-    expect(page).to have_content('Welcome to Our Website')
+    expect(page).to have_current_path(root_path)
 
     # check if role is user
     user = User.last

@@ -33,3 +33,16 @@ Feature: Search Games
     When I search for "Match"
     Then I should see "Match Game1" on the top of the game list
     And I should see "Game2" on the bottom of the game list
+
+  Scenario: No results found for a specific search
+    Given I am on the game list page
+    When I search for "Nonexistent Game"
+    Then I should see a message saying "No results found"
+
+  Scenario: Search with empty input returns all games
+    Given I am on the game list page
+    When I press the "Search" button without entering any search text
+    Then I should see a game titled "Match Game1"
+    And I should see a game titled "Game2"
+    And I should see a game titled "Game3"
+    And I should see a game titled "Game4"

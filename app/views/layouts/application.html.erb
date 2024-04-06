@@ -11,8 +11,19 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <%= link_to root_path, class: "navbar-logo" do %>
+        <%= image_tag 'logo.png', alt: 'EVG Library Logo', height: '50' %>
+      <% end %>
+      <%= link_to 'HOME', root_path, class: active_class(root_path) %>
+      <%= link_to 'GAMES', games_path, class: active_class(games_path) %>
+      <%= link_to 'MY PROFILE', user_account_info_path, class: active_class(user_account_info_path) %>
+      <%= link_to 'USER MANAGEMENT', user_management_path, class: active_class(user_management_path) %>
+    </div>
     <% flash.each do |message_type, message| %>
-      <div class="flash <%= message_type %>"><%= message %></div>
+      <% unless message_type.to_s == 'timedout' %>
+        <div class="flash <%= message_type %>"><%= message %></div>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>

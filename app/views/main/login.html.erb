@@ -10,7 +10,7 @@
 
     <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
 <% else %>
-    <p> Please create an account </p>
+    <p> Please Log in or create an account </p>
     <%= link_to "Sign up", new_user_registration_path %>
     <br />
     <%= link_to "Log in", new_user_session_path %>

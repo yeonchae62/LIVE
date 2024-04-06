@@ -33,7 +33,7 @@ And('I submit the registration form') do
 end
 
 Then('I should see a successful registration message') do
-  expect(page).to have_content('Welcome to Our Website')
+  expect(page).to have_content('Welcome! You have signed up successfully.')
 end
 
 And('the user should have the default role') do
