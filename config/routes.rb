@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   post '/change_role', to: 'main#change_role'
 
   get '/', to: 'main#index', as: :main_page
+  get '/games/cost', to: 'games#cost', as: 'games_with_cost'
+  get '/games/dimensions', to: 'games#dimensions', as: 'games_with_dimensions'
+  get '/games/publication_year', to: 'games#publication_year', as: 'games_with_publication_year'
 
   resources :games do
     collection do

@@ -68,6 +68,7 @@ end
 
 Then('I should see a link to view 3D games') do
   expect(page).to have_link('3D', href: dimensions_games_path)
+end
 
 Then(/^I should see a navigation bar$/) do
   expect(page).to have_css('.navbar')
@@ -85,5 +86,4 @@ end
 
 Then(/^I should be on My Profile page$/) do
   expect(page).to have_current_path(user_account_info_path, ignore_query: true)
->>>>>>> main
 end
