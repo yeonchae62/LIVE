@@ -93,7 +93,7 @@ h2 {
     border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
 }
 
-.search-container button {
+.search-container-button {
     padding: 15px 25px; /* Add padding */
     font-size: 16px; /* Set font size */
     background-color: #007bff; /* Set background color */
@@ -103,40 +103,11 @@ h2 {
     cursor: pointer; /* Change cursor on hover */
 }
 
-.search-container button:hover {
+.search-container-button:hover {
     background-color: #0056b3; /* Darker background color on hover */
     border-color: #0056b3; /* Darker border color on hover */
 }
 
-
-.search-container {
-    display: flex; /* Use flexbox for layout */
-    max-width: 600px; /* Set maximum width for the container */
-    width: 100%; /* Make container full width */
-}
-
-.search-container input[type="text"] {
-    flex: 1; /* Input field takes up remaining space */
-    padding: 15px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
-}
-
-.search-container button {
-    padding: 15px 25px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: 1px solid #007bff; /* Add border */
-    border-radius: 0 5px 5px 0; /* Rounded corners (right side only) */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.search-container button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
-    border-color: #0056b3; /* Darker border color on hover */
-}
 
 
 /*LogIn*/
@@ -154,3 +125,85 @@ h2 {
 .login-link:hover {
   background-color: #0056b3;
 }
+
+/* Flash Messages Styles */
+.flash {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.flash.notice {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.flash.alert {
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}
+
+.flash.info {
+    background-color: #d9edf7;
+    color: #31708f;
+    border-color: #bce8f1;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    height: 80px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 10px 10px 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbar a.active {
+    color: #1a9fff;
+}
+
+.navbar a:hover {
+    /*background-color: #ddd;*/
+    color: #1a9fff;
+    text-shadow: 0 0 2px #1a9fff;
+}
+
+.navbar .navbar-logo{
+    margin: 10px 10px 0 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.navbar-logo img{
+    display: block;
+    height:60px;
+}
+
+.navbar .navbar-logo:hover {
+    background-color: #333;
+}
+
+.navbar a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #1a9fff;
+    border-radius: 3px;
+    animation: slide 0.3s;
+    margin-top: 2px;
+}
+

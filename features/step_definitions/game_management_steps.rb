@@ -3,7 +3,7 @@
 # features/step_definitions/game_management_steps.rb
 
 Given('I have a game titled {string} with the url {string} and source {string}') do |title, url, source|
-  Game.create!(game_title: title, url:url, source:source)
+  Game.create!(game_title: title, url:, source:)
 end
 
 Given('I am on the game list page') do
@@ -11,7 +11,7 @@ Given('I am on the game list page') do
 end
 
 Given('I should see a {string} button') do |button_text|
-  page.should have_content(button_text)
+  expect(page).to have_content(button_text)
 end
 
 When('I click {string} button') do |button_text|
@@ -31,11 +31,12 @@ Then('I should be on the {string} details page') do |game_title|
   expect(page).to have_current_path(game_path(game), ignore_query: true)
 end
 
-When('I click {string} for the game titled {string}') do |_link_text, game_title|
-  # Find the div that contains the game title
-  game_div = find('div#games').all('div').find { |div| div.has_text?(game_title) }
+When('I click {string} for the game titled {string}') do |link_text, game_title|
+  # Find the div that contains the game title. Note: Adjusted to not rely on div#games
+  game_div = all('div.game-info').find { |div| div.has_text?(game_title) }
 
-  link = game_div.find(:xpath, './following-sibling::p[1]').find('a')
+  # Click the link by its text within the found div
+  link = game_div.find_link(link_text)
   link.click
 end
 

@@ -3,9 +3,11 @@
 require 'csv'
 
 # Seed the EVG DB with all included games from the CSV file.
-evg_csv_text = Rails.root.join('lib/seeds/2024GamesDatabaseGeneralized.csv').read
-parsed_csv = CSV.parse(evg_csv_text, headers: true, encoding: 'ISO-8859-1')
-parsed_csv&.each do |row|
+csv_file_path = Rails.root.join('lib/seeds/2024GamesDatabaseGeneralized.csv')
+csv_file_content = File.read(csv_file_path, encoding: 'UTF-8')
+parsed_csv = CSV.parse(csv_file_content, headers: true)
+
+parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
   next unless row['Included'] == 'TRUE'
 
   Game.create!(
@@ -39,9 +41,20 @@ parsed_csv&.each do |row|
       platform: row['Platform'],
       spanish: row['Available in Spanish'],
       other_languages: row['Available in other languages'],
-      notes: row['Notes']
+      notes: row['Notes'],
+      image: row['Image']
     }
   )
+end
+
+users = [
+  { email: 'user@example.com', password: 'user@example.com', role: 0 },
+  { email: 'moderator@example.com', password: 'moderator@example.com', role: 1 },
+  { email: 'admin@example.com', password: 'admin@example.com', role: 2 }
+]
+
+users.each do |user_attrs|
+  User.create!(user_attrs)
 end
 
 # use rails logger, this is only here for testing in the meantime

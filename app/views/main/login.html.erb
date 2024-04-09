@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login_application.css">
-</head>
-<body>
-    <div class="container">
-        <h2>login</h2>
-        <hr>
-        <form action="#" method="post">
-            <label for="username">username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="password">password:</label><br>
-            <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="login">
-        </form>
-        <hr>
-        <a href="#">Registration</a>
-    </div>
-</body>
+
+<% if current_user %>
+    <p> You are signed in as <%= current_user.email %> ! </p>
+    <p> Your role is <%= current_user.role %> </p>
+    <% if current_user.admin? %>
+        There are <%= User.count %> users in the system.
+    <% end %>
+
+    <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
+<% else %>
+    <p> Please Log in or create an account </p>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <br />
+    <%= link_to "Log in", new_user_session_path %>
+<% end %>
 </html>

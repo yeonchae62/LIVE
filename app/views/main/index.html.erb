@@ -3,66 +3,53 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Our Website</title>
-  <link rel="stylesheet" href="application.css">
+<!--  <title>Welcome to Our Website</title>-->
+<!--  <link rel="stylesheet" href="application.css">-->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-  <h1>Live Lab</h1>
+<!--  <h1>Live Lab</h1>-->
   
-  <h2>Welcome to Our Website</h2>
+<!--  <h2>Welcome to Our Website</h2>-->
 
   <!-- Login-->
   <%= link_to "Log In", login_path, class: "button" %>
   <!-- <a href="/login" class="login-link">Login</a>-->
 
 
-  <p>This is a project of educational video games for LIVE Lab</p>
+<!--  <p>This is a project of educational video games for LIVE Lab</p>-->
 
+  <%= form_with url: games_path, method: :get, local: true do |form| %>
   <div class="search-container">
-    <input type="text" placeholder="Search...">
-    <button type="submit">Search</button>
+    <%= form.text_field :search, placeholder: "Search..." %>
+    <%= form.submit "Search", class: "search-container-button" %>
   </div>
+  <% end %>
 
 
 
   <!-- Displaying Images with Links -->
   <div class="container">
-    <div class="image-container">
-        <img src="<%= image_path('a.png')%>" alt="Image 1">
-        <p>Most Watched - Category 1</p>
-    </div>
-    <div class="image-container">
-        <img src="<%= image_path('b.jpg')%>" alt="Image 2">
-        <p>Most Watched - Category 2</p>
-    </div>
-    <div class="image-container">
-        <img src="<%= image_path('c.jpg')%>" alt="Image 3">
-        <p>Most Watched - Category 3</p>
-    </div>
-    <!--
-    <div class="image-container">
-        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 4">
-        <p>Most Watched - Category 4</p>
-    </div>
-    <div class="image-container">
-        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 5">
-        <p>Most Watched - Category 5</p>
-    </div>
-    <div class="image-container">
-        <img src="https://clan.cloudflare.steamstatic.com/images/40671762/c7d19c6dfa25ca2631d9d97b9c78536603fb357c_960x311.png" alt="Image 6">
-        <p>Most Watched - Category 6</p>
-    </div>
-    !-->
+    <% @most_watched.each do |game| %>
+      <div class="image-container">
+        <img src = "<%= game.image %>"  alt="<% game.game_title%>">
+        <p><%= link_to game.game_title, game %></p>
+      </div>
+    <% end %>
 </div>
 
   <!-- Layouts-->
 
+  <!-- Link to User Management Page -->
+  <%#= link_to "User Management", user_management_path, class: "button" %>
+
   <!-- Games-->
-  <%= link_to "View All Games", "/games", class: "button" %>
+  <%#= link_to "View All Games", "/games", class: "button" %>
   <!-- <%= link_to "View All Games", "/games" %>-->
 </body>
 </html>

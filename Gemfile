@@ -25,6 +25,8 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -77,3 +79,5 @@ group :production do
   # for Heroku deployment
   gem 'pg'
 end
+
+gem 'will_paginate', '~> 4.0'

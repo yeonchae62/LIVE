@@ -1,10 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Information</title>
+</head>
+<body>
+
 <p style="color: green"><%= notice %></p>
 
-<%= render @game %>
+<h1>Game Information</h1>
 
-<div>
-  <%= link_to "Edit this game", edit_game_path(@game) %> |
-  <%= link_to "Back to games", games_path %>
-
-  <%= button_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+<div class="games-container">
+  <table>
+    <% @game.attributes.each do |attribute, value| %>
+      <tr>
+        <th><%= attribute.titleize %></th>
+        <% if attribute == "image" %>
+          <td><a href="<%= value %>"><img src="<%= value %>" alt="Game Image"></a></td>
+        <% else %>
+          <td><%= value %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table> 
 </div>
+
+<%= link_to "Edit this game", edit_game_path(@game) %> |
+<%= link_to "Back to games", games_path %>
+
+<%= button_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+
+</body>
+</html>

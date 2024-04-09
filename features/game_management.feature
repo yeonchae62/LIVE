@@ -9,14 +9,14 @@ Feature: Game management
   Scenario: Creating a new game
     Given I am on the game list page
     When I click "New Game"
-    And I fill in "Game title" with "New Game"
-    And I fill in "Url" with "http://newgame.com"
+    And I fill in "Game Title" with "New Game"
+    And I fill in "URL" with "http://newgame.com"
     And I click "Create Game" button
     Then I should be on the "New Game" details page
 
   Scenario: Unsuccessful creation of a game
     Given I am on the new game page
-    When I fill in "Game title" with ""
+    When I fill in "Game Title" with ""
     And I click "Create Game" button
     Then I should see "can't be blank"
 
@@ -30,13 +30,13 @@ Feature: Game management
   Scenario: Updating a game
     Given I am on the "Game1" details page
     When I click "Edit this game"
-    And I fill in "Game title" with "Game1 Updated"
+    And I fill in "Game Title" with "Game1 Updated"
     And I click "Update Game" button
     Then I should be on the "Game1 Updated" details page
 
   Scenario: Unsuccessful game update due to invalid input
     Given I am on the "Game1" edit page
-    When I fill in "Game title" with ""
+    When I fill in "Game Title" with ""
     And I click "Update Game" button
     Then I should see "can't be blank"
 

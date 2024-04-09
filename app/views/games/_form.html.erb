@@ -11,15 +11,121 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :game_title, style: "display: block" %>
-    <%= form.text_field :game_title %>
+  <div class="editform">
+    <%= form.label :game_title, 'Game Title', :class => 'col-form-label' %>
+    <%= form.text_field 'game_title', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :url, 'URL', :class => 'col-form-label' %>
+    <%= form.text_field 'url', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :source, 'Source', :class => 'col-form-label' %>
+    <%= form.text_field 'source', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :researcher, 'Researcher', :class => 'col-form-label' %>
+    <%= form.text_field 'researcher', :class => 'form-control' %>
   </div>
 
-  <div>
-    <%= form.label :url, style: "display: block" %>
-    <%= form.text_area :url %>
+  <div class="editform">
+    <%= form.label :publication_year, 'Publication Year', :class => 'col-form-label'  %>
+    <%= form.text_field 'publication_year', :class => 'form-control' %>
   </div>
+  <div class="editform">
+    <%= form.label :developers, 'Developers', :class => 'col-form-label' %>
+    <%= form.text_field 'developers', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :publisher, 'Publisher', :class => 'col-form-label' %>
+    <%= form.text_field 'publisher', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <!--  This could be a check_box-->
+    <%= form.label :used_in_class, 'Is this game used in classrooms? (Y/N)', :class => 'col-form-label' %>
+    <%= form.text_field 'used_in_class', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :downloadable, 'Is this game downloadable? (Y/N)', :class => 'col-form-label' %>
+    <%= form.text_field 'downloadable', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :discontinued, 'Is support discontinued for this game? (Y/N)', :class => 'col-form-label' %>
+    <%= form.text_field 'discontinued', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :generalized_subject, 'Generalized Subject', :class => 'col-form-label' %>
+    <%= form.text_field 'generalized_subject', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :subject1, 'Primary Subject', :class => 'col-form-label' %>
+    <%= form.text_field 'subject1', :class => 'form-control' %>
+    <%= form.label :subject2, 'Secondary Subject', :class => 'col-form-label' %>
+    <%= form.text_field 'subject2', :class => 'form-control' %>
+    <%= form.label :remainder, 'Any other Subjects?', :class => 'col-form-label' %>
+    <%= form.text_field 'remainder', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :teaching, 'Teaching', :class => 'col-form-label' %>
+    <%= form.text_field 'teaching', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :college_users, 'Which colleges use this game?', :class => 'col-form-label' %>
+    <%= form.text_field 'college_users', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :cost, 'Cost', :class => 'col-form-label' %>
+    <%= form.text_field 'cost', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :game_type, 'Game Type', :class => 'col-form-label' %>
+    <%= form.text_field 'game_type', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :genre, 'Genre', :class => 'col-form-label' %>
+    <%= form.text_field 'genre', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :tags, 'Tags', :class => 'col-form-label' %>
+    <%= form.text_field 'tags', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :game_time, 'Game Length (Hours)', :class => 'col-form-label' %>
+    <%= form.text_field 'game_time', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :dimensions, 'Dimensions (2D/3D)', :class => 'col-form-label' %>
+    <%= form.text_field 'dimensions', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :sound, 'Does this game have sound? (Y/N)', :class => 'col-form-label' %>
+    <%= form.text_field 'sound', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :platform, 'Platform', :class => 'col-form-label' %>
+    <%= form.text_field 'platform', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :spanish, 'Is this game available in Spanish? (Y/N)', :class => 'col-form-label' %>
+    <%= form.text_field 'spanish', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :other_languages, 'What other languages is this game available in?', :class => 'col-form-label' %>
+    <%= form.text_field 'other_languages', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+    <%= form.label :notes, 'Notes', :class => 'col-form-label' %>
+    <%= form.text_field 'notes', :class => 'form-control' %>
+  </div>
+  <div class="editform">
+  <%= form.label :image, 'Game image', :class => 'col-form-label' %>
+  <%= form.text_field 'image', :class => 'form-control' %>
+</div>
+<div class="games-container">
+  <% if @game.image.present? %>
+    <img src="<%= @game.image %>" alt="Game Image">
+  <% end %>
+</div>
 
   <div>
     <%= form.submit %>
