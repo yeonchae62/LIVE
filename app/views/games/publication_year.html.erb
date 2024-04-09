@@ -4,7 +4,7 @@
   <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
   <link rel="stylesheet" href="game_index.css">
 </div>
-<table>
+<table id="latest-games">
   <thead>
     <tr>
       <th>Title</th>
@@ -22,7 +22,7 @@
   <% end %>
 </table>
 
-<table>
+<table id="games-tobechecked">
 <h2>  Publication Year - Needed to be Checked </h2>
 <tbody>
 <% games_with_numeric_content = Game.where.not(publication_year: nil).select { |game| game.publication_year.to_s.match?(/\d/) && game.publication_year.to_s.length != 4 } %>
@@ -36,7 +36,7 @@
 </table>
 
 
-<table>
+<table id="games-with-updates">
 <h2>Games need for further updates</h2>
   <tbody>
   <% Game.where(publication_year: [nil, "UC"]).order(game_title: :asc, publication_year: :asc).each do |game| %>
