@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class GamesController < ApplicationController
-  before_action :set_game, only: %i[show edit update destroy]
+  before_action :set_game, :authenticate_user!, only: %i[show edit update destroy]
 
   # GET /games or /games.json
   def index
@@ -60,6 +60,12 @@ class GamesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # def current_user
+  #   puts "session"
+  #   puts session[:email]
+  #   @current_user ||= User.find(session[:email])
+  # end
 
   private
 

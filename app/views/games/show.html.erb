@@ -26,10 +26,15 @@
   </table> 
 </div>
 
-<%= link_to "Edit this game", edit_game_path(@game) %> |
-<%= link_to "Back to games", games_path %>
+<% if current_user.admin? || current_user.moderator? %>
+  <%= link_to "Edit this game", edit_game_path(@game) %> |
+<% end %>
 
+<% if current_user.admin? %>
 <%= button_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+<% end %>
+
+<%= link_to "Back to games", games_path %>
 
 </body>
 </html>
