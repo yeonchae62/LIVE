@@ -1,7 +1,16 @@
 # frozen_string_literal: true
 
-Given('I have a game titled {string} with the dimensions {string} and source {string}') do |title, dimensions, source|
-  Game.create!(game_title: title, dimensions:, source:)
+Given('I have the following games:') do |table|
+  # table is a Cucumber::MultilineArgument::DataTable
+  table.hashes.each do |game_attributes|
+    Game.create!(
+      game_title: game_attributes['title'],
+      dimensions: game_attributes['dimensions'],
+      source: game_attributes['source'],
+      publication_year: game_attributes['publication year'],
+      cost: game_attributes['cost']
+    )
+  end
 end
 
 Given('I am on the homepage') do
@@ -49,4 +58,48 @@ end
 
 When(/^I press the "([^"]*)" button without entering any search text$/) do |arg|
   click_on arg
+end
+
+Given(/^I am on the search result page$/) do
+  visit(root_path)
+  fill_in 'search', with: 'match'
+  click_on 'Search'
+end
+
+Then(/^the "([^"]*)" dropdown should be "([^"]*)"$/) do |arg1, arg2|
+  # Find the dropdown by its name or another identifiable attribute
+  expect(find("select[name=\"#{arg1}\"]").value).to eq(arg2)
+end
+
+Then('the search results should be sorted by game title in ascending order') do
+  expect_game_titles_in_order(['Game2', 'Game3', 'Game5', 'Match Game1'])
+end
+
+When(/^I select "([^"]*)" from the "([^"]*)" dropdown$/) do |option, dropdown_name|
+  select(option, from: dropdown_name)
+  click_on 'Search'
+end
+
+Then(/^the search results should be sorted by publication year in descending order$/) do
+  expect_game_titles_in_order(['Game3', 'Game5', 'Game2', 'Match Game1'])
+end
+
+Then(/^the search results should be sorted by lowest price first$/) do
+  expect_game_titles_in_order(['Match Game1', 'Game2', 'Game3', 'Game5'])
+end
+
+Then(/^the search results should be sorted by highest price first$/) do
+  expect_game_titles_in_order(['Game5', 'Game3', 'Game2', 'Match Game1'])
+end
+
+When(/^I refresh the page$/) do
+  visit page.current_url
+end
+
+Then(/^my sort selection should persist$/) do
+  expect(page).to have_css("select[name='sort_by'] option[selected]", text: 'Title')
+end
+
+Then('I should see the games ordered by relevance') do
+  expect_game_titles_in_order(['Match Game1', 'Game2', 'Game3', 'Game5'])
 end

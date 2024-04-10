@@ -91,7 +91,7 @@ RSpec.describe GamesController do
       Game.create!(game_title: 'Cat', publication_year: 2010, cost: 20)
       Game.create!(game_title: 'Dog', publication_year: 2015, cost: 40)
     end
-    
+
     it 'sorts games by title in ascending order' do
       get :index, params: { sort_by: 'Title' }
       expect(assigns(:games).map(&:game_title)).to eq(%w[Art Boy Cat Dog])

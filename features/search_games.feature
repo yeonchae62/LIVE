@@ -1,13 +1,17 @@
-Feature: Search Games
+Feature: Search and Sort Games
   As a user
-  I want to search for games
-  So that I can find games matching my search criteria
+  I want to search for games and sort the results
+  So that I can find and organize games matching my search criteria
 
   Background:
-    Given I have a game titled "Match Game1" with the dimensions "2D" and source "Source1"
-    And I have a game titled "Game2" with the dimensions "match" and source "Source2"
-    And I have a game titled "Game3" with the dimensions "3D" and source "Match3"
-    And I have a game titled "Game4" with the dimensions "2D" and source "Source4"
+    Given I have the following games:
+      | title  | dimensions | source  | publication year | cost |
+      | Match Game1  | 2D   | Source1 | 2000             | $10  |
+      | Game2  | match      | Source2 | 2014             | $12  |
+      | Game3  | 3D         | Match3  | 2020             | $13  |
+      | Game4  | 2D         | Source4 | 2000             | $14  |
+      | Game5  | match      | Source5 | 2015             | $15  |
+
 
   Scenario: Search redirects to the game list page
     Given I am on the homepage
@@ -46,3 +50,36 @@ Feature: Search Games
     And I should see a game titled "Game2"
     And I should see a game titled "Game3"
     And I should see a game titled "Game4"
+
+  Scenario: Default sorting option is applied
+    Given I am on the search result page
+    Then the "sort_by" dropdown should be "Relevance"
+    And I should see "Match Game1" on the top of the game list
+    And I should see "Game2" on the bottom of the game list
+
+  Scenario: Sorting search results by Title
+    Given I am on the search result page
+    When I select "Title" from the "sort_by" dropdown
+    Then the search results should be sorted by game title in ascending order
+
+  Scenario: Sorting search results by Publication Year
+    Given I am on the search result page
+    When I select "Publication Year" from the "sort_by" dropdown
+    Then the search results should be sorted by publication year in descending order
+
+  Scenario: Sorting search results by Lowest Price
+    Given I am on the search result page
+    When I select "Lowest Price" from the "sort_by" dropdown
+    Then the search results should be sorted by lowest price first
+
+  Scenario: Sorting search results by Highest Price
+    Given I am on the search result page
+    When I select "Highest Price" from the "sort_by" dropdown
+    Then the search results should be sorted by highest price first
+
+  Scenario: Sort selection persists after page refresh
+    Given I am on the search result page
+    When I select "Title" from the "sort_by" dropdown
+    And I refresh the page
+    Then the "sort_by" dropdown should be "Title"
+    And the search results should be sorted by game title in ascending order
