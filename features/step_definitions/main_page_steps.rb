@@ -57,7 +57,6 @@ Then('I print the page HTML') do
   puts page.html # Outputs the current page HTML
 end
 
-
 Then('I should see a link to view games by cost') do
   expect(page).to have_link('View Games by Cost', href: cost_games_path)
 end
