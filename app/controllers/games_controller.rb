@@ -5,11 +5,13 @@ class GamesController < ApplicationController
 
   # GET /games or /games.json
   def index
-    @games = if params[:search].present?
-               search_games(params[:search]).paginate(page: params[:page], per_page: 6)
-             else
-               Game.paginate(page: params[:page], per_page: 6)
-             end
+    @games = Game.all
+    @games = search_games(params[:search]) if params[:search].present?
+    @games = sort_games(@games, params[:sort_by])
+    @games = @games.paginate(page: params[:page], per_page: 6)
+
+    # Remember the sorting option in session or params to persist state after refresh
+    @sort_by = params[:sort_by] || 'Relevance'
   end
 
   # GET /games/1 or /games/1.json
@@ -83,6 +85,21 @@ class GamesController < ApplicationController
 
   def search_games(term)
     search_term = "%#{term.downcase}%"
-    Game.search_by_term(search_term).order_relevance(search_term)
+    Game.search_by_term(search_term)
+  end
+
+  def sort_games(games, sort_by, search_term = nil)
+    case sort_by
+    when 'Title'
+      games.order('LOWER(game_title) ASC')
+    when 'Publication Year'
+      games.order('publication_year DESC')
+    when 'Lowest Price'
+      games.order('cost ASC')
+    when 'Highest Price'
+      games.order('cost DESC')
+    else
+      search_term ? games.order_relevance("%#{search_term.downcase}%") : games.order('created_at DESC')
+    end
   end
 end
