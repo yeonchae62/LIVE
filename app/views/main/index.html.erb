@@ -24,10 +24,12 @@
 
 <!--  <p>This is a project of educational video games for LIVE Lab</p>-->
 
-  <%= form_with url: games_path, method: :get, local: true do |form| %>
+  <%= form_with url: games_path, method: :get, local: true, class:"search-main" do |form| %>
   <div class="search-container">
-    <%= form.text_field :search, placeholder: "Search..." %>
-    <%= form.submit "Search", class: "search-container-button" %>
+    <div class="searchbar">
+      <%= form.text_field :search, placeholder: "Search..." %>
+      <%= form.submit "Search", class: "searchbar-button" %>
+    </div>
   </div>
   <% end %>
 

@@ -3,9 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe GamesController do
-  let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+  Game.delete_all
 
   describe 'GET #index' do
+    let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+
     context 'without search parameters' do
       it 'assigns all games as @games and renders the index template' do
         get :index
@@ -49,6 +51,8 @@ RSpec.describe GamesController do
   end
 
   describe 'PATCH/PUT #update' do
+    let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+
     context 'with valid attributes' do
       it 'updates the requested game and redirects to the game' do
         patch :update, params: { id: game.id, game: { game_title: 'Updated Game Title', url: 'http://updatedgame.com' } }
@@ -69,12 +73,43 @@ RSpec.describe GamesController do
   end
 
   describe 'DELETE #destroy' do
+    let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+
     it 'destroys the requested game and redirects to the games list' do
       expect do
         delete :destroy, params: { id: game.id }
       end.to change(Game, :count).by(-1)
       expect(response).to redirect_to(games_url)
       expect(flash[:notice]).to eq('Game was successfully destroyed.')
+    end
+  end
+
+  describe '#sort_games' do
+    before do
+      Game.create!(game_title: 'Art', publication_year: 2000, cost: 50)
+      Game.create!(game_title: 'Boy', publication_year: 2005, cost: 30)
+      Game.create!(game_title: 'Cat', publication_year: 2010, cost: 20)
+      Game.create!(game_title: 'Dog', publication_year: 2015, cost: 40)
+    end
+
+    it 'sorts games by title in ascending order' do
+      get :index, params: { sort_by: 'Title' }
+      expect(assigns(:games).map(&:game_title)).to eq(%w[Art Boy Cat Dog])
+    end
+
+    it 'sorts games by publication year in descending order' do
+      get :index, params: { sort_by: 'Publication Year' }
+      expect(assigns(:games).map(&:publication_year)).to eq(%w[2015 2010 2005 2000])
+    end
+
+    it 'sorts games by highest cost first' do
+      get :index, params: { sort_by: 'Highest Price' }
+      expect(assigns(:games).map(&:cost)).to eq(%w[50 40 30 20])
+    end
+
+    it 'sorts games by lowest cost first' do
+      get :index, params: { sort_by: 'Lowest Price' }
+      expect(assigns(:games).map(&:cost)).to eq(%w[20 30 40 50])
     end
   end
 end

@@ -76,36 +76,90 @@ h2 {
 
 /*search bar*/
 
+/* Container for search and sort features */
 .search-container {
-    display: flex; /* Use flexbox for layout */
-    max-width: 500px; /* Set maximum width for the container */
-    width: 100%; /* Make container full width */
-    ustify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: space-between; /* Distributes space between search and sort */
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto; /* Center the container with automatic margins */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Light background */
+}
+.search-main .search-container {
+    justify-content: center; /* Center the search bar in the container */
+    padding: 20px;
 }
 
-.search-container input[type="text"] {
-    flex: 1; /* Input field takes up remaining space */
-    padding: 15px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px 0 0 5px; /* Rounded corners (left side only) */
+/* Styling for the search bar and button */
+.searchbar {
+    display: flex;
+    width: 60%; /* Adjust the width ratio between search and sort */
 }
 
-.search-container-button {
-    padding: 15px 25px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: 1px solid #007bff; /* Add border */
-    border-radius: 0 5px 5px 0; /* Rounded corners (right side only) */
-    cursor: pointer; /* Change cursor on hover */
+.search-main .searchbar{
+    width: 80%
 }
 
-.search-container-button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
-    border-color: #0056b3; /* Darker border color on hover */
+.searchbar input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #007bff; /* Match the button border */
+    border-right: none; /* Hide right border where button meets input */
+    border-radius: 5px 0 0 5px;
+    outline: none; /* Remove focus outline */
+}
+
+.searchbar-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.searchbar-button:hover, .searchbar-button:focus {
+    background-color: #0056b3;
+    border-color: #004095;
+}
+
+/* Sort box styling */
+.sortbox {
+    display: flex;
+    align-items: center;
+}
+
+.sortbox .label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.sortbox .select {
+    display: block;
+    width: auto; /* Let the width auto-adjust to content */
+}
+
+/* Style adjustments for the select dropdown */
+.select select {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    cursor: pointer; /* Indicates the dropdown is clickable */
+}
+
+.select select:hover, .select select:focus {
+    border-color: #0056b3;
 }
 
 
