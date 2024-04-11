@@ -19,6 +19,10 @@ When('I go to My Profile page') do
   visit user_account_info_path
 end
 
+When('I go to Main page') do
+  visit root_path
+end
+
 When('I click on the {string} button') do |button_text|
   click_on button_text
 end
@@ -45,4 +49,8 @@ end
 
 Then(/^I should be redirected to password change page$/) do
   expect(page).to have_current_path(edit_user_registration_path, ignore_query: true)
+end
+
+Then("I should see {string} button") do |button_text|
+  expect(page).to have_content(button_text)
 end
