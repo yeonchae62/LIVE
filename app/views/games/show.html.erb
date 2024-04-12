@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Information</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 
 <p style="color: green"><%= notice %></p>
 
 <h1>Game Information</h1>
-
-<%= link_to "Visit this Game", @game.url, class: "search-container-button" %>
 
 <div class="games-container">
   <table>
@@ -21,6 +18,8 @@
         <th><%= attribute.titleize %></th>
         <% if attribute == "image" %>
           <td><a href="<%= value %>"><img src="<%= value %>" alt="Game Image"></a></td>
+        <% elsif attribute == "url" %>
+          <td><a href="<%= value %>"><%= value %></a></td>
         <% else %>
           <td><%= value %></td>
         <% end %>
@@ -37,11 +36,11 @@
 
 <% if user_signed_in? %>
   <% if current_user.admin? %>
-  <%= link_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+  <%= link_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."}, class: "button" %>
   <% end %>
 <% end %>
 
-<%= link_to "Back to games", games_path %>
+<%= link_to "Back to games", games_path, class: "button" %>
 
 </body>
 </html>
