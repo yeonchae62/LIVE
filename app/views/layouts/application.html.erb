@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <header class="header">
+      <%= image_tag 'LLHeader.png', alt: 'Header Image'%>
+    </header>
     <div class="navbar">
       <%= link_to 'HOME', root_path, class: active_class(root_path) %>
       <%= link_to 'GAMES', games_path, class: active_class(games_path) %>
@@ -24,7 +27,7 @@
     <% end %>
     <%= yield %>
     <footer class="site-footer">
-      <%= image_tag 'LLFooter.png', alt: 'Footer Image Description', height: '50' %>
+      <%= image_tag 'LLFooter.png', alt: 'Footer Image' %>
     </footer>
   </body>
 </html>
