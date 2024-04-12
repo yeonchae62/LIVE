@@ -4,7 +4,6 @@ class MainController < ApplicationController
   def index
     @most_watched = Game.where(game_title: ['Lost Recipes', 'Roboco', 'Morning in Your Eyes',
                                             'Arté: Hemut', 'Variant: Limits', 'Arté: Mercenas'])
-    @user_signed_in = user_signed_in?
   end
 
   def user_management
