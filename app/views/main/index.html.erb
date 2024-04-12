@@ -54,8 +54,13 @@
   
 
 
-  <!-- Link to User Management Page -->
-  <%#= link_to "User Management", user_management_path, class: "button" %>
+  <% if user_signed_in? %>
+    <% if current_user.admin? %>
+      <!-- Link to User Management Page -->
+      <%#= link_to "User Management", user_management_path, class: "button" %>
+    <% end %>
+  <% end %>
+
 
   <!-- Games-->
   <%#= link_to "View All Games", "/games", class: "button" %>
