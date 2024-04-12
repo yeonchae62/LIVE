@@ -51,6 +51,6 @@ Then(/^I should be redirected to password change page$/) do
   expect(page).to have_current_path(edit_user_registration_path, ignore_query: true)
 end
 
-Then("I should see {string} button") do |button_text|
+Then('I should see {string} button') do |button_text|
   expect(page).to have_content(button_text)
 end
