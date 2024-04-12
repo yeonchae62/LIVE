@@ -1,0 +1,49 @@
+<h1>All Games with Publication Year</h1>
+<div class="button-container">
+  <%= link_to "Return to main", main_page_path, class: "button" %>
+  <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
+  <link rel="stylesheet" href="game_index.css">
+</div>
+<table id="latest-games">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Latest Game</th>
+    </tr>
+  </thead>
+  <h2>  Latest Games </h2>
+  <tbody>
+  <% games_with_numeric_years = Game.where("publication_year LIKE ?", "____").order(publication_year: :desc) %>
+  <% games_with_numeric_years.each do |game| %>
+    <tr>
+      <td><%= game.game_title %></td>
+      <td><%= game.publication_year %></td>
+    </tr>
+  <% end %>
+</table>
+
+<table id="games-tobechecked">
+<h2>  Publication Year - Needed to be Checked </h2>
+<tbody>
+<% games_with_numeric_content = Game.where.not(publication_year: nil).select { |game| game.publication_year.to_s.match?(/\d/) && game.publication_year.to_s.length != 4 } %>
+<% games_with_numeric_content.each do |game| %>
+    <tr>
+    <td><%= game.game_title %></td>
+    <td><%= game.publication_year %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+
+<table id="games-with-updates">
+<h2>Games need for further updates</h2>
+  <tbody>
+  <% Game.where(publication_year: [nil, "UC"]).order(game_title: :asc, publication_year: :asc).each do |game| %>
+    <tr>
+      <td><%= game.game_title %></td>
+      <td><%= game.publication_year.present? ? game.publication_year : 'info not included' %></td> 
+    </tr>
+  <% end %>  
+  </tbody>
+</table>

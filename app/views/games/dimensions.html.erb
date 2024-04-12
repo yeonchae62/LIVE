@@ -1,0 +1,67 @@
+<h1>All Games with 3D Contents</h1>
+<div class="button-container">
+  <%= link_to "Return to main", main_page_path, class: "button" %>
+  <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
+  <link rel="stylesheet" href="game_index.css">
+</div>
+<table id="3D-games">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Dimensions</th>
+    </tr>
+  </thead>
+
+  <h2>All Games with 3D Contents</h2>
+  <tbody>
+  <% Game.where(dimensions: ["3D"]).order(dimensions: :desc).each do |game| %>
+    <tr>
+      <td><%= game.game_title %></td>
+      <td><%= game.dimensions.present? ? game.dimensions : 'info not included' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<table id="2D-games">
+<thead>
+    <tr>
+      <th>Title</th>
+      <th>Dimensions</th>
+    </tr>
+  </thead>
+<h2>All Games with 2D Contents</h2>
+<tbody>
+<% Game.where(dimensions: ["2D"]).order(dimensions: :asc).each do |game| %>
+  <tr>
+    <td><%= game.game_title %></td>
+    <td><%= game.dimensions.present? ? game.dimensions : 'info not included' %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<table id="other-games">
+<thead>
+    <tr>
+      <th>Title</th>
+      <th>Dimensions</th>
+    </tr>
+  </thead>
+<h2>All Games Needed Further Information</h2>
+<tbody>
+<% Game.where(dimensions: [nil]).order(game_title: :asc).each do |game| %>
+  <tr>
+    <td><%= game.game_title %></td>
+    <td><%= game.dimensions.present? ? game.dimensions : 'info not included' %></td>
+  </tr>
+<% end %>
+
+<% Game.where.not(dimensions: ["2D", "3D"]).order(dimensions: :asc).each do |game| %>
+  <tr>
+    <td><%= game.game_title %></td>
+    <td><%= game.dimensions.present? ? game.dimensions : 'info not included' %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

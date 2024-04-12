@@ -1,0 +1,60 @@
+<h1>All Games with Cost</h1>
+<div class="button-container">
+  <%= link_to "Return to main", main_page_path, class: "button" %>
+  <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
+  <link rel="stylesheet" href="game_index.css">
+</div>
+
+<h2>Free Games</h2>
+<table id="free-games">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Game.where(cost: "Free").order(game_title: :asc).each do |game| %>
+      <tr>
+        <td><%= game.game_title %></td>
+        <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Games with Cost Information</h2>
+<table id="games-with-cost">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Game.where.not(cost: ["Free"]).order(cost: :asc).each do |game| %>
+      <tr>
+        <td><%= game.game_title %></td>
+        <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Games need for further updates</h2>
+<table id="games-needing-updates">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Game.where(cost: [nil]).order(game_title: :asc).each do |game| %>
+      <tr>
+        <td><%= game.game_title %></td>
+        <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

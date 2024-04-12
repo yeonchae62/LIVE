@@ -35,6 +35,45 @@ h2 {
 
 /*Button*/
 
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .custom-button {
+    text-align: center; /* Center-align the description */
+    flex: 1;
+    padding: 10px 20px;
+    color: white; 
+    text-decoration: none;
+    margin-right: 10px; 
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-button:last-child {
+    margin-right: 0; 
+  }
+  
+  .button-1 {
+    background-color: blue;
+    color: white;
+  }
+  
+  .button-2 {
+    background-color: green;
+    color: white;
+  }
+  
+  .button-3 {
+    background-color: red;
+    color: white;
+  }
+  
+
 .button {
     display: inline-block;
     padding: 10px 20px;
