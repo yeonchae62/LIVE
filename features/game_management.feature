@@ -5,6 +5,7 @@ Feature: Game management
   Background:
     Given I have a game titled "Game1" with the url "http://game1.com" and source "New Source"
     And I have a game titled "Lost Recipes" with the url "https://www.meta.com/experiences/4584847304916084/?utm_source=schellgames.com&utm_medium=oculusredirect" and source "Schell Games"
+    And I am an admin
 
   Scenario: Creating a new game
     Given I am on the game list page
@@ -50,3 +51,14 @@ Feature: Game management
     Given I am on the game list page
     When I click "Return to main" button
     Then I should be redirected to home page
+
+  Scenario: Hide destroy button for moderator
+    Given I changed my role to "moderator"
+    And I am on the "Game1" details page
+    Then I should not see "Destroy" button
+
+  Scenario: Hide destroy and edit button for user 
+    Given I changed my role to "user"
+    And I am on the "Game1" details page
+    Then I should not see "Destroy" button
+    And I should not see "Edit this game" button

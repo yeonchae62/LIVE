@@ -13,7 +13,9 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1 or /games/1.json
-  def show; end
+  def show
+    @user = current_user
+  end
 
   # GET /games/new
   def new
@@ -60,6 +62,12 @@ class GamesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # def current_user
+  #   puts "session"
+  #   puts session[:email]
+  #   @current_user ||= User.find(session[:email])
+  # end
 
   private
 

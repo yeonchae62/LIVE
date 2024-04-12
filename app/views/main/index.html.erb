@@ -18,8 +18,11 @@
 <!--  <h2>Welcome to Our Website</h2>-->
 
   <!-- Login-->
-  <%= link_to "Log In", login_path, class: "button" %>
-  <!-- <a href="/login" class="login-link">Login</a>-->
+  <% if @user_signed_in %>
+    <%= link_to "Log Out", destroy_user_session_path, class: "button", 'data-turbo-method': :delete %>
+  <% else %>
+    <%= link_to "Log In", login_path, class: "button" %>
+  <% end %>
 
 
 <!--  <p>This is a project of educational video games for LIVE Lab</p>-->
