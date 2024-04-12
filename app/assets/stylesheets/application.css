@@ -32,6 +32,19 @@ h2 {
     margin: 0; /* Remove default margin */
 }
 
+body {
+    display: block;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.body-content {
+    padding: 0 20px 0 20px;
+}
 
 /*Button*/
 
@@ -248,20 +261,23 @@ h2 {
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #333;
+    background-image: url('LLHeader.png');
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
-    height: 80px;
+    height: 430px;
+    padding: 10px 10px 10px 40px;
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: #1a1d28;
     text-align: center;
     text-decoration: none;
     padding: 10px 10px 10px 15px;
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 380px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -275,20 +291,6 @@ h2 {
     text-shadow: 0 0 2px #1a9fff;
 }
 
-.navbar .navbar-logo{
-    margin: 10px 10px 0 10px;
-    padding: 0 10px 10px 10px;
-}
-
-.navbar-logo img{
-    display: block;
-    height:60px;
-}
-
-.navbar .navbar-logo:hover {
-    background-color: #333;
-}
-
 .navbar a.active::after {
     content: "";
     display: block;
@@ -300,3 +302,14 @@ h2 {
     margin-top: 2px;
 }
 
+.site-footer {
+    width: 100%;
+    padding: 0;
+}
+
+.site-footer img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
