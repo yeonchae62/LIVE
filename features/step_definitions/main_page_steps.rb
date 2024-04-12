@@ -12,6 +12,10 @@ When('I visit the main page') do
   visit root_path
 end
 
+Then('I reload the main page') do
+  visit root_path
+end
+
 Then('I should see {string}') do |content|
   expect(page).to have_content(content)
 end
@@ -77,6 +81,14 @@ And(/^I should see links to "([^"]*)", "([^"]*)", "([^"]*)"$/) do |link1, link2,
   expect(page).to have_link(link1)
   expect(page).to have_link(link2)
   expect(page).to have_link(link3)
+end
+
+Then(/^I should not see links to "([^"]*)"$/) do |link1|
+  expect(page).to_not have_link(link1)
+end
+
+Then(/^I should see links to "([^"]*)"$/) do |link1|
+  expect(page).to have_link(link1)
 end
 
 When(/^I click on the "([^"]*)" link in the navigation bar$/) do |arg|

@@ -62,3 +62,20 @@ Feature: Main Page Content and Navigation
     Then I should be on My Profile page
     When I click on the "HOME" link in the navigation bar
     Then I should be redirected to home page
+
+Scenario: Hide User Management for users and moderators
+    Given I am on the main page
+    Then I should not see links to "USER MANAGEMENT"
+    Then I reload the main page
+    And I have registered with email "user@example.com" and password "password"
+    And I am logged in as a user
+    Then I should not see links to "USER MANAGEMENT"
+    And I should see links to "HOME", "GAMES", "MY PROFILE"
+    Then I changed my role to "moderator"
+    Then I reload the main page
+    Then I should not see links to "USER MANAGEMENT"
+    And I should see links to "HOME", "GAMES", "MY PROFILE"
+    Then I changed my role to "admin"
+    Then I reload the main page
+    Then I should see links to "USER MANAGEMENT"
+    And I should see links to "HOME", "GAMES", "MY PROFILE"
