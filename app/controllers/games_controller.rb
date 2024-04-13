@@ -13,9 +13,7 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1 or /games/1.json
-  def show
-    @user = current_user
-  end
+  def show; end
 
   # GET /games/new
   def new
