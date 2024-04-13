@@ -23,7 +23,13 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1/edit
-  def edit; end
+  def edit
+    if !user_signed_in? 
+      show_forbidden
+    elsif current_user.user?
+      show_forbidden
+    end
+  end
 
   # POST /games or /games.json
   def create
@@ -42,6 +48,11 @@ class GamesController < ApplicationController
 
   # PATCH/PUT /games/1 or /games/1.json
   def update
+    if !user_signed_in? 
+      show_forbidden
+    elsif current_user.user?
+      show_forbidden
+    end
     respond_to do |format|
       if @game.update(game_params)
         format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
@@ -55,6 +66,11 @@ class GamesController < ApplicationController
 
   # DELETE /games/1 or /games/1.json
   def destroy
+    if !user_signed_in? 
+      show_forbidden
+    elsif !current_user.admin?
+      show_forbidden
+    end
     @game.destroy!
 
     respond_to do |format|
@@ -115,5 +131,15 @@ class GamesController < ApplicationController
     @games = Game.all
     @games = search_games(params[:search]) if params[:search].present?
     @games = sort_games(@games, params[:sort_by], params[:search])
+  end
+
+  def is_moderator_or_higher
+    return current_user.moderator? || current_user.admin?
+  end
+  
+  def show_forbidden
+    respond_to do |format|
+      format.html {render :forbidden, :status => 403}
+    end
   end
 end

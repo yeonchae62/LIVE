@@ -37,7 +37,7 @@
 
 <% if user_signed_in? %>
   <% if current_user.admin? %>
-  <%= link_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+  <%= button_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
   <% end %>
 <% end %>
 
