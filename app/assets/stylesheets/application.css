@@ -32,6 +32,19 @@ h2 {
     margin: 0; /* Remove default margin */
 }
 
+body {
+    display: block;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.body-content {
+    padding: 0 2vw 0 2vw;
+}
 
 /*Button*/
 
@@ -44,13 +57,13 @@ h2 {
   .custom-button {
     text-align: center; /* Center-align the description */
     flex: 1;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     color: white; 
     text-decoration: none;
-    margin-right: 10px; 
-    margin-bottom: 20px;
+    margin-right: 1vw;
+    margin-bottom: 2vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vw;
     cursor: pointer;
   }
   
@@ -61,28 +74,32 @@ h2 {
   .button-1 {
     background-color: blue;
     color: white;
+    font-size: 1.4vw;
   }
   
   .button-2 {
     background-color: green;
     color: white;
+    font-size: 1.4vw;
   }
   
   .button-3 {
     background-color: red;
     color: white;
+    font-size: 1.4vw;
   }
   
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px; /* Add margin between buttons */
+    border-radius: 0.5vw;
+    margin-right: 1vw; /* Add margin between buttons */
     float: right; /* Float the buttons to the right */
+    font-size: 1.4vw;
 }
 .button:hover {
   background-color: #0056b3;
@@ -120,17 +137,17 @@ h2 {
     display: flex;
     justify-content: space-between; /* Distributes space between search and sort */
     align-items: center;
-    max-width: 800px;
+    max-width: 80vw;
     width: 100%;
-    margin: 20px auto; /* Center the container with automatic margins */
-    padding: 15px;
+    margin: 2vw auto; /* Center the container with automatic margins */
+    padding: 1.5vw;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
     background-color: #f9f9f9; /* Light background */
 }
 .search-main .search-container {
     justify-content: center; /* Center the search bar in the container */
-    padding: 20px;
+    padding: 2vw;
 }
 
 /* Styling for the search bar and button */
@@ -146,7 +163,7 @@ h2 {
 .searchbar input[type="text"] {
     flex-grow: 1;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 1.6vw;
     border: 2px solid #007bff; /* Match the button border */
     border-right: none; /* Hide right border where button meets input */
     border-radius: 5px 0 0 5px;
@@ -155,7 +172,7 @@ h2 {
 
 .searchbar-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.6vw;
     background-color: #007bff;
     color: #fff;
     border: 2px solid #007bff;
@@ -175,7 +192,7 @@ h2 {
 }
 
 .sortbox .label {
-    font-size: 16px;
+    font-size: 1.6vw;
     color: #333;
     margin-right: 10px;
 }
@@ -188,7 +205,7 @@ h2 {
 /* Style adjustments for the select dropdown */
 .select select {
     padding: 8px 10px;
-    font-size: 16px;
+    font-size: 1.6vw;
     border: 2px solid #007bff;
     border-radius: 5px;
     background-color: #fff;
@@ -248,20 +265,23 @@ h2 {
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #333;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
     overflow: hidden;
-    height: 80px;
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    top: 29vw;
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: #1a1d28;
     text-align: center;
     text-decoration: none;
-    padding: 10px 10px 10px 15px;
-    margin-top: 15px;
-    font-size: 18px;
+    padding: 0 1vw 1vw 1.5vw;
+    font-size: 2vw;
     font-weight: 700;
 }
 
@@ -275,28 +295,38 @@ h2 {
     text-shadow: 0 0 2px #1a9fff;
 }
 
-.navbar .navbar-logo{
-    margin: 10px 10px 0 10px;
-    padding: 0 10px 10px 10px;
-}
-
-.navbar-logo img{
-    display: block;
-    height:60px;
-}
-
-.navbar .navbar-logo:hover {
-    background-color: #333;
-}
-
 .navbar a.active::after {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
+    height: 0.2vw;
     background: #1a9fff;
     border-radius: 3px;
     animation: slide 0.3s;
-    margin-top: 2px;
+    margin-top: 0.2vw;
 }
 
+.site-footer {
+    width: 100%;
+    padding: 0;
+}
+
+.site-footer img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
