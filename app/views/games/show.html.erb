@@ -12,7 +12,9 @@
 
 <h1>Game Information</h1>
 
-<%= link_to "Visit this Game", @game.url, class: "search-container-button" %>
+<div class="games-container">
+<%= link_to "Visit this Game", @game.url, class:  "custom-button button-1" %>
+</div>
 
 <div class="games-container">
   <table>
@@ -31,7 +33,7 @@
 
 <% if user_signed_in? %>
   <% if current_user.admin? || current_user.moderator? %>
-    <%= link_to "Edit this game", edit_game_path(@game), class: "button" %>
+    <%= link_to "Edit this game", edit_game_path(@game), class:  "custom-button button-1" %>
   <% end %>
 <% end %>
 
@@ -41,7 +43,7 @@
   <% end %>
 <% end %>
 
-<%= link_to "Back to games", games_path %>
+<%= link_to "Back to games", games_path , class:  "custom-button button-1" %>
 
 </body>
 </html>

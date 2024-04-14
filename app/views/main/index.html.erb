@@ -17,48 +17,50 @@
   
 <!--  <h2>Welcome to Our Website</h2>-->
 
-  <!-- Login-->
-  <%= link_to "Log In", login_path, class: "button" %>
-  <!-- <a href="/login" class="login-link">Login</a>-->
+  <div class="body-content">
+    <!-- Login-->
+    <%= link_to "Log In", login_path, class: "button" %>
+    <!-- <a href="/login" class="login-link">Login</a>-->
 
 
-<!--  <p>This is a project of educational video games for LIVE Lab</p>-->
+  <!--  <p>This is a project of educational video games for LIVE Lab</p>-->
 
-  <%= form_with url: games_path, method: :get, local: true, class:"search-main" do |form| %>
-  <div class="search-container">
-    <div class="searchbar">
-      <%= form.text_field :search, placeholder: "Search..." %>
-      <%= form.submit "Search", class: "searchbar-button" %>
-    </div>
-  </div>
-  <% end %>
-
-
-
-  <!-- Displaying Images with Links -->
-  <div class="container">
-    <% @most_watched.each do |game| %>
-      <div class="image-container">
-        <img src = "<%= game.image %>"  alt="<% game.game_title%>">
-        <p><%= link_to game.game_title, game %></p>
+    <%= form_with url: games_path, method: :get, local: true, class:"search-main" do |form| %>
+    <div class="search-container">
+      <div class="searchbar">
+        <%= form.text_field :search, placeholder: "Search..." %>
+        <%= form.submit "Search", class: "searchbar-button" %>
       </div>
+    </div>
     <% end %>
-</div>
 
-  <!-- Layouts-->
-  <div class="container1">
-  <%= link_to "View Games by Cost", cost_games_path, class: "custom-button button-1" %>
-  <%= link_to "Latest Game", publication_year_games_path, class: "custom-button button-1" %>
-  <%= link_to "3D", dimensions_games_path, class: "custom-button button-1" %>
+
+
+    <!-- Displaying Images with Links -->
+    <div class="container">
+      <% @most_watched.each do |game| %>
+        <div class="image-container">
+          <img src = "<%= game.image %>"  alt="<% game.game_title%>">
+          <p><%= link_to game.game_title, game %></p>
+        </div>
+      <% end %>
   </div>
-  
+
+    <!-- Layouts-->
+    <div class="container1">
+    <%= link_to "View Games by Cost", cost_games_path, class: "custom-button button-1" %>
+    <%= link_to "Latest Game", publication_year_games_path, class: "custom-button button-1" %>
+    <%= link_to "3D", dimensions_games_path, class: "custom-button button-1" %>
+    </div>
 
 
-  <!-- Link to User Management Page -->
-  <%#= link_to "User Management", user_management_path, class: "button" %>
 
-  <!-- Games-->
-  <%#= link_to "View All Games", "/games", class: "button" %>
-  <!-- <%= link_to "View All Games", "/games" %>-->
+    <!-- Link to User Management Page -->
+    <%#= link_to "User Management", user_management_path, class: "button" %>
+
+    <!-- Games-->
+    <%#= link_to "View All Games", "/games", class: "button" %>
+    <!-- <%= link_to "View All Games", "/games" %>-->
+  </div>
 </body>
 </html>
