@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'main#index'
-  resources :games
 
   get '/users/my_profile', to: 'users#show', as: :user_account_info
 
@@ -17,6 +16,17 @@ Rails.application.routes.draw do
   post '/change_role', to: 'main#change_role'
 
   get '/', to: 'main#index', as: :main_page
+  get '/games/cost', to: 'games#cost', as: 'games_with_cost'
+  get '/games/dimensions', to: 'games#dimensions', as: 'games_with_dimensions'
+  get '/games/publication_year', to: 'games#publication_year', as: 'games_with_publication_year'
+
+  resources :games do
+    collection do
+      get 'cost'
+      get 'publication_year'
+      get 'dimensions'
+    end
+  end
 
   # Defines the root path route ("/")
   # root "posts#index"

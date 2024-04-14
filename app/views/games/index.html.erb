@@ -4,8 +4,19 @@
 
 <%= form_with url: games_path, method: :get, local: true do |form| %>
   <div class="search-container">
-    <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
-    <%= form.submit "Search", class: "search-container-button" %>
+    <div class="searchbar">
+      <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
+      <%= form.submit "Search", class: "searchbar-button" %>
+    </div>
+    <div class="sortbox">
+      <div class="label">Sort by</div>
+      <div class="select">
+        <%= form.select :sort_by,
+                        ['Relevance', 'Title', 'Publication Year', 'Lowest Price', 'Highest Price'],
+                        { selected: @sort_by },
+                        { onchange: "this.form.submit();", id: "sort-by-dropdown" }%>
+      </div>
+    </div>
   </div>
 <% end %>
 
@@ -16,7 +27,8 @@
     <%= link_to "Return to main", main_page_path, class: "button" %>
     <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
     <%= link_to "New Game", new_game_path, class: "button" %>
-    <link rel="stylesheet" href="game_index.css">
+<!--    <link rel="stylesheet" href="game_index.css">-->
+    <%= stylesheet_link_tag 'game_index', media: 'all', 'data-turbolinks-track': 'reload' %>
   </div>
 
 
