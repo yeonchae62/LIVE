@@ -22,12 +22,8 @@ class GamesController < ApplicationController
 
   # GET /games/1/edit
   def edit
-    if !user_signed_in? 
+    if !user_signed_in? || current_user.user?
       show_forbidden
-      return
-    elsif current_user.user?
-      show_forbidden
-      return
     end
   end
 
@@ -48,10 +44,7 @@ class GamesController < ApplicationController
 
   # PATCH/PUT /games/1 or /games/1.json
   def update
-    if !user_signed_in? 
-      show_forbidden 
-      return
-    elsif current_user.user?
+    if !user_signed_in? || current_user.user?
       show_forbidden
       return
     end
@@ -68,10 +61,7 @@ class GamesController < ApplicationController
 
   # DELETE /games/1 or /games/1.json
   def destroy
-    if !user_signed_in? 
-      show_forbidden
-      return
-    elsif !current_user.admin?
+    if !user_signed_in? || !current_user.admin?
       show_forbidden
       return
     end
@@ -137,13 +127,9 @@ class GamesController < ApplicationController
     @games = sort_games(@games, params[:sort_by], params[:search])
   end
 
-  def is_moderator_or_higher
-    return current_user.moderator? || current_user.admin?
-  end
-  
   def show_forbidden
     respond_to do |format|
-      format.html {render :forbidden, :status => 403}
+      format.html { render :forbidden, status: :forbidden }
     end
   end
 end
