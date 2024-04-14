@@ -24,8 +24,10 @@ class GamesController < ApplicationController
   def edit
     if !user_signed_in? 
       show_forbidden
+      return
     elsif current_user.user?
       show_forbidden
+      return
     end
   end
 
@@ -47,9 +49,11 @@ class GamesController < ApplicationController
   # PATCH/PUT /games/1 or /games/1.json
   def update
     if !user_signed_in? 
-      show_forbidden
+      show_forbidden 
+      return
     elsif current_user.user?
       show_forbidden
+      return
     end
     respond_to do |format|
       if @game.update(game_params)
@@ -66,8 +70,10 @@ class GamesController < ApplicationController
   def destroy
     if !user_signed_in? 
       show_forbidden
+      return
     elsif !current_user.admin?
       show_forbidden
+      return
     end
     @game.destroy!
 

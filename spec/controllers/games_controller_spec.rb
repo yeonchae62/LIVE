@@ -55,6 +55,8 @@ RSpec.describe GamesController do
 
     context 'with valid attributes' do
       it 'updates the requested game and redirects to the game' do
+        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+        sign_in user
         patch :update, params: { id: game.id, game: { game_title: 'Updated Game Title', url: 'http://updatedgame.com' } }
         game.reload
         expect(game.game_title).to eq('Updated Game Title')
@@ -66,6 +68,8 @@ RSpec.describe GamesController do
 
     context 'with invalid attributes' do
       it 'does not update the game and re-renders the edit template' do
+        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+        sign_in user
         patch :update, params: { id: game.id, game: { game_title: '', url: 'invalidurl' } }
         expect(response).to render_template(:edit)
       end
@@ -76,6 +80,8 @@ RSpec.describe GamesController do
     let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
 
     it 'destroys the requested game and redirects to the games list' do
+      user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+      sign_in user
       expect do
         delete :destroy, params: { id: game.id }
       end.to change(Game, :count).by(-1)
