@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<img lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<%= image_tag 'LL_MissionStatement.png', align: 'middle', alt: 'Live Lab Mission Statement' %>
+<%= image_tag 'LL_About.png', alt: 'Live Lab About Us' %>
+<%= link_to "https://pvfa.tamu.edu/research/live-lab/" do %>
+  <%= image_tag 'LL_Website.png', alt: 'Live Lab Website', height: 100, width: 100 %>
+<% end %>
+<%= link_to "https://www.youtube.com/@livelab7465" do %>
+  <%= image_tag 'LL_Youtube.png', alt: 'Live Lab Youtube', height: 100, width: 100 %>
+<% end %>
+<%= link_to "https://www.linkedin.com/company/tamu-live-lab/" do %>
+  <%= image_tag 'LL_LinkedIn.png', alt: 'Live Lab LinkedIn', height: 100, width: 100 %>
+<% end %>
+
+
+<%# if current_user %>
+<!--  <p> You are signed in as <%#= current_user.email %> ! </p>-->
+<!--  <p> Your role is <%#= current_user.role %> </p>-->
+  <%# if current_user.admin? %>
+<!--    There are <%#= User.count %> users in the system.-->
+  <%# end %>
+
+  <%#= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
+<%# else %>
+<!--  <p> Please Log in or create an account </p>-->
+  <%#= link_to "Sign up", new_user_registration_path %>
+<!--  <br />-->
+  <%#= link_to "Log in", new_user_session_path %>
+<%# end %>
+</html>

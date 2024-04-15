@@ -19,6 +19,7 @@
       <%= link_to 'GAMES', games_path, class: active_class(games_path) %>
       <%= link_to 'MY PROFILE', user_account_info_path, class: active_class(user_account_info_path) %>
       <%= link_to 'USER MANAGEMENT', user_management_path, class: active_class(user_management_path) %>
+      <%= link_to 'ABOUT US', about_path, class: active_class(about_path) %>
     </div>
     <% flash.each do |message_type, message| %>
       <% unless message_type.to_s == 'timedout' %>
