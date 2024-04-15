@@ -48,15 +48,26 @@
                 <td><%= user.email %></td>
                 <td><%= user.role %></td>
                 <td>
-                    <form action="/change_role" method="POST">
-                        <input type="hidden" name="user_id" value="<%= user.id %>">
-                        <select name="role" class="role-select">
-                          <option value="admin" <%= 'selected' if user.role == 'admin' %>>Admin</option>
-                          <option value="moderator" <%= 'selected' if user.role == 'moderator' %>>Moderator</option>
-                          <option value="user" <%= 'selected' if user.role == 'user' %>>User</option>
-                        </select>
-                        <input type="submit" value="Change Role" class="submit-btn">
-                    </form>
+                  <form action="<%= change_role_path %>" method="POST">
+                    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                    <input type="hidden" name="user_id" value="<%= user.id %>">
+                    <select name="role" class="role-select">
+                      <option value="admin" <%= 'selected' if user.role == 'admin' %>>Admin</option>
+                      <option value="moderator" <%= 'selected' if user.role == 'moderator' %>>Moderator</option>
+                      <option value="user" <%= 'selected' if user.role == 'user' %>>User</option>
+                    </select>
+                    <input type="submit" value="Change Role" class="submit-btn">
+                  </form>
+
+<!--                  <form action="/change_role" method="POST">-->
+<!--                        <input type="hidden" name="user_id" value="<%#= user.id %>">-->
+<!--                        <select name="role" class="role-select">-->
+<!--                          <option value="admin" <%#= 'selected' if user.role == 'admin' %>>Admin</option>-->
+<!--                          <option value="moderator" <%#= 'selected' if user.role == 'moderator' %>>Moderator</option>-->
+<!--                          <option value="user" <%#= 'selected' if user.role == 'user' %>>User</option>-->
+<!--                        </select>-->
+<!--                        <input type="submit" value="Change Role" class="submit-btn">-->
+<!--                    </form>-->
                 </td>
             </tr>
             <% end %>
