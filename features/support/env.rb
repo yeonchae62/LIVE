@@ -6,7 +6,6 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-require 'cucumber/rails'
 require 'simplecov'
 require 'simplecov_json_formatter'
 require 'devise'
@@ -15,6 +14,7 @@ World(Devise::Test::IntegrationHelpers)
 
 # SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start 'rails'
+require 'cucumber/rails'
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
