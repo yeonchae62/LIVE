@@ -22,9 +22,7 @@ class GamesController < ApplicationController
 
   # GET /games/1/edit
   def edit
-    if !user_signed_in? || current_user.user?
-      show_forbidden
-    end
+    show_forbidden if !user_signed_in? || current_user.user?
   end
 
   # POST /games or /games.json
@@ -46,16 +44,8 @@ class GamesController < ApplicationController
   def update
     if !user_signed_in? || current_user.user?
       show_forbidden
-      return
-    end
-    respond_to do |format|
-      if @game.update(game_params)
-        format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
-        format.json { render :show, status: :ok, location: @game }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
-      end
+    else
+      update_impl
     end
   end
 
@@ -63,13 +53,8 @@ class GamesController < ApplicationController
   def destroy
     if !user_signed_in? || !current_user.admin?
       show_forbidden
-      return
-    end
-    @game.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to games_url, notice: 'Game was successfully destroyed.' }
-      format.json { head :no_content }
+    else
+      destroy_impl
     end
   end
 
@@ -130,6 +115,26 @@ class GamesController < ApplicationController
   def show_forbidden
     respond_to do |format|
       format.html { render :forbidden, status: :forbidden }
+    end
+  end
+
+  def update_impl
+    respond_to do |format|
+      if @game.update(game_params)
+        format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
+        format.json { render :show, status: :ok, location: @game }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @game.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy_impl
+    @game.destroy!
+    respond_to do |format|
+      format.html { redirect_to games_url, notice: 'Game was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 end
