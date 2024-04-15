@@ -86,3 +86,40 @@ end
 Then(/^I should be on My Profile page$/) do
   expect(page).to have_current_path(user_account_info_path, ignore_query: true)
 end
+
+When(/^I look at the navigation bar$/) do
+  # This step is used to focus on checking elements within the navigation bar in subsequent steps.
+  # No action is taken at this point
+end
+
+And(/^I should see the "([^"]*)" link in the navigation bar$/) do |link|
+  expect(page).to have_link(link)
+end
+
+And(/^I should not see the "([^"]*)" link in the navigation bar$/) do |link|
+  expect(page).to have_no_link(link)
+end
+
+# Given(/^I am logged in as a moderator$/) do
+#   User.create(email: 'moderator@example.com', password: 'password123', role: 1)
+#   visit new_user_session_path
+#   fill_in 'Email', with: 'moderator@example.com'
+#   fill_in 'Password', with: 'password123'
+#   click_on 'Log in'
+# end
+
+Given('I am logged in as {string}') do |role|
+  @user = User.create(email: "#{role}@example.com", password: 'password123', role:)
+  visit new_user_session_path
+  fill_in 'Email', with: "#{role}@example.com"
+  fill_in 'Password', with: 'password123'
+  click_on 'Log in'
+end
+
+When('my role changes to {string}') do |role|
+  @user.update(role:)
+end
+
+When(/^I log out$/) do
+  click_on 'Log Out'
+end
