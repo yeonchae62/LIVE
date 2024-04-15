@@ -100,14 +100,6 @@ And(/^I should not see the "([^"]*)" link in the navigation bar$/) do |link|
   expect(page).to have_no_link(link)
 end
 
-# Given(/^I am logged in as a moderator$/) do
-#   User.create(email: 'moderator@example.com', password: 'password123', role: 1)
-#   visit new_user_session_path
-#   fill_in 'Email', with: 'moderator@example.com'
-#   fill_in 'Password', with: 'password123'
-#   click_on 'Log in'
-# end
-
 Given('I am logged in as {string}') do |role|
   @user = User.create(email: "#{role}@example.com", password: 'password123', role:)
   visit new_user_session_path
