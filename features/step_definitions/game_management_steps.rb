@@ -90,3 +90,24 @@ end
 Given('I should not see {string} button') do |button_text|
   expect(page).to_not have_content(button_text)
 end
+
+And(/^there is a game with id "([^"]*)"$/) do |id|
+  @game = Game.create!(id:, game_title: 'Test Game', url: 'https://example.com')
+end
+
+When('I attempt to access the edit page for game {string}') do |id|
+  visit edit_game_path(id)
+end
+
+When('I attempt to update the game with id {string}') do |id|
+  page.driver.submit :patch, game_path(id), { game: { game_title: 'Updated Title' } }
+end
+
+When('I attempt to delete the game with id {string}') do |id|
+  page.driver.submit :delete, game_path(id), {}
+end
+
+Then('I should be shown a forbidden error') do
+  expect(page).to have_content('Forbidden')
+  expect(page).to have_no_content('Update')
+end

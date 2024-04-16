@@ -62,3 +62,21 @@ Feature: Game management
     And I am on the "Game1" details page
     Then I should not see "Destroy" button
     And I should not see "Edit this game" button
+
+  Scenario: Non-admin user attempts to edit a game
+    Given I changed my role to "user"
+    And there is a game with id "1"
+    When I attempt to access the edit page for game "1"
+    Then I should be shown a forbidden error
+
+  Scenario: Non-logged-in user attempts to update a game
+    Given there is a game with id "1"
+    And I changed my role to "user"
+    When I attempt to update the game with id "1"
+    Then I should be shown a forbidden error
+
+  Scenario: Regular user attempts to delete a game
+    Given I changed my role to "user"
+    And there is a game with id "1"
+    When I attempt to delete the game with id "1"
+    Then I should be shown a forbidden error
