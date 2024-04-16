@@ -50,10 +50,21 @@ RSpec.describe GamesController do
     end
   end
 
+  describe '#edit' do
+    let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+
+    context 'with not signed in' do
+      it 'return forbidden' do
+        get :edit, params: { id: game.id }
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+  end
+
   describe 'PATCH/PUT #update' do
     let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
 
-    context 'with valid attributes' do
+    context 'with valid attributes - signed in' do
       it 'updates the requested game and redirects to the game' do
         user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
         sign_in user
@@ -63,6 +74,13 @@ RSpec.describe GamesController do
         expect(game.url).to eq('http://updatedgame.com')
         expect(response).to redirect_to(game)
         expect(flash[:notice]).to eq('Game was successfully updated.')
+      end
+    end
+
+    context 'with valid attributes - not signed in' do
+      it 'updates the requested game and redirects to the game' do
+        patch :update, params: { id: game.id, game: { game_title: 'Updated Game Title', url: 'http://updatedgame.com' } }
+        expect(response).to have_http_status(:forbidden)
       end
     end
 
@@ -87,6 +105,15 @@ RSpec.describe GamesController do
       end.to change(Game, :count).by(-1)
       expect(response).to redirect_to(games_url)
       expect(flash[:notice]).to eq('Game was successfully destroyed.')
+    end
+  end
+
+  describe 'DELETE #destroy - not signed in' do
+    let!(:game) { Game.create!(game_title: 'Game1', url: 'http://game1.com') }
+
+    it 'destroys the requested game and redirects to the games list' do
+      delete :destroy, params: { id: game.id }
+      expect(response).to have_http_status(:forbidden)
     end
   end
 
