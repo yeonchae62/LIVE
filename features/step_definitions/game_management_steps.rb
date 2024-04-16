@@ -6,6 +6,14 @@ Given('I have a game titled {string} with the url {string} and source {string}')
   Game.create!(game_title: title, url:, source:)
 end
 
+Given('I am an admin') do
+  @user = User.create!(email: 'a@a.com', password: 'password', role: 2)
+  visit new_user_session_path
+  fill_in 'Email', with: @user.email
+  fill_in 'Password', with: @user.password
+  click_on 'Log in'
+end
+
 Given('I am on the game list page') do
   visit games_path
 end
@@ -73,4 +81,12 @@ end
 Given(/^I am on the "([^"]*)" edit page$/) do |game_title|
   game = Game.find_by(game_title:)
   visit edit_game_path(game)
+end
+
+Given('I changed my role to {string}') do |role_text|
+  @user.update(role: role_text)
+end
+
+Given('I should not see {string} button') do |button_text|
+  expect(page).to_not have_content(button_text)
 end

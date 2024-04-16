@@ -21,7 +21,9 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1/edit
-  def edit; end
+  def edit
+    show_forbidden if !user_signed_in? || current_user.user?
+  end
 
   # POST /games or /games.json
   def create
@@ -40,26 +42,27 @@ class GamesController < ApplicationController
 
   # PATCH/PUT /games/1 or /games/1.json
   def update
-    respond_to do |format|
-      if @game.update(game_params)
-        format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
-        format.json { render :show, status: :ok, location: @game }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
-      end
+    if !user_signed_in? || current_user.user?
+      show_forbidden
+    else
+      update_impl
     end
   end
 
   # DELETE /games/1 or /games/1.json
   def destroy
-    @game.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to games_url, notice: 'Game was successfully destroyed.' }
-      format.json { head :no_content }
+    if !user_signed_in? || !current_user.admin?
+      show_forbidden
+    else
+      destroy_impl
     end
   end
+
+  # def current_user
+  #   puts "session"
+  #   puts session[:email]
+  #   @current_user ||= User.find(session[:email])
+  # end
 
   private
 
@@ -107,5 +110,31 @@ class GamesController < ApplicationController
     @games = Game.all
     @games = search_games(params[:search]) if params[:search].present?
     @games = sort_games(@games, params[:sort_by], params[:search])
+  end
+
+  def show_forbidden
+    respond_to do |format|
+      format.html { render :forbidden, status: :forbidden }
+    end
+  end
+
+  def update_impl
+    respond_to do |format|
+      if @game.update(game_params)
+        format.html { redirect_to game_url(@game), notice: 'Game was successfully updated.' }
+        format.json { render :show, status: :ok, location: @game }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @game.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy_impl
+    @game.destroy!
+    respond_to do |format|
+      format.html { redirect_to games_url, notice: 'Game was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 end

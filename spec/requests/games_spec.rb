@@ -37,6 +37,8 @@ RSpec.describe 'Games' do
     let!(:game) { Game.create!(game_title: 'Original Game', url: 'http://originalgame.com') }
 
     it 'updates the specified game' do
+      user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+      sign_in user
       updated_params = { game: { game_title: 'Updated Game', url: 'http://updatedgame.com' } }
       patch game_path(game), params: updated_params, headers: { Accept: 'application/json' }
 
@@ -53,6 +55,8 @@ RSpec.describe 'Games' do
 
     it 'deletes the specified game' do
       expect do
+        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+        sign_in user
         delete game_path(game), params: {}, headers: { Accept: 'application/json' }
       end.to change(Game, :count).by(-1)
 

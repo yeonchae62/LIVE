@@ -24,3 +24,9 @@ Rails/I18nLocaleTexts:
 
 RSpec/IndexedLet:
   Enabled: false
+
+Metric/ClassLength:
+  Max: 200
+
+Metric/MethodLength:
+  Max: 20
