@@ -31,19 +31,22 @@
   </table> 
 </div>
 
-<% if user_signed_in? %>
-  <% if current_user.admin? || current_user.moderator? %>
-    <%= link_to "Edit this game", edit_game_path(@game), class:  "custom-button button-1" %>
+<div class="container1">
+  <% if user_signed_in? %>
+    <% if current_user.admin? || current_user.moderator? %>
+      <%= link_to "Edit this game", edit_game_path(@game), class:  "custom-button button-1" %>
+    <% end %>
   <% end %>
-<% end %>
 
-<% if user_signed_in? %>
-  <% if current_user.admin? %>
-  <%= button_to "Destroy this game", @game, method: :delete, data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+  <% if user_signed_in? %>
+    <% if current_user.admin? %>
+    <%= button_to "Destroy this game", @game, method: :delete, class:  "custom-button btn-danger",
+                  data: { turbo_confirm: "Are you sure to delete?", disable_with: "Processing..."} %>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to "Back to games", games_path , class:  "custom-button button-1" %>
+  <%= link_to "Back to games", games_path , class:  "custom-button button-1" %>
+</div>
 
 </body>
 </html>
