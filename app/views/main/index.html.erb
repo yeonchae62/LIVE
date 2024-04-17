@@ -7,16 +7,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--  <title>Welcome to Our Website</title>-->
-<!--  <link rel="stylesheet" href="application.css">-->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-<!--  <h1>Live Lab</h1>-->
-  
-<!--  <h2>Welcome to Our Website</h2>-->
-
+<div class="body-content">
   <!-- Login-->
   <% if user_signed_in? %>
     <%= link_to "Log Out", destroy_user_session_path, class: "button", 'data-turbo-method': :delete %>

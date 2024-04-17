@@ -1,71 +1,89 @@
+
+<body>
 <p style="color: green"><%= notice %></p>
 
-<h1>Games</h1>
+<div class="body-content">
+  <h1>Games</h1>
 
-<%= form_with url: games_path, method: :get, local: true do |form| %>
-  <div class="search-container">
-    <div class="searchbar">
-      <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
-      <%= form.submit "Search", class: "searchbar-button" %>
-    </div>
-    <div class="sortbox">
-      <div class="label">Sort by</div>
-      <div class="select">
-        <%= form.select :sort_by,
-                        ['Relevance', 'Title', 'Publication Year', 'Lowest Price', 'Highest Price'],
-                        { selected: @sort_by },
-                        { onchange: "this.form.submit();", id: "sort-by-dropdown" }%>
+  <%= form_with url: games_path, method: :get, local: true do |form| %>
+    <div class="search-container">
+      <div class="searchbar">
+        <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
+        <%= form.submit "Search", class: "searchbar-button" %>
+      </div>
+      <div class="sortbox">
+        <div class="label">Sort by</div>
+        <div class="select">
+          <%= form.select :sort_by,
+                          ['Relevance', 'Title', 'Publication Year', 'Lowest Price', 'Highest Price'],
+                          { selected: @sort_by },
+                          { onchange: "this.form.submit();", id: "sort-by-dropdown" }%>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
 
-<% if @games.count.zero? %>
-  <p class="no-results-message">No results found.</p>
-<% else %>
   <div class="button-container">
     <%= link_to "Return to main", main_page_path, class: "button" %>
     <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
     <% if user_signed_in? && current_user.admin? %>
       <%= link_to "New Game", new_game_path, class: "button" %>
     <% end %>
-<!--    <link rel="stylesheet" href="game_index.css">-->
+  <!--    <link rel="stylesheet" href="game_index.css">-->
     <%= stylesheet_link_tag 'game_index', media: 'all', 'data-turbolinks-track': 'reload' %>
   </div>
 
-
-  <div class="games-container">
-    <% @games.each_with_index do |game, index| %>
-      <div class="game <%= index.even? ? 'left' : 'right' %>">
-        <div class="game-info">
-          <p>
-            <strong>Game Title:</strong>
-            <%= game.game_title %>
-          </p>
-          <p>
-            <strong>URL:</strong>
-            <%= game.url %>
-          </p>
-          <p>
-            <strong>Contents Info</strong>
-            <% if game.image.present? %>
-              <img src="<%= game.image %>" alt="Image 1" class="game-image">
-            <% else %>
-              <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="Default Image" class="game-image">
+    <% if @games.count.zero? %>
+      <p class="no-results-message">No results found.</p>
+    <% else %>
+      <div class="page_content_cnt">
+        <div class="left_page">
+          <div class="games-container">
+            <% @games.each_with_index do |game, index| %>
+                <a href="<%= game_path(game) %>" class="game_list_row">
+                  <div class="col image_ctn">
+                    <% if game.image.present? %>
+                      <img src="<%= game.image %>" alt="Image 1">
+                    <% else %>
+                      <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="Default Image">
+                    <% end %>
+                  </div>
+                  <div class="game_info_combined">
+                    <div class="col game_title_platform ellipsis">
+                      <div class="game_title">
+                        <strong><%= game.game_title %></strong>
+                      </div>
+                      <div class="platform">
+                        <strong>Platform(s):</strong> <%= game.platform %>
+                      </div>
+                    </div>
+                    <div class="publication_year ellipsis">
+                      <strong>Publication Year: </strong>
+                      <%= game.publication_year %>
+                    </div>
+                    <div class="cost ellipsis">
+                      <strong>Cost: </strong>
+                      <%= game.cost %>
+                    </div>
+                  </div>
+                </a>
             <% end %>
-          </p>
-          <p>
-            <strong>Platform(s):</strong>
-            <%= game.platform %>
-          </p>
-          <%= link_to "Show this game", game, class: "custom-button button-1" %></p>
-          <%= button_to "Save", saved_games_path(game_id: game.id), method: :post, class: "custom-button button-2", id: "save_button_#{game.id}" %>
+            <div class="pagination-container">
+              <%= will_paginate @games %>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_page">
+          <div class="label">Price Range:</div>
+          <%= form.select :price_range, options_for_select([['$0 - $50', '0-50'], ['$50 - $100', '50-100'], ['$100+', '100-inf']]), include_blank: true %>
+          <div class="label">Source:</div>
+          <%= form.text_field :source, placeholder: "Source" %>
+          <div class="label">Subject:</div>
+          <%= form.text_field :subject, placeholder: "Subject" %>
         </div>
       </div>
-    <% end %>
-  </div>
-<% end %>
 
-<div class="pagination-container">
-  <%= will_paginate @games %>
+    <% end %>
+  <% end %>
 </div>
+</body>
