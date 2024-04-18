@@ -11,15 +11,18 @@
   </head>
 
   <body>
+    <header class="header">
+      <%= image_tag 'LLHeader.png', alt: 'Header Image'%>
+    </header>
     <div class="navbar">
-      <%= link_to root_path, class: "navbar-logo" do %>
-        <%= image_tag 'logo.png', alt: 'EVG Library Logo', height: '50' %>
-      <% end %>
       <%= link_to 'HOME', root_path, class: active_class(root_path) %>
       <%= link_to 'GAMES', games_path, class: active_class(games_path) %>
-      <%= link_to 'MY PROFILE', user_account_info_path, class: active_class(user_account_info_path) %>
-      <%= link_to 'USER MANAGEMENT', user_management_path, class: active_class(user_management_path) %>
+      <%= link_to 'MY PROFILE', user_account_info_path, class: active_class(user_account_info_path) %>\
       <%= link_to 'ABOUT US', about_path, class: active_class(about_path) %>
+      <%#= link_to 'USER MANAGEMENT', user_management_path, class: active_class(user_management_path) %>
+      <% if user_signed_in? && current_user.admin? %>
+        <%= link_to 'USER MANAGEMENT', user_management_path, class: active_class(user_management_path) %>
+      <% end %>
     </div>
     <% flash.each do |message_type, message| %>
       <% unless message_type.to_s == 'timedout' %>
@@ -27,5 +30,8 @@
       <% end %>
     <% end %>
     <%= yield %>
+    <footer class="site-footer">
+      <%= image_tag 'LLFooter.png', alt: 'Footer Image' %>
+    </footer>
   </body>
 </html>

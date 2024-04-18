@@ -5,6 +5,8 @@ Feature: Create "My Profile" page with user details and actions
 
   Scenario: Show a button to log in if not logged in
     Given I am not logged in
+    When I go to Main page
+    Then I should see "Log In" button
     When I go to My Profile page
     Then I should be redirected to the login page
 
@@ -15,6 +17,8 @@ Feature: Create "My Profile" page with user details and actions
     And I should see my role is "user"
     And I should see a link to "Change Password"
     And I should see a link to "Sign Out"
+    When I go to Main page
+    Then I should see "Log Out" button
 
   Scenario: Changing password from the "My Profile" page
     Given I am logged in as a user

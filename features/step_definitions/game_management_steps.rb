@@ -63,7 +63,7 @@ Then('I should be redirected to game list page') do
 end
 
 Then('I should be redirected to home page') do
-  visit main_page_path
+  expect(page).to have_current_path(root_path, ignore_query: true)
 end
 
 Given(/^I am on the new game page$/) do

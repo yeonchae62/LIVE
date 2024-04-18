@@ -62,3 +62,36 @@ Feature: Main Page Content and Navigation
     Then I should be on My Profile page
     When I click on the "HOME" link in the navigation bar
     Then I should be redirected to home page
+
+  Scenario: Administrator views User Management link
+    Given I am logged in as an admin
+    When I look at the navigation bar
+    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should see the "USER MANAGEMENT" link in the navigation bar
+
+  Scenario: Moderator does not view User Management link
+    Given I am logged in as 'moderator'
+    When I look at the navigation bar
+    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should not see the "USER MANAGEMENT" link in the navigation bar
+
+  Scenario: Regular user does not view User Management link
+    Given I am logged in as 'user'
+    When I look at the navigation bar
+    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should not see the "USER MANAGEMENT" link in the navigation bar
+
+  Scenario: User role changes to Administrator
+    Given I am logged in as 'user'
+    And I am on the homepage
+    When my role changes to 'admin'
+    And I refresh the page
+    Then I should see the "USER MANAGEMENT" link in the navigation bar
+
+  Scenario: Administrator logs out
+    Given I am logged in as an admin
+    And I am on the homepage
+    When I log out
+    And I visit the main page
+    Then I should not see the "USER MANAGEMENT" link in the navigation bar
+
