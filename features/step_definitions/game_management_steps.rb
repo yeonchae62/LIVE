@@ -6,6 +6,14 @@ Given('I have a game titled {string} with the url {string} and source {string}')
   Game.create!(game_title: title, url:, source:)
 end
 
+Given('I am an admin') do
+  @user = User.create!(email: 'a@a.com', password: 'password', role: 2)
+  visit new_user_session_path
+  fill_in 'Email', with: @user.email
+  fill_in 'Password', with: @user.password
+  click_on 'Log in'
+end
+
 Given('I am on the game list page') do
   visit games_path
 end
@@ -73,4 +81,33 @@ end
 Given(/^I am on the "([^"]*)" edit page$/) do |game_title|
   game = Game.find_by(game_title:)
   visit edit_game_path(game)
+end
+
+Given('I changed my role to {string}') do |role_text|
+  @user.update(role: role_text)
+end
+
+Given('I should not see {string} button') do |button_text|
+  expect(page).to_not have_content(button_text)
+end
+
+And(/^there is a game with id "([^"]*)"$/) do |id|
+  @game = Game.create!(id:, game_title: 'Test Game', url: 'https://example.com')
+end
+
+When('I attempt to access the edit page for game {string}') do |id|
+  visit edit_game_path(id)
+end
+
+When('I attempt to update the game with id {string}') do |id|
+  page.driver.submit :patch, game_path(id), { game: { game_title: 'Updated Title' } }
+end
+
+When('I attempt to delete the game with id {string}') do |id|
+  page.driver.submit :delete, game_path(id), {}
+end
+
+Then('I should be shown a forbidden error') do
+  expect(page).to have_content('Forbidden')
+  expect(page).to have_no_content('Update')
 end
