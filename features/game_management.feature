@@ -65,18 +65,18 @@ Feature: Game management
 
   Scenario: Non-admin user attempts to edit a game
     Given I changed my role to "user"
-    And there is a game with id "1"
-    When I attempt to access the edit page for game "1"
+    And there is a game with id "11"
+    When I attempt to access the edit page for game "11"
     Then I should be shown a forbidden error
 
   Scenario: Non-logged-in user attempts to update a game
-    Given there is a game with id "1"
+    Given there is a game with id "22"
     And I changed my role to "user"
-    When I attempt to update the game with id "1"
+    When I attempt to update the game with id "22"
     Then I should be shown a forbidden error
 
   Scenario: Regular user attempts to delete a game
     Given I changed my role to "user"
-    And there is a game with id "1"
-    When I attempt to delete the game with id "1"
+    And there is a game with id "3"
+    When I attempt to delete the game with id "3"
     Then I should be shown a forbidden error
