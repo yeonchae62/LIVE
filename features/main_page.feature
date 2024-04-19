@@ -14,7 +14,7 @@ Feature: Main Page Content and Navigation
   Scenario: Main page game container visibility
     Given I have the most_watched games
     When I visit the main page
-    Then I should see six image containers
+    Then I should see 6 image containers
 
   Scenario: Navigating to the login page
     When I visit the main page
@@ -40,17 +40,22 @@ Feature: Main Page Content and Navigation
   Scenario: Navigation bar on the Homepage
     Given I am on the homepage
     Then I should see a navigation bar
-    And I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
 
   Scenario: Navigation bar on the Game List page
     Given I am on the game list page
     Then I should see a navigation bar
-    And I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
 
   Scenario: Navigation bar on the My Profile page
     Given I am on My Profile page
     Then I should see a navigation bar
-    And I should see links to "HOME", "GAMES", "MY PROFILE"
+    And I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
+
+  Scenario: Navigation bar on the About Us page
+    Given I am on About Us page
+    Then I should see a navigation bar
+    And I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
 
   Scenario: Navigating from one page to another using the navigation bar
     Given I am on the homepage
@@ -62,23 +67,29 @@ Feature: Main Page Content and Navigation
     Then I should be on My Profile page
     When I click on the "HOME" link in the navigation bar
     Then I should be redirected to home page
+    When I click on the "ABOUT US" link in the navigation bar
+    Then I should be redirected to the About Us page
+
+  Scenario: Viewing the About Us page
+    Given I am on About Us page
+    Then I should see 5 images within the ".about-container" div
 
   Scenario: Administrator views User Management link
     Given I am logged in as an admin
     When I look at the navigation bar
-    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    Then I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
     And I should see the "USER MANAGEMENT" link in the navigation bar
 
   Scenario: Moderator does not view User Management link
     Given I am logged in as 'moderator'
     When I look at the navigation bar
-    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    Then I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
     And I should not see the "USER MANAGEMENT" link in the navigation bar
 
   Scenario: Regular user does not view User Management link
     Given I am logged in as 'user'
     When I look at the navigation bar
-    Then I should see links to "HOME", "GAMES", "MY PROFILE"
+    Then I should see links to "HOME", "GAMES", "MY PROFILE", "ABOUT US"
     And I should not see the "USER MANAGEMENT" link in the navigation bar
 
   Scenario: User role changes to Administrator
