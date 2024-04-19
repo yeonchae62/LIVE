@@ -47,6 +47,31 @@ body {
     padding: 0 2vw 0 2vw;
 }
 
+.profile {
+    text-align: center; 
+  }
+  
+.profile img {
+    width: 200px; 
+    height: auto; 
+  }
+  
+.saved-games {
+    text-align: center;
+    column-count: 2; 
+    display: flex;
+    column-gap: 20px; 
+  }
+
+.saved-game {
+    flex: 1 0 45%;
+    margin: 10px;
+  }
+
+  .saved-game img {
+    height: 200px; 
+  }
+
 /*Button*/
 
 .container1 {

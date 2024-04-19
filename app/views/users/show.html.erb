@@ -4,10 +4,27 @@
 <body>
       <div class="profile">
         <h1>My Profile</h1>
+        <link rel="stylesheet" href="application.css">
+        <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png" alt="Image">
         <p>Email: <%= current_user.email %></p>
         <p>Role: <%= current_user.role %></p>
         <%= link_to 'Change Password', edit_user_registration_path %>
         <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete %>
+      </div>
+
+      <h2>Saved Games</h2>
+      <div class="saved-games">
+        <% current_user.saved_games.each do |saved_game| %>
+          <div class="saved-game">
+            <p><strong>Game Title:</strong> <%= saved_game.game.game_title %></p>
+            <% if saved_game.game.image.present? %>
+              <img src="<%= saved_game.game.image %>" alt="Image 1" class="game-image">
+            <% else %>
+              <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="Default Image" class="game-image">
+            <% end %>
+            <p><%= link_to "Visit This Game", saved_game.game.url, class: "custom-button button-1" %></p>
+          </div>
+        <% end %>
       </div>
 </body>
 

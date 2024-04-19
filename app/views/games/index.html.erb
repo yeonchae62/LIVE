@@ -57,6 +57,7 @@
             <%= game.platform %>
           </p>
           <%= link_to "Show this game", game %>
+          <%= button_to "Save", saved_games_path(game_id: game.id), method: :post, class: "save-button" %>
         </div>
       </div>
     <% end %>

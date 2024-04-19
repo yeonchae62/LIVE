@@ -5,5 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @games = @user.saved_games
   end
 end
