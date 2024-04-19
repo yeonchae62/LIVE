@@ -17,6 +17,7 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
+    show_forbidden if !user_signed_in? 
     @game = Game.new
   end
 
@@ -27,6 +28,7 @@ class GamesController < ApplicationController
 
   # POST /games or /games.json
   def create
+    show_forbidden if !user_signed_in? 
     @game = Game.new(game_params)
 
     respond_to do |format|
