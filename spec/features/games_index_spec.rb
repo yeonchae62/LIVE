@@ -33,17 +33,35 @@ RSpec.describe 'Games' do
     end
   end
 
-  it 'provides a link to create a new game' do
+  it 'provides a link to create a new game for signed user' do
     # Verify: Check for the link to create a new game
+    user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+    sign_in user
+    visit games_path
     expect(page).to have_link('New Game', href: new_game_path)
   end
 
-  it 'Navigating to the new game page' do
+  it 'hide new game link for unsigned user' do
+    # Verify: Check for the link to create a new game
+    expect(page).to_not have_link('New Game', href: new_game_path)
+  end
+
+  it 'Navigating to the new game page for signed in user' do
+    user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+    sign_in user
     visit games_path
     click_on 'New Game'
 
     # Verify: Ensure we're on the new game creation page
     expect(page).to have_current_path(new_game_path)
     expect(page).to have_content('New Game')
+  end
+
+  it 'Navigating to the new game page for unsigned in user' do
+    user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+    sign_out user
+    visit new_game_path
+
+    expect(page).to have_content("Forbidden")
   end
 end

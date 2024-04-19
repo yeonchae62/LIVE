@@ -30,8 +30,10 @@ RSpec.describe GamesController do
   end
 
   describe 'POST #create' do
-    context 'with valid attributes' do
+    context 'with valid attributes with signed in user' do
       it "creates a new game and redirects to the game's page" do
+        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 0)
+        sign_in user
         expect do
           post :create, params: { game: { game_title: 'New Game', url: 'http://newgame.com' } }
         end.to change(Game, :count).by(1)
@@ -40,9 +42,18 @@ RSpec.describe GamesController do
       end
     end
 
+    context 'with valid attributes with unsigned in user' do
+      it "returns forbidden" do
+        post :create, params: { game: { game_title: 'New Game', url: 'http://newgame.com' } }
+        expect(response).to have_http_status(:forbidden)
+      end
+    end
+
     context 'with invalid attributes' do
       it 'does not create a new game and re-renders the new method' do
         expect do
+          user = User.create!(email: 'test2@example.com', password: 'password1234', role: 0)
+          sign_in user
           post :create, params: { game: { game_title: '', url: '' } }
         end.not_to change(Game, :count)
         expect(response).to render_template(:new)

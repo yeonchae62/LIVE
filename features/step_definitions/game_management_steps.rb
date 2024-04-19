@@ -111,3 +111,7 @@ Then('I should be shown a forbidden error') do
   expect(page).to have_content('Forbidden')
   expect(page).to have_no_content('Update')
 end
+
+And('I attempt to access new game page') do
+  visit new_game_path
+end
