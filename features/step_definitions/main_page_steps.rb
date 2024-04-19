@@ -28,8 +28,15 @@ Then('I should see a search button') do
   expect(page).to have_button(type: 'submit')
 end
 
-Then('I should see six image containers') do
-  expect(page).to have_css('.image-container', count: 6)
+Then('I should see {int} image containers') do |target_count|
+  expect(page).to have_css('.image-container', count: target_count)
+end
+
+Then('I should see {int} images within the {string} div') do |target_count, div_name|
+  within(div_name) do
+    image_count = page.all('img').count
+    expect(image_count).to eq(target_count)
+  end
 end
 
 Then('I should see a link {string} leading to the games page') do |link_text|
@@ -73,10 +80,11 @@ Then(/^I should see a navigation bar$/) do
   expect(page).to have_css('.navbar')
 end
 
-And(/^I should see links to "([^"]*)", "([^"]*)", "([^"]*)"$/) do |link1, link2, link3|
+And(/^I should see links to "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"$/) do |link1, link2, link3, link4|
   expect(page).to have_link(link1)
   expect(page).to have_link(link2)
   expect(page).to have_link(link3)
+  expect(page).to have_link(link4)
 end
 
 When(/^I click on the "([^"]*)" link in the navigation bar$/) do |arg|
@@ -85,6 +93,10 @@ end
 
 Then(/^I should be on My Profile page$/) do
   expect(page).to have_current_path(user_account_info_path, ignore_query: true)
+end
+
+Then(/^I should be redirected to the About Us page$/) do
+  expect(page).to have_current_path(about_path, ignore_query: true)
 end
 
 When(/^I look at the navigation bar$/) do
