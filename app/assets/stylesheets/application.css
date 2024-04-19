@@ -58,7 +58,6 @@ body {
   
 .saved-games {
     text-align: center;
-    column-count: 2; 
     display: flex;
     column-gap: 20px; 
   }
@@ -68,7 +67,7 @@ body {
     margin: 10px;
   }
 
-  .saved-game img {
+.saved-game img {
     height: 200px; 
   }
 
