@@ -43,7 +43,7 @@ RSpec.describe GamesController do
     end
 
     context 'with valid attributes with unsigned in user' do
-      it "returns forbidden" do
+      it 'returns forbidden' do
         post :create, params: { game: { game_title: 'New Game', url: 'http://newgame.com' } }
         expect(response).to have_http_status(:forbidden)
       end

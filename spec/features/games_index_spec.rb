@@ -43,7 +43,7 @@ RSpec.describe 'Games' do
 
   it 'hide new game link for unsigned user' do
     # Verify: Check for the link to create a new game
-    expect(page).to_not have_link('New Game', href: new_game_path)
+    expect(page).to have_no_link('New Game', href: new_game_path)
   end
 
   it 'Navigating to the new game page for signed in user' do
@@ -62,6 +62,6 @@ RSpec.describe 'Games' do
     sign_out user
     visit new_game_path
 
-    expect(page).to have_content("Forbidden")
+    expect(page).to have_content('Forbidden')
   end
 end

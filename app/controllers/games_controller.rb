@@ -17,7 +17,7 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
-    if !user_signed_in? 
+    unless user_signed_in?
       show_forbidden
       return
     end
@@ -31,7 +31,7 @@ class GamesController < ApplicationController
 
   # POST /games or /games.json
   def create
-    if !user_signed_in? 
+    unless user_signed_in?
       show_forbidden
       return
     end
