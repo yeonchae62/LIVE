@@ -17,7 +17,7 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
-    unless user_signed_in?
+    unless user_signed_in? && current_user.admin?
       show_forbidden
       return
     end
@@ -31,10 +31,6 @@ class GamesController < ApplicationController
 
   # POST /games or /games.json
   def create
-    unless user_signed_in?
-      show_forbidden
-      return
-    end
     @game = Game.new(game_params)
 
     respond_to do |format|

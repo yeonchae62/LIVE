@@ -32,7 +32,7 @@ RSpec.describe GamesController do
   describe 'POST #create' do
     context 'with valid attributes with signed in user' do
       it "creates a new game and redirects to the game's page" do
-        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 0)
+        user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
         sign_in user
         expect do
           post :create, params: { game: { game_title: 'New Game', url: 'http://newgame.com' } }
@@ -52,7 +52,7 @@ RSpec.describe GamesController do
     context 'with invalid attributes' do
       it 'does not create a new game and re-renders the new method' do
         expect do
-          user = User.create!(email: 'test2@example.com', password: 'password1234', role: 0)
+          user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
           sign_in user
           post :create, params: { game: { game_title: '', url: '' } }
         end.not_to change(Game, :count)
