@@ -58,3 +58,13 @@ end
 Then('I should see {string} button') do |button_text|
   expect(page).to have_content(button_text)
 end
+
+When('I save Games {string}') do |game_title|
+  game = Game.create!(game_title:)
+  @user.saved_games.create(game:)
+end
+
+And('I should see game titile of {string}') do |game_title|
+  visit user_account_info_path
+  expect(page).to have_content(game_title)
+end
