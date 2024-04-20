@@ -52,6 +52,10 @@ And('I signed out') do
   visit games_path
 end
 
+And(/^I am on About Us page$/) do
+  visit about_path
+end
+
 Then(/^I should be redirected to password change page$/) do
   expect(page).to have_current_path(edit_user_registration_path, ignore_query: true)
 end

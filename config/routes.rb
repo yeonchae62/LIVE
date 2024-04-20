@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/login', to: 'main#login'
   get '/user_management', to: 'main#user_management'
   post '/change_role', to: 'main#change_role'
+  get '/about', to: 'main#about'
 
   get '/', to: 'main#index', as: :main_page
   get '/games/cost', to: 'games#cost', as: 'games_with_cost'
