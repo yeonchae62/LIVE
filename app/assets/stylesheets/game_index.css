@@ -48,12 +48,12 @@
 }
 
 .right_page {
-  width: 19%;
+  width: 25%;
   float: right;
 }
 
 .left_page {
-  width: 80%;
+  width: 75%;
   float: left;
 }
 
@@ -69,16 +69,11 @@
   height: 8vw;
   overflow: hidden;
 }
-.col {
-  height: 4.5vw;
-  display: inline-block;
-  vertical-align: top;
-}
+
 .game_list_row .image_ctn{
-  width: 20%;
+  width: 25%;
   height: 100%;
   margin-left: 0;
-  /*background-color: black;*/
 }
 .game_list_row .image_ctn img {
   height: 100%;
@@ -89,42 +84,40 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  width: 80%;
+  width: 75%;
+  height: 100%;
 }
 
-.ellipsis {
-  overflow: hidden;
+.game_title_platform {
+  width: 40%;
+  display: inline-block;
+  margin: 2vw 1vw 1vw 1vw;
+}
+
+.game_list_row .game_title {
+  color: #000099;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.game_list_row .platform {
+  color: #4c6c8c;
+  font-size: 1vw;
+  margin-top: 1.2vw;
   text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
-
-.game_list_row .game_title_platform {
-  width: 30%;
-  margin-left: 1vw;
-  display: inline-block;
-  vertical-align: top;
-}
-
 .game_list_row .publication_year {
   width: 30%;
   color: #4c6c8c;
   font-size: 1vw;
-  /*line-height: 45px;*/
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
   margin: auto;
 }
 
-.game_title_platform .platform {
-  font-size: 1vw;
-  font-weight: lighter;
-  margin-top: 5%;
-}
 .game_info_combined .cost {
-  font-size: 12px;
-  text-align: left;
-  color: #1a9fff;
   width: 30%;
+  font-size: 1.2vw;
+  text-align: left;
+  color: #4c6c8c;
   margin: auto;
 }

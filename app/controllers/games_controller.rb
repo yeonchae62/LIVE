@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 class GamesController < ApplicationController
+  include Filterable
   before_action :set_game, only: %i[show edit update destroy]
 
   # GET /games or /games.json
   def index
     @games = load_games
-    @games = @games.paginate(page: params[:page], per_page: 6)
+    @games = filter_games(@games, params)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    @games = @games.paginate(page: params[:page], per_page: 6) unless @games.nil?
 
     # Remember the sorting option in session or params to persist state after refresh
     @sort_by = params[:sort_by] || 'Relevance'
@@ -144,5 +150,9 @@ class GamesController < ApplicationController
       format.html { redirect_to games_url, notice: 'Game was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def filter_params
+    params.slice(:price_range, :source, :subject)
   end
 end

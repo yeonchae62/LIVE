@@ -5,7 +5,7 @@
 <div class="body-content">
   <h1>Games</h1>
 
-  <%= form_with url: games_path, method: :get, local: true do |form| %>
+  <%= form_with url: games_path, method: :get, id: 'games_form', local:true do |form| %>
     <div class="search-container">
       <div class="searchbar">
         <%= form.text_field :search, placeholder: "Search...", value: params[:search]%>
@@ -32,58 +32,147 @@
     <%= stylesheet_link_tag 'game_index', media: 'all', 'data-turbolinks-track': 'reload' %>
   </div>
 
-    <% if @games.count.zero? %>
-      <p class="no-results-message">No results found.</p>
-    <% else %>
-      <div class="page_content_cnt">
-        <div class="left_page">
-          <div class="games-container">
-            <% @games.each_with_index do |game, index| %>
-                <a href="<%= game_path(game) %>" class="game_list_row">
-                  <div class="col image_ctn">
-                    <% if game.image.present? %>
-                      <img src="<%= game.image %>" alt="Image 1">
-                    <% else %>
-                      <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="Default Image">
-                    <% end %>
-                  </div>
-                  <div class="game_info_combined">
-                    <div class="col game_title_platform ellipsis">
-                      <div class="game_title">
-                        <strong><%= game.game_title %></strong>
-                      </div>
-                      <div class="platform">
-                        <strong>Platform(s):</strong> <%= game.platform %>
-                      </div>
-                    </div>
-                    <div class="publication_year ellipsis">
-                      <strong>Publication Year: </strong>
-                      <%= game.publication_year %>
-                    </div>
-                    <div class="cost ellipsis">
-                      <strong>Cost: </strong>
-                      <%= game.cost %>
-                    </div>
-                  </div>
-                </a>
-            <% end %>
-            <div class="pagination-container">
-              <%= will_paginate @games %>
+    <div class="page_content_cnt">
+      <div class="left_page">
+        <%= render 'game_list', games: @games %>
+      </div>
+      <div class="right_page">
+        <div class="filter-item">
+          <label>Price Range:</label>
+          <div class="checkbox_ctn">
+            <div class="checkbox_pair">
+              <%= form.check_box :price_range_free, { class: 'filter-checkbox', checked: params[:price_range_free]&.include?('free') }, 'free', false %>
+              <%= label_tag 'price_range_free', 'Free' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :price_range_0to10, { class: 'filter-checkbox', checked: params[:price_range_0to10]&.include?('0-10')  }, '0-10', false %>
+              <%= label_tag 'price_range_0_10', 'Under $10' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :price_range_10to20, { class: 'filter-checkbox', checked:  params[:price_range_10to20]&.include?('10-20')}, '10-20', false %>
+              <%= label_tag 'price_range_10_20', '$10 - $20' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :price_range_above20, { class: 'filter-checkbox', checked: params[:price_range_above20]&.include?('above20') }, 'above20', false %>
+              <%= label_tag 'price_range_above20', 'Above $20' %>
             </div>
           </div>
         </div>
-
-        <div class="right_page">
-          <div class="label">Price Range:</div>
-          <%= form.select :price_range, options_for_select([['$0 - $50', '0-50'], ['$50 - $100', '50-100'], ['$100+', '100-inf']]), include_blank: true %>
-          <div class="label">Source:</div>
-          <%= form.text_field :source, placeholder: "Source" %>
-          <div class="label">Subject:</div>
-          <%= form.text_field :subject, placeholder: "Subject" %>
+        <div class="filter-item">
+          <label>Platform</label>
+          <div class="checkbox_ctn">
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_windows, { class: 'filter-checkbox', checked: params[:platform_windows]&.include?('windows') }, 'windows', false %>
+              <%= label_tag 'platform_windows', 'Windows' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_mac, { class: 'filter-checkbox', checked: params[:platform_mac]&.include?('mac') }, 'mac', false %>
+              <%= label_tag 'platform_mac', 'Mac' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_steam, { class: 'filter-checkbox', checked: params[:platform_steam]&.include?('steam') }, 'steam', false %>
+              <%= label_tag 'platform_steam', 'Steam' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_web, { class: 'filter-checkbox', checked: params[:platform_web]&.include?('web') }, 'web', false %>
+              <%= label_tag 'platform_web', 'Web' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_pc, { class: 'filter-checkbox', checked: params[:platform_pc]&.include?('pc') }, 'pc', false %>
+              <%= label_tag 'platform_pc', 'PC' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_mobile, { class: 'filter-checkbox', checked: params[:platform_mobile]&.include?('mobile') }, 'mobile', false %>
+              <%= label_tag 'platform_mobile', 'Mobile' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_html5, { class: 'filter-checkbox', checked: params[:platform_html5]&.include?('html5') }, 'html5', false %>
+              <%= label_tag 'platform_html5', 'HTML5' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :platform_vr, { class: 'filter-checkbox', checked: params[:platform_vr]&.include?('vr') }, 'vr', false %>
+              <%= label_tag 'platform_vr', 'VR' %>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item">
+          <label>Number of Players</label>
+          <div class="checkbox_ctn">
+            <div class="checkbox_pair">
+              <%= form.check_box :genre_single, { class: 'filter-checkbox', checked:  params[:genre_single]&.include?('single')}, 'single', false %>
+              <%= label_tag 'genre_single', 'Single-player' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :genre_single, { class: 'filter-checkbox', checked:  params[:genre_single]&.include?('single')}, 'single', false %>
+              <%= label_tag 'genre_single', 'Multi-player' %>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item">
+          <label>Subject</label>  <!-- art, biology, ecology, medical, math, nursing, language, geography -->
+          <div class="checkbox_ctn">
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_art, { class: 'filter-checkbox', checked: params[:subject_art]&.include?('art') }, 'art', false %>
+              <%= label_tag 'subject_art', 'Art' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_biology, { class: 'filter-checkbox', checked: params[:subject_biology]&.include?('biology') }, 'biology', false %>
+              <%= label_tag 'subject_biology', 'biology' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_ecology, { class: 'filter-checkbox', checked: params[:subject_ecology]&.include?('ecology') }, 'ecology', false %>
+              <%= label_tag 'subject_ecology', 'Ecology' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_medical, { class: 'filter-checkbox', checked: params[:subject_medical]&.include?('medical') }, 'medical', false %>
+              <%= label_tag 'subject_medical', 'Medical' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_nursing, { class: 'filter-checkbox', checked: params[:subject_nursing]&.include?('nursing') }, 'nursing', false %>
+              <%= label_tag 'subject_nursing', 'Nursing' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_math, { class: 'filter-checkbox', checked: params[:subject_math]&.include?('math') }, 'math', false %>
+              <%= label_tag 'subject_math', 'Math' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_language, { class: 'filter-checkbox', checked: params[:subject_language]&.include?('language') }, 'language', false %>
+              <%= label_tag 'subject_language', 'Language' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :subject_geography, { class: 'filter-checkbox', checked: params[:subject_geography]&.include?('geography') }, 'geography', false %>
+              <%= label_tag 'subject_geography', 'Geography' %>
+            </div>
+          </div>
+        </div>
+        <div class="filter-item">
+          <label>2D/3D</label>
+          <div class="checkbox_ctn">
+            <div class="checkbox_pair">
+              <%= form.check_box :dimensions_2D, { class: 'filter-checkbox', checked: params[:dimensions_2D]&.include?('2d') }, '2d', false %>
+              <%= label_tag 'dimensions_2D', '2D' %>
+            </div>
+            <div class="checkbox_pair">
+              <%= form.check_box :dimensions_3D, { class: 'filter-checkbox', checked: params[:dimensions_3D]&.include?('3d') }, '3d', false %>
+              <%= label_tag 'dimensions_3D', '3D' %>
+            </div>
+          </div>
         </div>
       </div>
-
-    <% end %>
+    </div>
   <% end %>
 </div>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("content loaded")
+        document.body.addEventListener('change', function(event) {
+            if (event.target.matches('.filter-checkbox')) {
+                document.getElementById('games_form').submit();
+            }
+        });
+    });
+
+
+</script>
