@@ -3,9 +3,7 @@
 class SavedGamesController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @saved_games = current_user.saved_games
-  end
+  def index; end
 
   def create
     @game = Game.find(params[:game_id])
@@ -25,10 +23,8 @@ class SavedGamesController < ApplicationController
   def save_game
     @saved_game = current_user.saved_games.build(game: @game)
 
-    if @saved_game.save
-      redirect_to games_path, notice: 'Game saved successfully!'
-    else
-      redirect_to games_path, alert: 'Failed to save the game.'
-    end
+    return unless @saved_game.save
+
+    redirect_to games_path, notice: 'Game saved successfully!'
   end
 end
