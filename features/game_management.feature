@@ -87,3 +87,10 @@ Feature: Game management
     And there is a game with id "3"
     When I attempt to delete the game with id "3"
     Then I should be shown a forbidden error
+    And I should not be shown a "Update" content
+  
+  Scenario: Regular user attempts to delete a game
+    Given I changed my role to "user"
+    When I attempt to create the game with id "101"
+    Then I should be shown a forbidden error
+    And I should not be shown a "Update" content
