@@ -8,30 +8,101 @@ module Filterable
   end
 
   def filter_games(games, params)
-    games = filter_by_price(games, params) if params.keys.any? { |key| key.start_with?('price_range') }
-    # g.where!('lower(source) LIKE ?', "%#{params[:source].downcase}%") if params[:source].present?
-    # g.where!('lower(subject) LIKE ?', "%#{params[:subject].downcase}%") if params[:subject].present?
+    filters = {
+      'price_range' => method(:filter_by_price),
+      'platform' => method(:filter_by_platform),
+      'subject' => method(:filter_by_subject),
+      'genre' => method(:filter_by_genre),
+      'dimensions' => method(:filter_by_dimension),
+      'other_features' => method(:filter_by_others)
+    }
+
+    filters.each do |prefix, filter_method|
+      games = filter_method.call(games, params) if params.keys.any? { |key| key.start_with?(prefix) }
+    end
+
     games
   end
 
   private
 
   def filter_by_price(games, params)
-    conditions = []
-    conditions << games.where(cost: '$0'..'$10.00') if params[:price_range_0to10] == '0-10'
-    conditions << games.where(cost: '$10'..'$20.00') if params[:price_range_10to20] == '10-20'
-    if params[:price_range_above20] == 'above20'
-      conditions << games.where(cost: '$20'..'$99999')
-    end
-    conditions << games.where('lower(cost) = ?', 'free') if params[:price_range_free] == 'free'
+    price_conditions = []
 
-    combined_games = games.none
-    conditions.each do |condition|
-      combined_games = combined_games.or(condition)
-    end
-    return combined_games unless combined_games.nil?
+    price_conditions << "cost BETWEEN '$0' AND '$10.00'" if params[:price_range_0to10] == 'true'
+    price_conditions << "cost BETWEEN '$10' AND '$20.00'" if params[:price_range_10to20] == 'true'
+    price_conditions << "cost BETWEEN '$20' AND '$9999'" if params[:price_range_above20] == 'true'
+    price_conditions << "LOWER(cost) = 'free'" if params[:price_range_free] == 'true'
 
-    games.none
+    query = price_conditions.join(' OR ')
+    games.where(query)
   end
 
+  def filter_by_platform(games, params)
+    platform_params = {
+      platform_windows: 'windows',
+      platform_mac: 'mac',
+      platform_steam: 'steam',
+      platform_web: 'web',
+      platform_pc: 'pc',
+      platform_mobile: %w[ios android],
+      platform_html5: 'html5',
+      platform_vr: 'vr'
+    }
+    platforms = platform_params.each_with_object([]) do |(param_key, platform_value), result|
+      result.concat(Array(platform_value)) if params[param_key] == 'true'
+    end
+
+    query = platforms.map { |platform| "LOWER(platform) LIKE '%#{platform}%'" }.join(' OR ')
+    games.where(query)
+  end
+
+  def filter_by_subject(games, params)
+    subject_params = {
+      subject_art: 'art',
+      subject_biology: 'biology',
+      subject_ecology: 'ecology',
+      subject_medical: 'medical',
+      subject_nursing: 'nursing',
+      subject_math: 'math',
+      subject_language: 'language',
+      subject_geography: 'geography'
+    }
+    subjects = subject_params.each_with_object([]) do |(param_key, subject_value), result|
+      result << subject_value if params[param_key] == 'true'
+    end
+    query_parts = subjects.map do
+      'LOWER(subject1) LIKE ? OR LOWER(subject2) LIKE ? OR LOWER(remainder) LIKE ?'
+    end
+    query = query_parts.join(' OR ')
+
+    # Prepare arguments for each part of the query: each subject needs to be repeated for each field
+    query_arguments = subjects.flat_map { |subject| %W[%#{subject}% %#{subject}% %#{subject}%] }
+
+    games.where(query, *query_arguments)
+  end
+
+  def filter_by_genre(games, params)
+    genres = []
+    genres << 'single' if params[:genre_single] == 'true'
+    genres << 'multi' if params[:genre_multi] == 'true'
+    query = genres.map { |genre| "LOWER(genre) LIKE '%#{genre}%'" }.join(' OR ')
+    games.where(query)
+  end
+
+  def filter_by_dimension(games, params)
+    dimensions = []
+    dimensions << '2D' if params[:dimensions_2D] == 'true'
+    dimensions << '3D' if params[:dimensions_3D] == 'true'
+    query = dimensions.map { |dim| "LOWER(dimensions) LIKE '%#{dim}%'" }.join(' OR ')
+    games.where(query)
+  end
+
+  def filter_by_others(games, params)
+    games = games.where(used_in_class: 'Y') if params[:other_features_uic] == 'true'
+
+    games = games.where(downloadable: 'Y') if params[:other_features_downloadable] == 'true'
+
+    games
+  end
 end

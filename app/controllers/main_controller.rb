@@ -5,7 +5,7 @@ class MainController < ApplicationController
   before_action :check_admin, only: %i[user_management change_role]
 
   def index
-    @most_watched = Game.where(game_title: ['Lost Recipes', 'Roboco', 'Morning in Your Eyes',
+    @most_watched = Game.where(game_title: ['Lost Recipes', 'Roboco', 'Zero Threat',
                                             'Arté: Hemut', 'Variant: Limits', 'Arté: Mercenas'])
   end
 

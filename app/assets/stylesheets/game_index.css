@@ -57,7 +57,7 @@
   float: left;
 }
 
-.game_list_row {
+.game_list_link {
   display: flex;
   align-items: center;
   padding: 0;
@@ -65,17 +65,17 @@
   margin-bottom: 1vw;
   text-decoration: none;
   color: #333;
-  width: 100%;
+  width: 90%;
   height: 8vw;
   overflow: hidden;
 }
 
-.game_list_row .image_ctn{
+.game_list_link .image_ctn{
   width: 25%;
   height: 100%;
   margin-left: 0;
 }
-.game_list_row .image_ctn img {
+.game_list_link .image_ctn img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -94,30 +94,57 @@
   margin: 2vw 1vw 1vw 1vw;
 }
 
-.game_list_row .game_title {
+.game_list_link .game_title {
   color: #000099;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.game_list_row .platform {
+.game_list_link .platform {
   color: #4c6c8c;
   font-size: 1vw;
-  margin-top: 1.2vw;
+  margin-top: 1vw;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.game_list_row .publication_year {
-  width: 30%;
+.game_list_link .publication_year {
+  width: 35%;
   color: #4c6c8c;
   font-size: 1vw;
-  margin: auto;
+  margin: 3.5vw auto auto auto;
+  white-space: pre;
+  /*padding: 1vw 1vw 3.5vw 1vw;*/
 }
 
-.game_info_combined .cost {
-  width: 30%;
-  font-size: 1.2vw;
+.game_list_link .cost {
+  width: 25%;
+  font-size: 1vw;
   text-align: left;
   color: #4c6c8c;
-  margin: auto;
+  margin: 4.5vw auto auto auto;
+  /*padding: 1vw 1vw 3.5vw 1vw;*/
+}
+
+.save_button_cnt {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #f0f0f0;
+  margin-bottom: 1vw;
+  width: 10%;
+  height: 8vw;
+}
+
+.save_button {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 1.2vw;
+  padding: 5px 10px;
+}
+.save_button:hover {
+  background-color: #003399;
 }

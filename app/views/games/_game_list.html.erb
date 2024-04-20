@@ -5,7 +5,7 @@
   <div id="game-list-container">
     <div class="games-container">
       <% @games.each_with_index do |game, index| %>
-        <a href="<%= game_path(game) %>" class="game_list_row">
+        <a href="<%= game_path(game) %>" class="game_list_link">
           <div class="image_ctn">
             <% if game.image.present? %>
               <img src="<%= game.image %>" alt="Image 1">
@@ -32,6 +32,9 @@
             </div>
           </div>
         </a>
+        <div class="save_button_cnt">
+          <%= button_to "Save", saved_games_path(game_id: game.id), method: :post, class: "save_button", id: "save_button_#{game.id}" %>
+        </div>
       <% end %>
       <div class="pagination-container">
         <%= will_paginate @games %>
