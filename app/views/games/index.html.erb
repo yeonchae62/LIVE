@@ -26,7 +26,7 @@
   <div class="button-container">
     <%= link_to "Return to main", main_page_path, class: "button" %>
     <div style="margin-right: 30px;"></div> <!-- Adding a margin of 30px between the buttons -->
-    <% if user_signed_in? %>
+    <% if user_signed_in? && current_user.admin? %>
       <%= link_to "New Game", new_game_path, class: "button" %>
     <% end %>
 <!--    <link rel="stylesheet" href="game_index.css">-->
