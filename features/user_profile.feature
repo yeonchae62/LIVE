@@ -17,6 +17,9 @@ Feature: Create "My Profile" page with user details and actions
     And I should see my role is "user"
     And I should see a link to "Change Password"
     And I should see a link to "Sign Out"
+    And I should see "My Saved Games"
+    When I save Games "Game Example"
+    And I should see game titile of "Game Example"
     When I go to Main page
     Then I should see "Log Out" button
 

@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/games/dimensions', to: 'games#dimensions', as: 'games_with_dimensions'
   get '/games/publication_year', to: 'games#publication_year', as: 'games_with_publication_year'
 
+  resources :saved_games, only: %i[index create]
+
   resources :games do
     collection do
       get 'cost'

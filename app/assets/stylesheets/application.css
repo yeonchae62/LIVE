@@ -32,6 +32,14 @@ h2 {
     margin: 0; /* Remove default margin */
 }
 
+h3 {
+    text-align: center; /* Center alignment */
+    padding: 20px 0; /* Top and bottom padding */
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    margin: 0 20px; /* Margin for left and right sides */
+}
+
 body {
     display: block;
     min-height: 100%;
@@ -46,6 +54,38 @@ body {
 .body-content {
     padding: 0 2vw 0 2vw;
 }
+
+.profile {
+    text-align: center; 
+  }
+  
+.profile img {
+    width: 100px; 
+    height: auto; 
+  }
+  
+.saved-games {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+.saved-game {
+    width: 50%; /* Each saved game takes 50% width to create a two-column layout */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+/* Optional: Add additional styling for saved-game items */
+.saved-game p {
+    margin: 0; /* Remove default margin for paragraphs */
+    text-align: center; 
+}
+
+.game-image {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 /*Button*/
 
@@ -79,9 +119,10 @@ body {
   }
   
   .button-2 {
-    background-color: green;
+    background-color: blue;
     color: white;
     font-size: 1.4vw;
+    text-align: center;
   }
   
   .button-3 {
@@ -90,6 +131,8 @@ body {
     font-size: 1.4vw;
   }
   
+.game-info{
+  }
 
 .button {
     display: inline-block;
