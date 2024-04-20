@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
       <div class="profile">
         <h1>My Profile</h1>
@@ -11,8 +10,7 @@
         <%= link_to 'Change Password', edit_user_registration_path %>
         <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete %>
       </div>
-
-      <h2>Saved Games</h2>
+      <h3>My Saved Games</h3>
       <div class="saved-games">
         <% current_user.saved_games.each do |saved_game| %>
           <div class="saved-game">
@@ -27,4 +25,3 @@
         <% end %>
       </div>
 </body>
-
