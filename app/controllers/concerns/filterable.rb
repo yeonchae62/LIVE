@@ -29,10 +29,10 @@ module Filterable
   def filter_by_price(games, params)
     price_conditions = []
 
-    price_conditions << "cost BETWEEN '$0' AND '$10.00'" if params[:price_range_0to10] == 'true'
-    price_conditions << "cost BETWEEN '$10' AND '$20.00'" if params[:price_range_10to20] == 'true'
-    price_conditions << "cost BETWEEN '$20' AND '$9999'" if params[:price_range_above20] == 'true'
-    price_conditions << "LOWER(cost) = 'free'" if params[:price_range_free] == 'true'
+    price_conditions << 'cost_value BETWEEN 0.0001 AND 10' if params[:price_range_0to10] == 'true'
+    price_conditions << 'cost_value BETWEEN 10 AND 20' if params[:price_range_10to20] == 'true'
+    price_conditions << 'cost_value BETWEEN 20 AND 9999' if params[:price_range_above20] == 'true'
+    price_conditions << 'cost_value = 0.0' if params[:price_range_free] == 'true'
 
     query = price_conditions.join(' OR ')
     games.where(query)
