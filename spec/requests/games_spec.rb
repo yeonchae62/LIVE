@@ -20,6 +20,10 @@ RSpec.describe 'Games' do
 
   describe 'POST /games' do
     it 'creates a new game' do
+      # Sign in
+      user = User.create!(email: 'test2@example.com', password: 'password1234', role: 2)
+      sign_in user
+
       # Setup
       game_params = { game: { game_title: 'New Game', url: 'http://newgame.com' } }
 

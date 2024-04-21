@@ -7,13 +7,20 @@ Feature: Game management
     And I have a game titled "Lost Recipes" with the url "https://www.meta.com/experiences/4584847304916084/?utm_source=schellgames.com&utm_medium=oculusredirect" and source "Schell Games"
     And I am an admin
 
-  Scenario: Creating a new game
+  Scenario: Creating a new game - signed in user
     Given I am on the game list page
     When I click "New Game"
     And I fill in "Game Title" with "New Game"
     And I fill in "URL" with "http://newgame.com"
     And I click "Create Game" button
     Then I should be on the "New Game" details page
+  
+  Scenario: Creating a new game - unsigned in user
+    Given I am on the game list page
+    And I signed out
+    Then I should not see "New Game" button
+    And I attempt to access new game page
+    Then I should be shown a forbidden error
 
   Scenario: Unsuccessful creation of a game
     Given I am on the new game page
@@ -80,3 +87,10 @@ Feature: Game management
     And there is a game with id "3"
     When I attempt to delete the game with id "3"
     Then I should be shown a forbidden error
+    And I should not be shown a "Update" content
+  
+  Scenario: Regular user attempts to delete a game
+    Given I changed my role to "user"
+    When I attempt to create the game with id "101"
+    Then I should be shown a forbidden error
+    And I should not be shown a "Update" content

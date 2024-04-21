@@ -107,7 +107,18 @@ When('I attempt to delete the game with id {string}') do |id|
   page.driver.submit :delete, game_path(id), {}
 end
 
+When('I attempt to create the game with id {string}') do |_id|
+  page.driver.submit :post, games_path, { game: { game_title: 'Created title' } }
+end
+
 Then('I should be shown a forbidden error') do
   expect(page).to have_content('Forbidden')
-  expect(page).to have_no_content('Update')
+end
+
+And('I should not be shown a {string} content') do |content_text|
+  expect(page).to have_no_content(content_text)
+end
+
+And('I attempt to access new game page') do
+  visit new_game_path
 end

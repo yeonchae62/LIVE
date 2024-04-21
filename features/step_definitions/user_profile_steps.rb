@@ -47,6 +47,11 @@ And(/^I am on My Profile page$/) do
   visit user_account_info_path
 end
 
+And('I signed out') do
+  Capybara.reset_sessions!
+  visit games_path
+end
+
 And(/^I am on About Us page$/) do
   visit about_path
 end
