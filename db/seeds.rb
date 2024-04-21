@@ -47,6 +47,17 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
   )
 end
 
+Game.find_each do |game|
+  if game.cost.nil?
+    game.update(cost_value: nil)
+  elsif game.cost.downcase.include?('free')
+    game.update(cost_value: 0.0)
+  else
+    numeric_value = game.cost.scan(/(\d+\.\d+|\d+)/).first
+    game.update(cost_value: numeric_value ? numeric_value.first.to_f : nil)
+  end
+end
+
 users = [
   { email: 'user@example.com', password: 'user@example.com', role: 0 },
   { email: 'moderator@example.com', password: 'moderator@example.com', role: 1 },
