@@ -41,3 +41,110 @@
   text-align: center;
   margin-top: 20px;
 }
+
+.page_content_cnt{
+  display: block;
+  justify-content: space-between;
+}
+
+.right_page {
+  width: 25%;
+  float: right;
+}
+
+.left_page {
+  width: 75%;
+  float: left;
+}
+
+.game_list_link {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #f0f0f0;
+  margin-bottom: 1vw;
+  text-decoration: none;
+  color: #333;
+  width: 90%;
+  height: 8vw;
+  overflow: hidden;
+}
+
+.game_list_link .image_ctn{
+  width: 25%;
+  height: 100%;
+  margin-left: 0;
+}
+.game_list_link .image_ctn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.game_info_combined {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 75%;
+  height: 100%;
+}
+
+.game_title_platform {
+  width: 40%;
+  display: inline-block;
+  margin: 2vw 1vw 1vw 1vw;
+}
+
+.game_list_link .game_title {
+  color: #000099;
+  font-size: 1.2vw;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.game_list_link .platform {
+  color: #4c6c8c;
+  font-size: 1vw;
+  margin-top: 1vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.game_list_link .publication_year {
+  width: 35%;
+  color: #4c6c8c;
+  font-size: 1vw;
+  margin: 3.5vw auto auto auto;
+  white-space: pre;
+  /*padding: 1vw 1vw 3.5vw 1vw;*/
+}
+
+.game_list_link .cost {
+  width: 25%;
+  font-size: 1vw;
+  text-align: left;
+  color: #4c6c8c;
+  margin: 4.5vw auto auto auto;
+  /*padding: 1vw 1vw 3.5vw 1vw;*/
+}
+
+.save_button_cnt {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #f0f0f0;
+  margin-bottom: 1vw;
+  width: 10%;
+  height: 8vw;
+}
+
+.save_button {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 1.2vw;
+  padding: 5px 10px;
+}
+.save_button:hover {
+  background-color: #003399;
+}

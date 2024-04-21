@@ -5,12 +5,12 @@ Feature: Search and Sort Games
 
   Background:
     Given I have the following games:
-      | title  | dimensions | source  | publication year | cost |
-      | Match Game1  | 2D   | Source1 | 2000             | $10  |
-      | Game2  | match      | Source2 | 2014             | $12  |
-      | Game3  | 3D         | Match3  | 2020             | $13  |
-      | Game4  | 2D         | Source4 | 2000             | $14  |
-      | Game5  | match      | Source5 | 2015             | $15  |
+      | title  | dimensions | source  | publication year | cost_value |
+      | Match Game1  | 2D   | Source1 | 2000             | 10.0  |
+      | Game2  | match      | Source2 | 2014             | 12.0  |
+      | Game3  | 3D         | Match3  | 2020             | 13.0  |
+      | Game4  | 2D         | Source4 | 2000             | 14.0  |
+      | Game5  | match      | Source5 | 2015             | 15.0  |
 
 
   Scenario: Search redirects to the game list page

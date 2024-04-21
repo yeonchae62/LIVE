@@ -22,6 +22,7 @@ class CreateGames < ActiveRecord::Migration[7.1]
       g.string 'teaching'
       g.string 'college_users'
       g.string 'cost'
+      g.float 'cost_value'
       g.string 'game_type'
       g.string 'genre'
       g.string 'tags'

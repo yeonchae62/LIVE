@@ -28,12 +28,12 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
       generalized_subject: row['Generalized Subject'],
       subject1: row['Subject1'],
       subject2: row['Subject2'],
-      remainder: row['Subject remainder (a++ b++ c)'],
-      teaching: row['Teaching (College++ Training++ Work)'],
+      remainder: row['Subject remainder (a, b, c)'],
+      teaching: row['Teaching (College, Training, Work)'],
       college_users: row['Colleges that use the game'],
       cost: row['Cost'],
-      game_type: row['Game Type (Story++ Simulation...)'],
-      genre: row['Genre: single player++ multiplayer++ other (specify)'],
+      game_type: row['Game Type (Story, Simulation...)'],
+      genre: row['Genre: single player, multiplayer, other (specify)'],
       tags: row['Tags'],
       game_time: row['Game Time'],
       dimensions: row['2D/3D'],
@@ -42,9 +42,20 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
       spanish: row['Available in Spanish'],
       other_languages: row['Available in other languages'],
       notes: row['Notes'],
-      image: row['Image']
+      image: row['Image1']
     }
   )
+end
+
+Game.find_each do |game|
+  if game.cost.nil?
+    game.update(cost_value: nil)
+  elsif game.cost.downcase.include?('free')
+    game.update(cost_value: 0.0)
+  else
+    numeric_value = game.cost.scan(/(\d+\.\d+|\d+)/).first
+    game.update(cost_value: numeric_value ? numeric_value.first.to_f : nil)
+  end
 end
 
 users = [

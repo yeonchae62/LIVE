@@ -18,10 +18,15 @@ end
 
 Then('I should see game information with images') do
   # Verify that game information with images is displayed
-  expect(page).to have_css('.game .game-info .game-image')
+  expect(page).to have_css('.games-container .game_list_link .game_info_combined')
 end
 
-Then('I should see game information without images') do
-  # Verify that game information without images is displayed
-  expect(page).to have_css('.game .game-info .game-image')
+Then('I should see game information with default images') do
+  within('.games-container') do
+    all('.game_list_link').each do |game_link|
+      within(game_link) do
+        expect(page).to have_css('.image_ctn img[alt="Default Image"]')
+      end
+    end
+  end
 end

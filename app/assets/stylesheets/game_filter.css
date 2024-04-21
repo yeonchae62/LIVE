@@ -1,0 +1,47 @@
+.filter-item {
+    margin: 1.5vw 0;
+    padding: 1vw;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-item > label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 0.5vw;
+    font-size: 14px;
+}
+
+.checkbox_ctn {
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple lines if many checkboxes */
+    align-items: center;
+}
+
+
+.checkbox_ctn label {
+    margin: 0.5vw 1vw 0.3vw 0; /* Spacing around labels */
+    font-size: 12px;
+    flex-wrap: nowrap;
+}
+
+.filter-checkbox {
+    margin-right: 0.5vw; /* Space between checkbox and label */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for each checkbox and label pair */
+.checkbox_pair {
+    display: flex;
+    align-items: center; /* Aligns the checkbox and label in the center vertically */
+    margin-right: 2vw;
+    white-space: nowrap; /* Ensures that each label and checkbox pair stays together */
+    cursor: pointer; /* Makes the entire pair clickable */
+}
+
+.checkbox_ctn input[type='checkbox'] + label {
+    cursor: pointer;
+}
+

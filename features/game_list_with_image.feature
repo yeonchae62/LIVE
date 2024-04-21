@@ -8,4 +8,4 @@ Feature: Display Game List with Image
   Scenario: View Game List without Image
     Given there are games without images
     When I visit the games list page
-    Then I should see game information without images
+    Then I should see game information with default images

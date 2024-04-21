@@ -130,10 +130,10 @@ RSpec.describe GamesController do
 
   describe '#sort_games' do
     before do
-      Game.create!(game_title: 'Art', publication_year: 2000, cost: 50)
-      Game.create!(game_title: 'Boy', publication_year: 2005, cost: 30, subject2: 'match')
-      Game.create!(game_title: 'Cat', publication_year: 2010, cost: 20, subject1: 'match')
-      Game.create!(game_title: 'Dog', publication_year: 2015, cost: 40)
+      Game.create!(game_title: 'Art', publication_year: 2000, cost_value: 50)
+      Game.create!(game_title: 'Boy', publication_year: 2005, cost_value: 30, subject2: 'match')
+      Game.create!(game_title: 'Cat', publication_year: 2010, cost_value: 20, subject1: 'match')
+      Game.create!(game_title: 'Dog', publication_year: 2015, cost_value: 40)
     end
 
     it 'sorts games by title in ascending order' do
@@ -148,12 +148,12 @@ RSpec.describe GamesController do
 
     it 'sorts games by highest cost first' do
       get :index, params: { sort_by: 'Highest Price' }
-      expect(assigns(:games).map(&:cost)).to eq(%w[50 40 30 20])
+      expect(assigns(:games).map(&:cost_value)).to eq([50, 40, 30, 20])
     end
 
     it 'sorts games by lowest cost first' do
       get :index, params: { sort_by: 'Lowest Price' }
-      expect(assigns(:games).map(&:cost)).to eq(%w[20 30 40 50])
+      expect(assigns(:games).map(&:cost_value)).to eq([20, 30, 40, 50])
     end
 
     it 'sorts games by relevance' do

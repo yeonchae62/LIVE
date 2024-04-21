@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 class GamesController < ApplicationController
+  include Filterable
   before_action :set_game, only: %i[show edit update destroy]
 
   # GET /games or /games.json
   def index
     @games = load_games
-    @games = @games.paginate(page: params[:page], per_page: 6)
+    @games = filter_games(@games, params)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    @games = @games.paginate(page: params[:page], per_page: 8) unless @games.nil?
 
     # Remember the sorting option in session or params to persist state after refresh
     @sort_by = params[:sort_by] || 'Relevance'
@@ -104,9 +110,9 @@ class GamesController < ApplicationController
     when 'Publication Year'
       games.order('publication_year DESC')
     when 'Lowest Price'
-      games.order('cost ASC')
+      games.order('cost_value ASC')
     when 'Highest Price'
-      games.order('cost DESC')
+      games.order('cost_value DESC')
     when 'Relevance'
       games.order_relevance("%#{search_term.downcase}%")
     else

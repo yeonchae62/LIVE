@@ -56,14 +56,14 @@ body {
 }
 
 .profile {
-    text-align: center; 
+    text-align: center;
   }
-  
+
 .profile img {
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
   }
-  
+
 .saved-games {
             display: flex;
             flex-wrap: wrap;
@@ -78,7 +78,7 @@ body {
 /* Optional: Add additional styling for saved-game items */
 .saved-game p {
     margin: 0; /* Remove default margin for paragraphs */
-    text-align: center; 
+    text-align: center;
 }
 
 .game-image {
@@ -92,31 +92,37 @@ body {
 .container1 {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-  }
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 1.5vw;
+    align-items: center;
+}
   
-  .custom-button {
+.custom-button {
     text-align: center; /* Center-align the description */
     flex: 1;
     padding: 1vw 2vw;
-    color: white; 
+    color: white;
     text-decoration: none;
     margin-right: 1vw;
     margin-bottom: 2vw;
     border: none;
     border-radius: 0.5vw;
     cursor: pointer;
-  }
+}
   
-  .custom-button:last-child {
-    margin-right: 0; 
-  }
-  
-  .button-1 {
-    background-color: blue;
+.custom-button:last-child {
+    margin-right: 0;
+}
+
+.button-1 {
+    background-color: #007bff;
     color: white;
     font-size: 1.4vw;
-  }
+}
+.button-1:hover {
+    background-color: #0056b3;
+}
   
   .button-2 {
     background-color: blue;
@@ -125,11 +131,14 @@ body {
     text-align: center;
   }
   
-  .button-3 {
-    background-color: red;
+.btn-danger {
+    background-color: #f44336;
     color: white;
     font-size: 1.4vw;
-  }
+}
+.btn-danger:hover {
+    background-color: #da190b;
+}
   
 .game-info{
   }

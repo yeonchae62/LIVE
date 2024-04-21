@@ -8,7 +8,12 @@ Given('I have the following games:') do |table|
       dimensions: game_attributes['dimensions'],
       source: game_attributes['source'],
       publication_year: game_attributes['publication year'],
-      cost: game_attributes['cost']
+      cost_value: game_attributes['cost_value'],
+      platform: game_attributes['platform'],
+      genre: game_attributes['genre'],
+      subject1: game_attributes['subject1'],
+      used_in_class: game_attributes['used_in_class'],
+      downloadable: game_attributes['downloadable']
     )
   end
 end
@@ -22,7 +27,7 @@ When('I do not enter any search criteria') do
 end
 
 Then('I should see all games') do
-  expect(page).to have_css('.game', count: Game.count)
+  expect(page).to have_css('.game_list_link', count: Game.count)
 end
 
 When('I search for {string}') do |search_term|
