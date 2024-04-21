@@ -26,10 +26,10 @@ RSpec.describe 'Games' do
     expect(page).to have_content('Game2')
   end
 
-  it 'includes a "Show this game" link for each game' do
-    # Verify: Check that each game has a "Show this game" link
+  it 'includes a clickable link for each game that leads to its detailed view' do
+    # Verify: Check that each game has a clickable link that navigates to the game's detailed view
     [game1, game2].each do |game|
-      expect(page).to have_link('Show this game', href: game_path(game))
+      expect(page).to have_css("a[href='#{game_path(game)}']")
     end
   end
 

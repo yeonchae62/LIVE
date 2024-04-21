@@ -46,7 +46,7 @@
             </div>
             <div class="checkbox_pair">
               <%= form.check_box :price_range_0to10, { class: 'filter-checkbox', checked: params[:price_range_0to10]&.include?('true'), onchange: "this.form.submit();"}, 'true', false %>
-              <%= label_tag 'price_range_0_10', 'Under $10' %>
+              <%= label_tag 'price_range_0_10', '$0 - $10' %>
             </div>
             <div class="checkbox_pair">
               <%= form.check_box :price_range_10to20, { class: 'filter-checkbox', checked:  params[:price_range_10to20]&.include?('true'), onchange: "this.form.submit();"}, 'true', false %>
@@ -176,16 +176,3 @@
   <% end %>
 </div>
 </body>
-
-<script>
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     console.log("content loaded")
-    //     document.body.addEventListener('change', function(event) {
-    //         if (event.target.matches('.filter-checkbox')) {
-    //             document.getElementById('games_form').submit();
-    //         }
-    //     });
-    // });
-
-
-</script>
