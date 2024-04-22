@@ -17,3 +17,12 @@ application up and running.
 
 * For testing
   * run `rails db:test:prepare` to setup the database
+ 
+
+
+* How to contact us:
+ * xiuyu@tamu.edu
+ * cholmcdowell@tamu.edu
+ * yeonchae62@tamu.edu
+ * komo@tamu.edu
+ * nl6867@tamu.edu
