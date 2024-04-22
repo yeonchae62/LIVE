@@ -19,7 +19,7 @@ parsed_csv&.each do |row| # rubocop:disable Metrics/BlockLength
       included: row['Included'],
       exclusion_notes: row['Exclusion Notes'],
       url: row['URL'],
-      publication_year: row['Publication Year'],
+      publication_year: row['Year game was published'],
       developers: row['Developers'],
       publisher: row['Publisher'],
       used_in_class: row['Still being used in classrooms?'],
