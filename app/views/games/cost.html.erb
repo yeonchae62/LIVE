@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <% Game.where(cost: "Free").order(game_title: :asc).each do |game| %>
+  <% Game.where("lower(cost) = ? OR cost = ? OR lower(cost) = ? OR cost = ?", "free", "Free. In app purchases", "FREE", "Free ").order(game_title: :asc).each do |game| %>
       <tr>
         <td><%= game.game_title %></td>
         <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
@@ -31,8 +31,8 @@
       <th>Cost</th>
     </tr>
   </thead>
-  <tbody>
-    <% Game.where.not(cost: ["Free"]).order(cost: :asc).each do |game| %>
+  <tbody>  
+  <% Game.where.not("lower(cost) = ? OR cost = ? OR lower(cost) = ? OR cost = ?", "free", "Free. In app purchases", "FREE", "Free ").order(game_title: :asc).each do |game| %>
       <tr>
         <td><%= game.game_title %></td>
         <td><%= game.cost.present? ? game.cost : 'info not included' %></td>
