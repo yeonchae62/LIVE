@@ -92,8 +92,8 @@ module Filterable
 
   def filter_by_dimension(games, params)
     dimensions = []
-    dimensions << '2D' if params[:dimensions_2D] == 'true'
-    dimensions << '3D' if params[:dimensions_3D] == 'true'
+    dimensions << '2d' if params[:dimensions_2D] == 'true'
+    dimensions << '3d' if params[:dimensions_3D] == 'true'
     query = dimensions.map { |dim| "LOWER(dimensions) LIKE '%#{dim}%'" }.join(' OR ')
     games.where(query)
   end
