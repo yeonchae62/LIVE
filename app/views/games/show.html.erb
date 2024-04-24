@@ -10,26 +10,32 @@
 
 <p style="color: green"><%= notice %></p>
 
-<h1>Game Information</h1>
+<h1 style="text-align: center"><%= @game.game_title %></h1>
+<% if @game.image %>
+  <img src="<%= @game.image %>" alt="Game Image" style="max-width: 1200px; display: block; margin: 0 auto;">
+<% end %>
 
 <div class="games-container">
-<%= link_to "Visit this Game", @game.url, class:  "custom-button button-1" %>
+  <%= link_to "Visit this Game", @game.url, class:  "custom-button button-1" %>
   <%= button_to "Save", saved_games_path(game_id: @game.id), method: :post, class: "custom-button button-2", id: "save_button_#{@game.id}" %>
 </div>
 
 <div class="games-container">
   <table>
+    <% ignored_attributes = ["id", "researcher", "included", "exclusion_notes"] %>
     <% @game.attributes.each do |attribute, value| %>
       <tr>
-        <th><%= attribute.titleize %></th>
-        <% if attribute == "image" %>
-          <td><a href="<%= value %>"><img src="<%= value %>" alt="Game Image"></a></td>
-        <% else %>
-          <td><%= value %></td>
+        <% if ignored_attributes.exclude?(attribute) %>
+          <th><%= attribute.titleize %></th>
+          <% if attribute == "image" %>
+            <td><a href="<%= value %>"><img src="<%= value %>" alt="Game Image" style="max-width: 1000px" ></a></td>
+          <% else %>
+            <td><%= value %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
-  </table> 
+  </table>
 </div>
 
 <div class="container1">
