@@ -60,7 +60,7 @@
 
 ## Deploy to Heroku
   *  signup or login to your [Heroku](https://id.heroku.com/login) account. After successfully logged in, you will see this:
-    <img src="img.png" width=400px>
+    <img src="app/assets/images/heroku1.png" width=400px>
   * 
 
 
