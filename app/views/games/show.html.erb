@@ -23,6 +23,7 @@
 <div class="games-container">
   <table>
     <% ignored_attributes = ["id", "researcher", "included", "exclusion_notes"] %>
+
     <% @game.attributes.each do |attribute, value| %>
       <tr>
         <% if ignored_attributes.exclude?(attribute) %>
