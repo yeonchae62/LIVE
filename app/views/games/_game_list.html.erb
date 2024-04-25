@@ -33,7 +33,10 @@
           </div>
         </a>
         <div class="save_button_cnt">
-          <%= button_to "Save", saved_games_path(game_id: game.id), method: :post, class: "save_button", id: "save_button_#{game.id}" %>
+          <form action="<%= saved_games_path(game_id: game.id) %>" method='post' id="save_form" data-remote=”true” >
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <button form="save_form" class="save_button">Save</button>
+          </form>
         </div>
       <% end %>
       <div class="pagination-container">

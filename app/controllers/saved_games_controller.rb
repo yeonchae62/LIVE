@@ -14,7 +14,7 @@ class SavedGamesController < ApplicationController
 
   def create_saved_game
     if current_user.saved_games.exists?(game_id: @game.id)
-      redirect_to games_path, notice: 'This game is already saved.'
+      redirect_to request.referer, notice: 'This game is already saved.'
     else
       save_game
     end
@@ -25,6 +25,6 @@ class SavedGamesController < ApplicationController
 
     return unless @saved_game.save
 
-    redirect_to games_path, notice: 'Game saved successfully!'
+    redirect_to request.referer, notice: 'Game saved successfully!'
   end
 end
