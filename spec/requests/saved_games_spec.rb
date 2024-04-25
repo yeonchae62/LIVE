@@ -25,7 +25,7 @@ RSpec.describe 'SavedGames' do
 
       it 'redirects to the games index page' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id}, headers: { 'Referer' => games_path }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(response).to redirect_to(games_path)
       end
 
