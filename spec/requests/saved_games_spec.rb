@@ -19,19 +19,19 @@ RSpec.describe 'SavedGames' do
 
       it 'creates a saved game' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(SavedGame.count).to eq(1)
       end
 
       it 'redirects to the games index page' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(response).to redirect_to(games_path)
       end
 
       it 'sets a success notice' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(flash[:notice]).to eq('Game saved successfully!')
       end
     end
@@ -43,20 +43,20 @@ RSpec.describe 'SavedGames' do
 
       it 'does not create a duplicate saved game' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(SavedGame.count).to eq(1)
       end
 
       it 'redirects to the games index page' do
         sign_in user
         saved_game.game
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(response).to redirect_to(games_path)
       end
 
       it 'sets a notice indicating the game is already saved' do
         sign_in user
-        post saved_games_path, params: { game_id: game.id }
+        post saved_games_path, params: { game_id: game.id }, headers: { 'Referer' => games_path }
         expect(flash[:notice]).to eq('This game is already saved.')
       end
     end
