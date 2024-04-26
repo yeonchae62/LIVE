@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="" />
+    <list default="true" id="71eb1d58-61e4-44c4-976d-95d1e3ca0601" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/heroku2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/heroku1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/heroku1.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,7 +269,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Test::Unit/Shoulda/Minitest.GamesControllerTest.executor": "Run",
     "Test::Unit/Shoulda/Minitest.MainControllerTest.executor": "Run",
-    "git-widget-placeholder": "save__games__bug",
+    "git-widget-placeholder": "readme",
     "last_opened_file_path": "/Users/jianwendong/xiuyu/CSCE 606 Software Engineering/LIVE",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -290,6 +295,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/assets/heroku1" />
       <recent name="$PROJECT_DIR$/app/javascript/packs" />
       <recent name="$PROJECT_DIR$/app/javascript/" />
       <recent name="$PROJECT_DIR$/features" />
