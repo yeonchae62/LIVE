@@ -59,9 +59,34 @@
 
 
 ## Deploy to Heroku
-  *  signup or login to your [Heroku](https://id.heroku.com/login) account. After successfully logged in, you will see this:
-    <img src="app/assets/images/heroku1.png" width=400px>
-  * 
+
+  * Signup or login to your [Heroku](https://id.heroku.com/login) account. 
+  * Create a new app on heroku. 
+    * Open [this page](https://dashboard.heroku.com/apps) or paste this in your browser: https://dashboard.heroku.com/apps, then you will see the following page: 
+    
+        <img width="600" alt="image" src="app/assets/images/heroku1.png">
+    
+    * Click the button "New" at the top right corner and then click "Create new app". Then you will see this:
+
+        <img width="600" alt="image" src="app/assets/images/heroku2.png">
+      
+    * Fill in the App name and click "Create app" to create your app. Note that the App name will be part of the deployment link. In our team, we used "evg-library" for the App name, so we got "https://evg-library-8a920fa9c3cb.herokuapp.com/" for the deployed app.
+  * Add Postgres to your app. On the dashboard page (https://dashboard.heroku.com/apps), you will see the created app. Click that app to open the setting page. Then click "Resources" and search "postgres" in the "Add-ons" field. Choose a plan according to your needs. We used the Mini plan for the course project.  
+    
+    <img width="600" alt="image" src="app/assets/images/heroku3.png">
+
+  * Download and install the Heroku CLI to your local environment by following the instructions here: https://devcenter.heroku.com/articles/heroku-cli
+  
+  * If you haven't already, run `git clone https://github.com/yeonchae62/LIVE.git` and `cd LIVE`.
+
+    Under the project folder `LIVE/`, run the following commands to deploy the repo to Heroku.
+    * run `heroku login` to connect to heroku. 
+    * run `heroku git:remote -a [app-name]`, replace the [app-name] with your App name.
+    * run `git push heroku main` to deploy the project. The link to the deployed app will appear in the terminal. 
+    You can also get it on Heroku website. 
+    
+      But you will see errors if you open the link at this point because we haven't set up the database.
+    * run `heroku run rails db:migrate db:seed` to set up the database. Now you can visit the link you got in the last step.
 
 
 ## How to contact us:
