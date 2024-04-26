@@ -77,7 +77,7 @@
 
   * Download and install the Heroku CLI to your local environment by following the instructions here: https://devcenter.heroku.com/articles/heroku-cli
   
-  * If you haven't already, run `git clone https://github.com/CSCE-606-Event360/Spring2024EventNXT.git` and `cd LIVE`.
+  * If you haven't already, run `git clone https://github.com/yeonchae62/LIVE.git` and `cd LIVE`.
 
     Under the project folder `LIVE/`, run the following commands to deploy the repo to Heroku.
     * run `heroku login` to connect to heroku. 
